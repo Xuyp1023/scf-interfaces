@@ -32,4 +32,13 @@ public interface IScfProductService {
      */
     public String webAddProduct(Map<String, Object> anMap);
 
+    /**
+     * 融资产品修改
+     * 
+     * @param anMap
+     * @param anId
+     * @return
+     */
+    public String webSaveModifyProduct(Map<String, Object> anMap);
+
 }
