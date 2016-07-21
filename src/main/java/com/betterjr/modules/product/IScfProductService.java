@@ -41,4 +41,11 @@ public interface IScfProductService {
      */
     public String webSaveModifyProduct(Map<String, Object> anMap);
 
+    /**
+     * 融资产品删除
+     * 
+     * @param anId
+     */
+    public String webSaveDeleteProduct(Long anId);
+
 }
