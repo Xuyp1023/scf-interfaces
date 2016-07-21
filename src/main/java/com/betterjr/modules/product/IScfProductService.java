@@ -48,4 +48,12 @@ public interface IScfProductService {
      */
     public String webSaveDeleteProduct(Long anId);
 
+    /**
+     * 融资产品上架
+     * 
+     * @param anId
+     * @return
+     */
+    public String webSaveShelvesProduct(Long anId);
+
 }
