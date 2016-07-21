@@ -56,4 +56,12 @@ public interface IScfProductService {
      */
     public String webSaveShelvesProduct(Long anId);
 
+    /**
+     * 融资产品下架
+     * 
+     * @param anId
+     * @return
+     */
+    public String webSaveOfflineProduct(Long anId);
+
 }
