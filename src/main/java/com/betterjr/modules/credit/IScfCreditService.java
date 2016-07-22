@@ -40,4 +40,12 @@ public interface IScfCreditService {
      */
     public String webActivateCredit(Long anId);
 
+    /**
+     * 保理-授信终止
+     * 
+     * @param anId
+     * @return
+     */
+    public String webTerminatCredit(Long anId);
+
 }
