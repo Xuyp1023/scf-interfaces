@@ -32,4 +32,12 @@ public interface IScfCreditService {
      */
     public String webModifyCredit(Map<String, Object> anMap, Long anId);
 
+    /**
+     * 保理-授信额度激活
+     * 
+     * @param anId
+     * @return
+     */
+    public String webActivateCredit(Long anId);
+
 }
