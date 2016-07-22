@@ -15,4 +15,12 @@ public interface IScfCreditService {
      */
     public String webQueryFactorCredit(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 
+    /**
+     * 保理-授信额度录入
+     * 
+     * @param anMap
+     * @return
+     */
+    public String webAddCredit(Map<String, Object> anMap);
+
 }
