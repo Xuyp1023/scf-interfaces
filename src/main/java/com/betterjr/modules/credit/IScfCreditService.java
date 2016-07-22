@@ -23,4 +23,13 @@ public interface IScfCreditService {
      */
     public String webAddCredit(Map<String, Object> anMap);
 
+    /**
+     * 保理-授信记录修改
+     * 
+     * @param anMap
+     * @param anId
+     * @return
+     */
+    public String webModifyCredit(Map<String, Object> anMap, Long anId);
+
 }
