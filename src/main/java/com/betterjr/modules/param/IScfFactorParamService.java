@@ -13,8 +13,8 @@ public interface IScfFactorParamService {
     
     /**
      * 获取保理公司参数
-     * @param custNo
+     * @param anCustNo
      * @return
      */
-    public String webLoadFactorParam(String custNo);
+    public String webLoadFactorParam(String anCustNo);
 }

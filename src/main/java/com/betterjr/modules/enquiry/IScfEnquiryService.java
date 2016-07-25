@@ -17,7 +17,7 @@ public interface IScfEnquiryService {
     /**
      * 查询询价详情
      */
-    public String webFindEnquiryDetail(Long id);
+    public String webFindEnquiryDetail(Long anId);
     
     /**
      * 修改询价
@@ -42,6 +42,6 @@ public interface IScfEnquiryService {
     /**
      * 查询报价详情
      */
-    public String webFindOfferDetail(Long id);
+    public String webFindOfferDetail(Long anId);
     
 }
