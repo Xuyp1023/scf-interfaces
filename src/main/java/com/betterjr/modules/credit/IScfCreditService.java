@@ -2,6 +2,8 @@ package com.betterjr.modules.credit;
 
 import java.util.Map;
 
+import com.betterjr.modules.credit.entity.ScfCreditInfo;
+
 public interface IScfCreditService {
 
     /**
@@ -58,5 +60,13 @@ public interface IScfCreditService {
      * @return
      */
     public String webTerminatCredit(Long anId);
+
+    /**
+     * 授信额度占用,供融资放款业务调用
+     * 
+     * @param anOccupyCredit
+     * @return
+     */
+    public int saveOccupyCredit(ScfCreditInfo anOccupyCredit);
 
 }
