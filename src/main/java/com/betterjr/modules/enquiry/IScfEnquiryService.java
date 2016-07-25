@@ -44,9 +44,4 @@ public interface IScfEnquiryService {
      */
     public String webFindOfferDetail(Long id);
     
-    /**
-     * 获取已选择的订单
-     */
-    public String getSelectedOrders(Map<String, Object> anMap);
-
 }
