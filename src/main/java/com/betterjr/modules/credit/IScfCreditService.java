@@ -69,4 +69,12 @@ public interface IScfCreditService {
      */
     public int saveOccupyCredit(ScfCreditInfo anOccupyCredit);
 
+    /**
+     * 授信额度释放,供融资还款业务调用,一次性授信不释放额度
+     * 
+     * @param anOccupyCredit
+     * @return
+     */
+    public int saveReleaseCredit(ScfCreditInfo anOccupyCredit);
+
 }
