@@ -8,4 +8,6 @@ public interface IScfInvoiceService {
      */
     public String webAddInvoice(Map<String, Object> anMap, String anFileList);
 
+    public String webQueryInvoiceList(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+
 }
