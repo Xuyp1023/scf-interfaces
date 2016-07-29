@@ -41,7 +41,18 @@ public interface IScfEnquiryService {
 
     /**
      * 查询报价详情
+     * @param factorNo
+     * @param enquiryNo
+     * @return
      */
-    public String webFindOfferDetail(Long anId);
+    public String webFindOfferDetail(Long factorNo, String enquiryNo);
+
+    /**
+     * 查询保理公司收到的询价
+     * @param anMap
+     * @param factorNo
+     * @return
+     */
+    String webQueryEnquiryByfactorNo(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
     
 }

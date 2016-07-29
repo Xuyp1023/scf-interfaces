@@ -1,4 +1,4 @@
-package com.betterjr.modules.repayment;
+package com.betterjr.modules.loan;
 
 import java.util.Map;
 
