@@ -8,6 +8,9 @@ public interface IScfInvoiceService {
      */
     public String webAddInvoice(Map<String, Object> anMap, String anFileList);
 
+    /**
+     *  订单发票分页查询 
+     */
     public String webQueryInvoiceList(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 
 }
