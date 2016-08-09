@@ -1,5 +1,6 @@
 package com.betterjr.modules.loan;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 public interface IScfRequestService {
@@ -38,19 +39,12 @@ public interface IScfRequestService {
     String webFindRequestDetail(Map<String, Object> anMap, String anRequestNo);
 
     /**
-     * 出具贷款方案
-     * @param anMap
-     * @return
-     */
-    String webOfferScheme(Map<String, Object> anMap);
-
-    /**
      * 查询融资审批详情
      * @param anRequestNo
      * @param anFactorNo
      * @return
      */
-    String webFindApprovedDetail(String anRequestNo);
+    String webFindSchemeDetail(String anRequestNo);
 
     /**
      * 修改融资审批
@@ -58,7 +52,7 @@ public interface IScfRequestService {
      * @param anId
      * @return
      */
-    String webSaveModifyApproved(Map<String, Object> anMap);
+    String webSaveModifyScheme(Map<String, Object> anMap);
 
     /**
      * 分页查询融资审批
@@ -68,25 +62,25 @@ public interface IScfRequestService {
      * @param anPageSize
      * @return
      */
-    String webQueryApprovedList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+    String webQuerySchemeList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 
     /**
      * 审批申请
      * @param anMap
      * @return
      */
-    String webApproveRequest(Map<String, Object> anMap);
+    String webApproveRequest(String anRequestNo, String anApprovalResult, String anReturnNode, String anDescription, String tradeStatus);
 
     /**
      * 融资企业-确认融资方案
      * @param anRequestNo
-     * @param anAduit
+     * @param anBusinStatus
      * @return
      */
     String webConfirmScheme(String anRequestNo, String anBusinStatus);
 
     /**
-     * 资方发起贸易背景确认-发送债权转让通知书
+     * 资方--签约-发起贸易背景确认-发送债权转让通知书
      * @param anRequestNo
      * @return
      */
@@ -99,6 +93,50 @@ public interface IScfRequestService {
      * @return
      */
     String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus);
+
+    /**
+     * 出具贷款方案
+     * @param anMap
+     * @param anApprovalResult 审批结果
+     * @param anReturnNode     打回节点
+     * @param anDescription    备注
+     * @return
+     */
+    String webOfferScheme(Map<String, Object> anMap, String anApprovalResult, String anReturnNode, String anDescription);
+
+    /**
+     * 保理公司-放款确认
+     * @param anMap
+     * @param anApprovalResult 审批结果
+     * @param anReturnNode     打回节点
+     * @param anDescription    备注
+     * @return
+     */
+    String webConfirmLoan(Map<String, Object> anMap, String anApprovalResult, String anReturnNode, String anDescription);
+
+    /**
+     * 计算手续费
+     * @param anRequestNo
+     * @param loanBalance
+     * @return
+     */
+    String webCalculatServiecFee(String anRequestNo, BigDecimal loanBalance);
+
+    /**
+     * 计算结束日期
+     * @param anRequestNo
+     * @param startDate
+     * @return
+     */
+    String webCalculatEndDate(String anRequestNo, String startDate);
+
+    /**
+     * 计算利息 和管理费
+     * @param anRequestNo
+     * @param loanBalance
+     * @return
+     */
+    String webCalculatInsterest(String anRequestNo, BigDecimal loanBalance);
 
 
 
