@@ -6,7 +6,7 @@ public interface IScfOrderService {
     /**
      * 订单信息编辑
      */
-    public String webSaveModifyOrder(Map<String, Object> anMap, Long anId, String anFileList);
+    public String webSaveModifyOrder(Map<String, Object> anMap, Long anId, String anFileList, String anOtherFileList);
     
     /**
      * 订单信息分页查询
