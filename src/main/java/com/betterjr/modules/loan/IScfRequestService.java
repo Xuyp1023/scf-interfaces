@@ -70,7 +70,7 @@ public interface IScfRequestService {
      * @param anMap
      * @return
      */
-    String webApproveRequest(String anRequestNo, String anApprovalResult, String anReturnNode, String anDescription, String tradeStatus);
+    String webApproveRequest(String anRequestNo, String anApprovalResult, String anReturnNode, String anDescription);
 
     /**
      * 融资企业-确认融资方案
