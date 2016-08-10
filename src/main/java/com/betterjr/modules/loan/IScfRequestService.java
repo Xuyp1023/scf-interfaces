@@ -3,6 +3,7 @@ package com.betterjr.modules.loan;
 import java.math.BigDecimal;
 import java.util.Map;
 
+
 public interface IScfRequestService {
 
     /**
@@ -84,7 +85,7 @@ public interface IScfRequestService {
      * @param anRequestNo
      * @return
      */
-    String webRequestTradingBackgrand(String anRequestNo);
+    String webRequestTradingBackgrand(String anRequestNo, String anAduitStatus, String anReturnNode, String anDescription);
 
     /**
      * 核心企业确认债权转上，签订转让协议
