@@ -73,4 +73,12 @@ public interface IScfElecAgreementService {
      * @return
      */
     public boolean webTransOpinion(Map<String, Object> anMap);
+    
+    /****
+     * 根据申请单号，类型查询合同
+     * @param anRequestNo
+     * @param anSignType
+     * @return
+     */
+    public String webFindOneElecAgreeByOrderNo(String anRequestNo, String anSignType);
 }
