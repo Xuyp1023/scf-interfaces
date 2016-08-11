@@ -139,6 +139,24 @@ public interface IScfRequestService {
      */
     String webCalculatInsterest(String anRequestNo, BigDecimal loanBalance);
 
-
+    /**
+     * 查询待批融资
+     */
+    String webQueryPendingRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 查询还款融资
+     */
+    String webQueryRepaymentRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 查询历史融资
+     */
+    String webQueryCompletedRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 核心企业进行融资查询
+     */
+    String webQueryCoreEnterpriseRequest(Map<String, Object> anMap, String anRequestType, String anFlag, int anPageNum, int anPageSize);
 
 }
