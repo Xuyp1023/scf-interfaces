@@ -11,5 +11,5 @@ public interface IScfOrderService {
     /**
      * 订单信息分页查询
      */
-    public String webQueryOrder(Map<String, Object> anMap,String anFlag, int anPageNum, int anPageSize);
+    public String webQueryOrder(Map<String, Object> anMap,String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
 }

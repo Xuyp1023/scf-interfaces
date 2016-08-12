@@ -6,7 +6,7 @@ public interface IScfOrderRelationService {
     /**
      * 订单关联关系增加
      */
-    public String webAddOrderRelation(Map<String, Object> anMap, String anInfoIdList);
+    public String webAddOrderRelation(String anEnterType, Long anEnterId, String anInfoType, String anInfoIdList);
     
     /**
      * 订单关联关系删除
