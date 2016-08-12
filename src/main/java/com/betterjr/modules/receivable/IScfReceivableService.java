@@ -12,6 +12,6 @@ public interface IScfReceivableService {
     /**
      * 应收账款信息分页查询
      */
-    public String webQueryReceivable(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryReceivable(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
 
 }
