@@ -159,4 +159,14 @@ public interface IScfRequestService {
      */
     String webQueryCoreEnterpriseRequest(Map<String, Object> anMap, String anRequestType, String anFlag, int anPageNum, int anPageSize);
 
+    /**
+     * 查询当前用户任务
+     * @param type 1：待办，2：已办
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryWorkTask(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+
 }
