@@ -8,4 +8,6 @@ public interface IScfAcceptBillService {
 
     public String webSaveModifyAcceptBill(Map<String, Object> anMap, Long anId, String anFileList);
 
+    public String webFindAcceptBillList(String anCustNo, String anIsOnlyNormal);
+
 }
