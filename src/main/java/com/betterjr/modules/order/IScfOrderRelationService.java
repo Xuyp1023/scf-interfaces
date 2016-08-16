@@ -1,7 +1,5 @@
 package com.betterjr.modules.order;
 
-import java.util.Map;
-
 public interface IScfOrderRelationService {
     /**
      * 订单关联关系增加
@@ -11,6 +9,6 @@ public interface IScfOrderRelationService {
     /**
      * 订单关联关系删除
      */
-    public String webSaveDeleteOrderRelation(Long anId);
+    public String webSaveDeleteOrderRelation(String anEnterType, Long anEnterId, String anInfoType, Long anInfoId);
 
 }
