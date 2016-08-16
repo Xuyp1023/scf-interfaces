@@ -169,5 +169,5 @@ public interface IScfRequestService {
      */
     String webQueryWorkTask(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 
-    String getTradeStatus();
+    String webQueryTradeStatus();
 }
