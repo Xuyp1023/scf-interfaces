@@ -20,7 +20,7 @@ public interface IScfDeliveryNoticeService {
     String webAddDeliveryNotice(Map<String, Object> anMap);
 
     /**
-     * 查询发货通知列表
+     * 分页查询发货通知列表
      * @param anMap
      * @param anFlag
      * @param anPageNum
@@ -28,6 +28,13 @@ public interface IScfDeliveryNoticeService {
      * @return
      */
     String webQueryDeliveryNoticeList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
-  
+
+    /**
+     * 查询发货通知列表（无分页）
+     * @param anMap
+     * @return
+     */
+    String webFindDeliveryNoticeList(Map<String, Object> anMap);
+
 }
 

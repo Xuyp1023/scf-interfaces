@@ -1,5 +1,6 @@
 package com.betterjr.modules.loan;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 public interface IScfRepaymentService {
@@ -112,5 +113,89 @@ public interface IScfRepaymentService {
      */
     String webCalculatPayType(String anRequestNo, String anPayDate);
 
+    /**
+     * 分页查询豁免记录
+     * @param anMap
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryExemptList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 
+    /**
+     * 新增豁免记录
+     * @param anMap
+     * @return
+     */
+    String webAddExempt(Map<String, Object> anMap);
+
+    /**
+     * 分页查询催收记录
+     * @param anMap
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryPressMoneyList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+
+    /**
+     * 新增催收记录
+     * @param anMap
+     * @return
+     */
+    String webAddPressMoney(Map<String, Object> anMap);
+
+    /**
+     * 计算贷款余额-填入展期开始日期后调用（填入的开始日期可能超过了计划还款日期所以要把罚息计算到总额里面）
+     * @param anRequestNo
+     * @param anStartDate
+     * @return
+     */
+    String webCalculatLoanBalance(String anRequestNo, String anStartDate);
+    
+    /**
+     * 填入展期期限后调用，用于计算结束日期
+     * @param anStartDate
+     * @param period
+     * @param periodUnit
+     * @return
+     */
+    String webCalculatExtensionEndDate(String anStartDate, Integer period, Integer periodUnit);
+
+    /**
+     * 展期时，填入本次还款金额后，将得到展期金额，根据展期利率可以 计算展期后的利息（利率若改变也要调用此方法）
+     * @param ratio
+     * @param managementRatio
+     * @param extensionBalance
+     * @return
+     */
+    String webCalculatExtensionFee(BigDecimal ratio, BigDecimal managementRatio, BigDecimal extensionBalance);
+
+    /**
+     * 展期时-填入本次还款金额后调用，用于填充还款分配
+     * @param anRequestNo
+     * @param anStartDate
+     * @param payBalance
+     * @return
+     */ 
+    String webPayAssigned(String anRequestNo, String anStartDate, BigDecimal payBalance);
+
+    /**
+     * 保存展期
+     * @param anMap
+     * @return
+     */
+    String webAddExtension(Map<String, Object> anMap);
+
+    /**
+     * 分页查询展期列表
+     * @param anMap
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryExtensionList(Map<String, Object> anMap, String requestNo, int anFlag, int anPageNum, int anPageSize);
 }
