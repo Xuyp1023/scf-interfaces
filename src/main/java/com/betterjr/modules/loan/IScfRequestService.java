@@ -169,5 +169,17 @@ public interface IScfRequestService {
      */
     String webQueryWorkTask(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 
+    /**
+     * 获取申请状态结果集
+     * @return
+     */
     String webQueryTradeStatus();
+
+    /**
+     * 根据属性-查询还款计划
+     * @param anMap
+     * @return
+     */
+    String webFindPayPlan(Map<String, Object> anMap);
+
 }
