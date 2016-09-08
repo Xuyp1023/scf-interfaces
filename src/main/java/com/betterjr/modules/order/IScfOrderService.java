@@ -22,4 +22,14 @@ public interface IScfOrderService {
      * 通过融资申请查询相关信息
      */
     public String webFindInfoListByRequest(String anRequestNo, String anRequestType);
+    
+    /**
+     * 新增订单信息
+     */
+    public String webAddOrder(Map<String, Object> anMap, String anFileList, String anOtherFileList);
+    
+    /**
+     * 检查订单下发票所关联订单是否勾选完成
+     */
+    public String webCheckCompleteInvoice(String anRequestType, String anIdList);
 }
