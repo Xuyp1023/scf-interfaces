@@ -13,5 +13,7 @@ public interface IScfAcceptBillService {
     public String webAddAcceptBill(Map<String, Object> anMap, String anFileList);
 
     public String webSaveAduitAcceptBill(Long anId);
+    
+    public String webFindAllFile(Long anId);
 
 }

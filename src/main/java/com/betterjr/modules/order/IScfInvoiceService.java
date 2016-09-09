@@ -14,7 +14,7 @@ public interface IScfInvoiceService {
     public String webQueryInvoiceList(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
     
     /**
-     * 发片信息编辑
+     * 发票信息编辑
      */
     public String webSaveModifyInvoice(Map<String, Object> anMap, String anInvoiceIds, String anFileList);
 
