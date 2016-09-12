@@ -198,4 +198,44 @@ public interface IScfRepaymentService {
      * @return
      */
     String webQueryExtensionList(Map<String, Object> anMap, String requestNo, int anFlag, int anPageNum, int anPageSize);
+
+    /**
+     * 无分页查展期列表
+     * @param anMap
+     * @return
+     */
+    String webFindExtensionList(Map<String, Object> anMap);
+
+    /**
+     * 无分页查询豁免列表
+     * @param anMap
+     * @return
+     */
+    String webFindExemptList(Map<String, Object> anMap);
+
+    /**
+     * 无分页查催收列表
+     * @param anMap
+     * @return
+     */
+    String webFindPresMoneyist(Map<String, Object> anMap);
+
+    /**
+     * 无分页查还款计划列表
+     * @param anMap
+     * @return
+     */
+    String webFindPlanList(Map<String, Object> anMap);
+
+    /**
+     * 无分页查还款记录列表
+     * @param anMap
+     * @return
+     */
+    String webFindPayRecordList(Map<String, Object> anMap);
+
+
+    String webSaveModifyPressMoney(Map<String, Object> anMap, Long id);
+
+    String webSaveDelPressMoney(Map<String, Object> map, Long id);
 }
