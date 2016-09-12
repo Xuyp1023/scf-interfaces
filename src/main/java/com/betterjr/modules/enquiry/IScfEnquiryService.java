@@ -54,5 +54,46 @@ public interface IScfEnquiryService {
      * @return
      */
     String webQueryEnquiryByfactorNo(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+
+    /**
+     * 新增报价回复
+     * @param anMap
+     * @param anId
+     * @return
+     */
+    String webAddOfferReply(Map<String, Object> anMap);
+
+    /**
+     * 修改报价回复
+     * @param anMap
+     * @param anId
+     * @return
+     */
+    String webSaveModifyOfferReply(Map<String, Object> anMap, Long anId);
+
+    /**
+     * 查询报价回复
+     * @param anMap
+     * @param anId
+     * @return
+     */
+    String webQueryOfferReply(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+
+    /**
+     * 放弃报价
+     * @param anEnquiryNo
+     * @param anFactorNo
+     * @return
+     */
+    String webDropOffer(String anEnquiryNo, Long anFactorNo);
     
+    /**
+     * 查看有哪些公司报了价
+     * @param anMap
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryOfferByFactor(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 }

@@ -121,7 +121,7 @@ public interface IScfRequestService {
      * @param loanBalance
      * @return
      */
-    String webCalculatServiecFee(String anRequestNo, BigDecimal loanBalance);
+    String webGetServiecFee(String anRequestNo, BigDecimal loanBalance);
 
     /**
      * 计算结束日期
@@ -129,7 +129,7 @@ public interface IScfRequestService {
      * @param startDate
      * @return
      */
-    String webCalculatEndDate(String anRequestNo, String startDate);
+    String webGetEndDate(String anRequestNo, String startDate);
 
     /**
      * 计算利息 和管理费
@@ -137,7 +137,7 @@ public interface IScfRequestService {
      * @param loanBalance
      * @return
      */
-    String webCalculatInsterest(String anRequestNo, BigDecimal loanBalance);
+    String webGetInsterest(String anRequestNo, BigDecimal loanBalance);
 
     /**
      * 查询待批融资
@@ -175,11 +175,7 @@ public interface IScfRequestService {
      */
     String webQueryTradeStatus();
 
-    /**
-     * 根据属性-查询还款计划
-     * @param anMap
-     * @return
-     */
-    String webFindPayPlan(Map<String, Object> anMap);
+    String webFindPayPlan(Long anId);
+
 
 }
