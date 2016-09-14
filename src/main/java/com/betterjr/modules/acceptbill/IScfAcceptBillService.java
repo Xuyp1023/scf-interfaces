@@ -16,4 +16,6 @@ public interface IScfAcceptBillService {
     
     public String webFindAllFile(Long anId);
 
+    public String webQueryFinancedByFactor(Map<String, Object> anMap, Long anFactorNo);
+    
 }
