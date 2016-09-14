@@ -3,6 +3,7 @@ package com.betterjr.modules.agreement;
 import java.util.List;
 import java.util.Map;
 
+import com.betterjr.modules.document.entity.CustFileItem;
 /****
  * 电子合同管理
  * @author hubl
@@ -83,4 +84,32 @@ public interface IScfElecAgreementService {
      * @return
      */
     public String webFindElecAgreeByOrderNo(String anRequestNo, String anSignType);
+    
+    /***
+     * 查找pdf文件
+     * @param appNo
+     * @return
+     */
+    public CustFileItem webFindPdfFileInfo(String appNo);
+    
+    /****
+     * 添加其它资料
+     * @param anMap
+     * @return
+     */
+    public String webAddOtherFile(Map<String, Object> anMap);
+    
+    /***
+     * 根据申请单号查询其它资料信息
+     * @param anRequestNo
+     * @return
+     */
+    public String webQueryOtherFile(String anRequestNo);
+    
+    /***
+     * 删除其它资料
+     * @param anOtherFileId
+     * @return
+     */
+    public String webDelOtherFile(Long anOtherFileId);
 }
