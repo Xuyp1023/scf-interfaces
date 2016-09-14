@@ -13,7 +13,7 @@ public interface IScfBillRequestService {
      * @param anId
      * @return
      */
-    String webToRequest(String anId);
+    String webRequestByOffer(String anId);
 
    /**
     * 修改票据申请的融资状态
@@ -22,6 +22,20 @@ public interface IScfBillRequestService {
     * @return
     */
     String updateRequestTradeStauts(String anRequestNo, String anTradeStatus);
+
+    /**
+     * 根据申请编号查询融资申请
+     * @param anRequestNo
+     * @return
+     */
+    String webFindRequestByNo(String anRequestNo);
+
+    /**
+     * 根据票据id查询融资申请
+     * @param anBillsNo
+     * @return
+     */
+    String webFindRequestByBill(String anBillsNo);
 
 
 }
