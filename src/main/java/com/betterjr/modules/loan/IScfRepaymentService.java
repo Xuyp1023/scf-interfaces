@@ -218,7 +218,7 @@ public interface IScfRepaymentService {
      * @param anMap
      * @return
      */
-    String webFindPresMoneyist(Map<String, Object> anMap);
+    String webFindPressMoneyList(Map<String, Object> anMap);
 
     /**
      * 无分页查还款计划列表
