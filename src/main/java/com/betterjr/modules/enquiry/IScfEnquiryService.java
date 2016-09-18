@@ -80,12 +80,12 @@ public interface IScfEnquiryService {
     String webQueryOfferReply(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
 
     /**
-     * 放弃报价
+     * 资金方-放弃报价
      * @param anEnquiryNo
      * @param anFactorNo
      * @return
      */
-    String webDropOffer(String anEnquiryNo, Long anFactorNo);
+    String webFactorDropOffer(String anEnquiryNo, Long anFactorNo);
     
     /**
      * 查看有哪些公司报了价
@@ -96,4 +96,28 @@ public interface IScfEnquiryService {
      * @return
      */
     String webQueryOfferByFactor(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 票据版查询
+     * @param custNo
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQuerySingleOrderEnquiryList(Long custNo, int anFlag, int anPageNum, int anPageSize);
+    /**
+     *  票据版查询
+     * @param anId 询价id
+     * @return
+     */
+    String webFindSingleOrderEnquiryDetail(Long anId);
+
+    /**
+     * 询价企业放弃 某个保理公司的报价
+     * @param anEnquiryNo
+     * @param factorNo
+     * @return
+     */
+    String webCustDropFactorOffer(String anEnquiryNo, Long factorNo);
 }

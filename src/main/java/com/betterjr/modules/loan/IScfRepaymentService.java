@@ -28,7 +28,7 @@ public interface IScfRepaymentService {
      * @param id
      * @return
      */
-    String webFindPayPlanDetail(Map<String, Object> anMap, Long id);
+    String webFindPayPlanDetail(String anRequestNo);
 
     /**
      * 还款记录-分页查询
