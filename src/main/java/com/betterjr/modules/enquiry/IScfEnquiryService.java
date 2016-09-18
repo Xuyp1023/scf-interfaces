@@ -119,5 +119,5 @@ public interface IScfEnquiryService {
      * @param factorNo
      * @return
      */
-    String webCustDropFactorOffer(String anEnquiryNo, Long factorNo);
+    String webCustDropOffer(String anEnquiryNo, Long factorNo);
 }
