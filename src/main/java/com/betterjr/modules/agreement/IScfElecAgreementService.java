@@ -25,7 +25,7 @@ public interface IScfElecAgreementService {
      * @param appNo 流水号
      * @return
      */
-    public String webCancelElecAgreement(String anAppNo);
+    public String webCancelElecAgreement(String anAppNo,String anDescribe);
     
     /****
      * 生成电子合同的静态页面
