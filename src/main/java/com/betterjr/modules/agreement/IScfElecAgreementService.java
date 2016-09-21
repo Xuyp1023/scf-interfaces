@@ -33,6 +33,12 @@ public interface IScfElecAgreementService {
      */
     public String webFindElecAgreePage(String anAppNo);
     
+    /****
+     * 根据请求单号生成电子合同的静态页面
+     * @param 
+     */
+    public String webFindElecAgreePageByRequestNo(String anRequestNo,String anAgreeType);
+    
     /***
      * 获取签署合同的验证码
      * @param anAppNo
