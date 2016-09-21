@@ -112,4 +112,22 @@ public interface IScfElecAgreementService {
      * @return
      */
     public String webDelOtherFile(Long anOtherFileId);
+    
+
+    /***
+     * 根据请求单号和合同类型获取验证码
+     * @param anRequestNo
+     * @param anAgreeType
+     * @return
+     */
+    public String webFindValidCodeByRequestNo(String anRequestNo, String anAgreeType);
+    
+    /***
+     * 发送并验证签署合同的验证码
+     * @param anAppNo
+     * @param anCustType
+     * @param anVcode
+     * @return
+     */
+    public String webSendValidCodeByRequestNo(String anAppNo, String anAgreeType, String anVcode);
 }
