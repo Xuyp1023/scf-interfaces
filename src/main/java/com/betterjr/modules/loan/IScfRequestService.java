@@ -93,7 +93,7 @@ public interface IScfRequestService {
      * @param anAduit
      * @return
      */
-    String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus);
+    String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus, String smsCode);
 
     /**
      * 出具贷款方案
