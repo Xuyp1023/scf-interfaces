@@ -78,7 +78,7 @@ public interface IScfRequestService {
      * @param anBusinStatus
      * @return
      */
-    String webConfirmScheme(String anRequestNo, String anBusinStatus);
+    String webConfirmScheme(String anRequestNo, String anBusinStatus, String smsCode);
 
     /**
      * 资方--签约-发起贸易背景确认-发送债权转让通知书
