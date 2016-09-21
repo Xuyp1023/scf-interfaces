@@ -32,4 +32,9 @@ public interface IScfOrderService {
      * 检查订单下发票所关联订单是否勾选完成
      */
     public String webCheckCompleteInvoice(String anRequestType, String anIdList);
+
+    /**
+     * 根据融资编号查询基本信息的所有附件
+     */
+    public String webFindRequestBaseInfoFileList(String anRequestNo);
 }
