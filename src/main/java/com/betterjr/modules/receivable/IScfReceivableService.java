@@ -7,7 +7,7 @@ public interface IScfReceivableService {
     /**
      * 应收账款信息编辑
      */
-    public String webSaveModifyReceivable(Map<String, Object> anMap, Long anId, String anFileList);
+    public String webSaveModifyReceivable(Map<String, Object> anMap, Long anId, String anFileList, String anOtherFileList);
 
     /**
      * 应收账款信息分页查询

@@ -6,11 +6,11 @@ public interface IScfAcceptBillService {
 
     public String webQueryAcceptBill(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
 
-    public String webSaveModifyAcceptBill(Map<String, Object> anMap, Long anId, String anFileList);
+    public String webSaveModifyAcceptBill(Map<String, Object> anMap, Long anId, String anFileList, String anOtherFileList);
 
     public String webFindAcceptBillList(String anCustNo, String anIsOnlyNormal);
 
-    public String webAddAcceptBill(Map<String, Object> anMap, String anFileList);
+    public String webAddAcceptBill(Map<String, Object> anMap, String anFileList, String anOtherFileList);
 
     public String webSaveAduitAcceptBill(Long anId);
     
