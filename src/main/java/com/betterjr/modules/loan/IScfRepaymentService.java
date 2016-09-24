@@ -94,9 +94,10 @@ public interface IScfRepaymentService {
      * @param anRequestNo
      * @param anPayType
      * @param anFactorNo
+     * @param anPayDate 还款日期
      * @return
      */
-    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo);
+    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo, String anPayDate);
 
     /**
      * 经销商还款 -计算利息 -填入(本次还款额) 时  调用
