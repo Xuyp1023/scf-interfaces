@@ -178,5 +178,15 @@ public interface IScfRequestService {
 
     String webFindPayPlan(Long anId);
 
+    /**
+     * 查询供应商融资
+     */
+    public String webQuerySupplierRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
 
+    /**
+     * 查询经销商融资
+     */
+    public String webQuerySellerRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
+    
+  
 }
