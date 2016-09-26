@@ -40,6 +40,17 @@ public interface IScfCreditService {
     public String webQueryCreditDetail(Map<String, Object> anMap, Long anCreditId, String anFlag, int anPageNum, int anPageSize);
 
     /**
+     * 查询授信额度
+     * 
+     * @param anCustNo
+     * @param anCoreCustNo
+     * @param anFactorNo
+     * @param anCreditMode
+     * @return
+     */
+    public String webFindCredit(Long anCustNo, Long anCoreCustNo, Long anFactorNo, String anCreditMode);
+
+    /**
      * 按客户编号查询授信额度
      * 
      * @param anCustNo
