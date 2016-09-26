@@ -97,14 +97,14 @@ public interface IScfRepaymentService {
      * @param anPayDate 还款日期
      * @return
      */
-    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo, String anPayDate);
+    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo, String anPayDate, BigDecimal totalBalance);
 
     /**
      * 经销商还款 -计算利息 -填入(本次还款额) 时  调用
      * @param anMap
      * @return
      */
-    String webQuerySellerRepaymentFee(Map<String, Object> anMap);
+    String webQuerySellerRepaymentFee(String anRequestNo, String anPayType, String anPayDate, BigDecimal anTotalBalance);
 
     /**
      * 计算还款方式-还款时，在选择还款日期后调用，用于填充还款方式
@@ -239,4 +239,5 @@ public interface IScfRepaymentService {
     String webSaveModifyPressMoney(Map<String, Object> anMap, Long id);
 
     String webSaveDelPressMoney(Map<String, Object> map, Long id);
+
 }
