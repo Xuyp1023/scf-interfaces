@@ -73,30 +73,7 @@ public interface IScfRequestService {
     String webApproveRequest(String anRequestNo, String anApprovalResult, String anReturnNode, String anDescription);
 
     /**
-     * 融资企业-确认融资方案
-     * @param anRequestNo
-     * @param anBusinStatus
-     * @return
-     */
-    String webConfirmScheme(String anRequestNo, String anBusinStatus, String smsCode);
-
-    /**
-     * 资方--签约-发起贸易背景确认-发送债权转让通知书
-     * @param anRequestNo
-     * @return
-     */
-    String webRequestTradingBackgrand(String anRequestNo, String anAduitStatus, String anReturnNode, String anDescription);
-
-    /**
-     * 核心企业确认债权转上，签订转让协议
-     * @param anRequestNo
-     * @param anAduit
-     * @return
-     */
-    String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus, String smsCode);
-
-    /**
-     * 出具贷款方案
+     * 资方-出具融资方案（供应商融资：生成《 应收账款转让通知书》，经销商融资：生成《三方协议》供下一步  融资企业 确认融资资方    使用）
      * @param anMap
      * @param anApprovalResult 审批结果
      * @param anReturnNode     打回节点
@@ -104,9 +81,33 @@ public interface IScfRequestService {
      * @return
      */
     String webOfferScheme(Map<String, Object> anMap, String anApprovalResult, String anReturnNode, String anDescription);
+    
+    /**
+     * 融资企业-确认融资方案（供应商融资 ：签署应收账款转让通知书。销商融资：签署《保兑仓业务三方合作协议》）
+     * @param anRequestNo
+     * @param anBusinStatus
+     * @return
+     */
+    String webConfirmScheme(String anRequestNo, String anBusinStatus, String anSmsCode);
 
     /**
-     * 保理公司-放款确认
+     * 资方--发起贸易背景确认（供应商融资：生成《应收账款转让通知书》 供下一步（核心企业确认融资背景）使用。销商融资：资方签署《保兑仓业务三方合作协议》）
+     * @param anRequestNo
+     * @return
+     */
+    String webRequestTradingBackgrand(String anRequestNo, String anAduitStatus, String anReturnNode, String anDescription, String anSmsCode);
+
+    /**
+     * 核心企业确认贸易背景，（供应商融资：签署《 应收账款转让确认意见书》，经销商融资：签署《保兑仓业务三方合作协议》）
+     * @param anRequestNo
+     * @param anAduit
+     * @return
+     */
+    String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus, String anSmsCode);
+
+
+    /**
+     * 保理公司-放款确认（生成还款计划）
      * @param anMap
      * @param anApprovalResult 审批结果
      * @param anReturnNode     打回节点
