@@ -3,6 +3,7 @@ package com.betterjr.modules.agreement;
 import java.util.List;
 import java.util.Map;
 
+import com.betterjr.modules.agreement.entity.ScfElecAgreement;
 import com.betterjr.modules.document.entity.CustFileItem;
 /****
  * 电子合同管理
@@ -120,6 +121,7 @@ public interface IScfElecAgreementService {
     public String webDelOtherFile(Long anOtherFileId);
     
 
+
     /***
      * 根据请求单号和合同类型获取验证码
      * @param anRequestNo
@@ -136,4 +138,48 @@ public interface IScfElecAgreementService {
      * @return
      */
     public String webSendValidCodeByRequestNo(String anAppNo, String anAgreeType, String anVcode);
+
+    /**
+     * 根据订单号，查询需要签署的文件
+     * 
+     * @param anAppNo
+     * @return
+     */
+    public List<Long> findBatchNo(String anAppNo);
+    
+    /**
+     * 获得签名的文件信息
+     * 
+     * @param anAppNo
+     * @return
+     */
+    public List<Long> findSignedBatchNo(String anRequestNo);
+    
+    /**
+     * 更新电子合同的状态
+     * 
+     * @param anAppNo
+     * @param anStatus
+     */
+    public void saveElecAgreementStatus(String anAppNo, String anStatus);
+    
+    /**
+     * 根据主键找到电子合同协议信息
+     * 
+     * @param anAppNo
+     * @return
+     */
+    public ScfElecAgreement findOneElecAgreement(String anAppNo);
+    
+    /**
+     * 更新已经签署的电子文件信息
+     * 
+     * @param anAppNo
+     *            签署的电子文件订单号信息
+     * @param anFileItem
+     *            文件信息
+     * @return
+     */
+    public boolean saveSignedFile(String anAppNo, CustFileItem anFileItem);
+
 }

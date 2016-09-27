@@ -1,6 +1,7 @@
 package com.betterjr.modules.loan;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 
@@ -177,6 +178,18 @@ public interface IScfRequestService {
     String webQueryTradeStatus();
 
     String webFindPayPlan(Long anId);
+    
+    
+    public List<Long> findVoucherBatchNo(String anRequest);
+    /**
+     * 发送申请单状态给保理公司
+     * 
+     * @param anRequestNo
+     *            申请单编号
+     * @param anStatus
+     *            申请单状态
+     */
+    public void updateAndSendRequestStatus(String anRequestNo, String anStatus) ;
 
     /**
      * 查询供应商融资
