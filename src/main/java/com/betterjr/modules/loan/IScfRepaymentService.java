@@ -240,4 +240,12 @@ public interface IScfRepaymentService {
 
     String webSaveDelPressMoney(Map<String, Object> map, Long id);
 
+    /**
+     * 还款提醒发送消息发送
+     * @param anMap
+     * @param requestNo
+     * @return
+     */
+    String webNotifyPay(Map<String, Object> anMap, String requestNo);
+
 }
