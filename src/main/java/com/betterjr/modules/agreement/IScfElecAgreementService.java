@@ -181,5 +181,38 @@ public interface IScfElecAgreementService {
      * @return
      */
     public boolean saveSignedFile(String anAppNo, CustFileItem anFileItem);
+    
+    /***
+     * 添加保理合同
+     * @param anElecAgreement
+     * @param anFileList
+     * @return
+     */
+    public String webAddFactorAgreement(Map anMap,String anFileList);
 
+    /***
+     * 分页查询保理合同
+     * @param anParam
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    public String webQueryFactorAgreement(Map<String, Object> anParam, int anPageNum, int anPageSize);
+    
+    /***
+     * 查询保理合同关联下拉列表
+     * @param anCustNo 客户号 
+     * @param anFactorNo 保理公司编号
+     * @param anCoreCustNo 核心企业编号
+     * @param anAgreeType 合同类型
+     * @return
+     */
+    public String webFindFactorAgreement(Long anCustNo,Long anFactorNo,String anAgreeType);
+    
+    /***
+     * 作废合同
+     * @param anAppNo
+     * @return
+     */
+    public String updateFactorAgree(String anAppNo,String anStatus);
 }
