@@ -74,6 +74,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
      */
     @Column(name = "D_SIGN_DATE",  columnDefinition="VARCHAR" )
     @MetaData( value="合同正式签署时间", comments = "合同正式签署时间")
+    @OrderBy("DESC")
     private String signDate;
 
     /**
@@ -115,7 +116,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
      * 电子合同类型，0：应收账款债权转让通知书，1：买方确认意见
      */
     @Column(name = "C_AGREETYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="电子合同类型", comments = "电子合同类型，0：应收账款债权转让通知书，1：买方确认意见")
+    @MetaData( value="电子合同类型", comments = "电子合同类型，0：应收账款债权转让通知书，1：买方确认意见,2三方协议书，3保理合同")
     private String agreeType;
 
     /**
@@ -491,5 +492,14 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         this.batchNo = 0L;
         this.signBatchNo = 0L;
         this.dealFlag ="0";
+    }
+    
+    public void initDefValue(String anSupplier){
+        this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
+        this.regDate = BetterDateUtils.getNumDate();
+        this.modiDate = this.regDate;
+        this.signStatus = "1";
+        this.dealFlag ="1";
+        this.supplier=anSupplier;
     }
 }
