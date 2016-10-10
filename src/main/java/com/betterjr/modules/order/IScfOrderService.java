@@ -37,4 +37,9 @@ public interface IScfOrderService {
      * 根据融资编号查询基本信息的所有附件
      */
     public String webFindRequestBaseInfoFileList(String anRequestNo);
+
+    /**
+     * 根据Id查看订单详情
+     */
+    public String webFindOrderDetailsById(Long anId);
 }

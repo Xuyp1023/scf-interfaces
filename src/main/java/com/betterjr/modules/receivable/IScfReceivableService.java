@@ -19,4 +19,9 @@ public interface IScfReceivableService {
      */
     public String webFindReceivableList(String anCustNo, String anIsOnlyNormal);
 
+    /**
+     * 应收账款详情查询
+     */
+    public String webFindReceivableDetailsById(Long anId);
+
 }
