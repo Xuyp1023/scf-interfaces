@@ -154,6 +154,35 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
     @Column(name = "C_DESCRIBE", columnDefinition = "VARCHAR")
     @MetaData(value = "拒绝原因", comments = "拒绝原因")
     private String des;
+    
+    /**
+     * 法定代表人
+     */
+    @Column(name = "C_LAWNAME", columnDefinition = "VARCHAR")
+    @MetaData(value = "法定代表人", comments = "法定代表人")
+    private String resrepentName;
+    
+    /**
+     * 法定地址
+     */
+    @Column(name = "C_DELIVERYADDR", columnDefinition = "VARCHAR")
+    @MetaData(value = "法定地址", comments = "法定地址")
+    private String resrepentAddr;
+    
+    /**
+     * 合同开始时间
+     */
+    @Column(name = "C_BEGINDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "合同开始时间", comments = "合同开始时间")
+    private String agreeStartDate;
+
+    /**
+     * 合同结束时间
+     */
+    @Column(name = "C_ENDDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "合同结束时间", comments = "合同结束时间")
+    private String agreeEndDate;
+    
  
     private static final long serialVersionUID = 1461746080033L;
 
@@ -328,6 +357,38 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
 
     public void setDes(String anDescribe) {
         this.des= anDescribe;
+    }
+
+    public String getResrepentName() {
+        return this.resrepentName;
+    }
+
+    public void setResrepentName(String anResrepentName) {
+        this.resrepentName = anResrepentName;
+    }
+
+    public String getResrepentAddr() {
+        return this.resrepentAddr;
+    }
+
+    public void setResrepentAddr(String anResrepentAddr) {
+        this.resrepentAddr = anResrepentAddr;
+    }
+
+    public String getAgreeStartDate() {
+        return this.agreeStartDate;
+    }
+
+    public void setAgreeStartDate(String anAgreeStartDate) {
+        this.agreeStartDate = anAgreeStartDate;
+    }
+
+    public String getAgreeEndDate() {
+        return this.agreeEndDate;
+    }
+
+    public void setAgreeEndDate(String anAgreeEndDate) {
+        this.agreeEndDate = anAgreeEndDate;
     }
 
     @Override
