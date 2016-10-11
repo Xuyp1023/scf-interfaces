@@ -22,4 +22,9 @@ public interface IScfInvoiceService {
      * 发票详情录入
      */
     public String webAddInvoiceItem(Map<String, Object> anMap);
+
+    /**
+     * 发票信息删除
+     */
+    public String webSaveDeleteInvoice(Long anId);
 }
