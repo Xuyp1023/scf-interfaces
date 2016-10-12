@@ -66,24 +66,6 @@ public interface IScfElecAgreementService {
      */
     public void webAddElecAgreementInfo(Map<String, Object> anMap, List<Long> anCustNoList);
     
-    /***
-     * 转让通知书
-     * @param anRequestNo 申请单号
-     * @param anFactorRequestNo 保理商单号
-     * @return
-     */
-    public boolean webTransNotice(Map<String, Object> anMap);
-    
-    /***
-     * 确认意见书
-     * @param anRequestNo 申请单号
-     * @param anFactorRequestNo 保理商单号
-     * @return
-     */
-    public boolean webTransOpinion(Map<String, Object> anMap);
-    
-    public boolean webTransProtacal(Map<String, Object> anMap);
-    
     /****
      * 根据申请单号，类型查询合同
      * @param anRequestNo
@@ -91,6 +73,13 @@ public interface IScfElecAgreementService {
      * @return
      */
     public String webFindElecAgreeByOrderNo(String anRequestNo, String anSignType);
+    
+    /***
+     * 查询参数
+     * @param anParam
+     * @return
+     */
+    public String webFindParamPath(String anParam);
     
     /***
      * 查找pdf文件
