@@ -95,16 +95,14 @@ public interface IScfCreditService {
      * 授信额度占用,供融资放款业务调用
      * 
      * @param anOccupyCredit
-     * @return 1:成功;-1:失败;
      */
-    public int saveOccupyCredit(ScfCreditInfo anOccupyCredit);
+    public void saveOccupyCredit(ScfCreditInfo anOccupyCredit);
 
     /**
      * 授信额度释放,供融资还款业务调用,一次性授信不释放额度
      * 
      * @param anOccupyCredit
-     * @return 1:成功;-1:失败;
      */
-    public int saveReleaseCredit(ScfCreditInfo anOccupyCredit);
+    public void saveReleaseCredit(ScfCreditInfo anOccupyCredit);
 
 }
