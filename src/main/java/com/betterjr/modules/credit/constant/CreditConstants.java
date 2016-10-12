@@ -59,5 +59,17 @@ public interface CreditConstants {
      * 授信变动状态:1-冻结中;
      */
     String CREDIT_CHANGE_STATUS_FREEZE = "1";
+    /**
+     * 业务类型:1-应收账款融资;
+     */
+    String CREDIT_BUSIN_STATUS_ARF = "1";
+    /**
+     * 业务类型:2-应收账款票据质押融资;
+     */
+    String CREDIT_BUSIN_STATUS_ARBPF = "2";
+    /**
+     * 业务类型:3-预付款融资;
+     */
+    String CREDIT_BUSIN_STATUS_APF = "3";
 
 }
