@@ -25,6 +25,24 @@ public interface IScfProductService {
     public String webQueryProductKeyAndValue(Long anCoreCustNo, Long anFactorNo);
 
     /**
+     * 查询融资产品信息
+     * 
+     * @param anCoreCustNo
+     * @param anFactorNo
+     * @param anProductCode
+     * @return
+     */
+    public String webFindProductByCode(Long anCoreCustNo, Long anFactorNo, String anProductCode);
+
+    /**
+     * 查询融资产品信息
+     * 
+     * @param anProductId:产品Id
+     * @return
+     */
+    public String webFindProductById(Long anProductId);
+
+    /**
      * 融资产品录入
      * 
      * @param anMap
