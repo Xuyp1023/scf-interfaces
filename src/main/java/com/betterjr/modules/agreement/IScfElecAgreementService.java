@@ -178,6 +178,15 @@ public interface IScfElecAgreementService {
      * @return
      */
     public String webAddFactorAgreement(Map anMap,String anFileList);
+    
+    /***
+     * 修改保理合同
+     * @param anMap
+     * @param anAppNo 应用号
+     * @param anFileList 文件列表
+     * @return
+     */
+    public String webUpdateFactorAgreement(Map anMap,String anAppNo,String anFileList);
 
     /***
      * 分页查询保理合同
