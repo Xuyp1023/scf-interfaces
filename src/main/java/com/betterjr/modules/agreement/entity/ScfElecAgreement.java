@@ -559,8 +559,20 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
         this.regDate = BetterDateUtils.getNumDate();
         this.modiDate = this.regDate;
-        this.signStatus = "1";
+        this.signStatus = "0";
         this.dealFlag ="1";
         this.supplier=anSupplier;
+    }
+    
+    public void modifyAgreement(ScfElecAgreement elecAgreement){
+        this.appNo=elecAgreement.getAppNo();
+        this.batchNo=elecAgreement.getBatchNo();
+        this.factorNo=elecAgreement.getFactorNo();
+        this.signStatus=elecAgreement.getSignStatus();
+        this.regDate=elecAgreement.getRegDate();
+        this.agreeType=elecAgreement.getAgreeType();
+        this.signDate=elecAgreement.getSignDate();
+        this.dealFlag=elecAgreement.getDealFlag();
+        this.modiDate = BetterDateUtils.getNumDate();
     }
 }
