@@ -24,4 +24,9 @@ public interface IScfReceivableService {
      */
     public String webFindReceivableDetailsById(Long anId);
 
+    /**
+     * 应收账款新增
+     */
+    public String webAddReceivable(Map<String, Object> anMap, String anFileList, String anOtherFileList);
+
 }
