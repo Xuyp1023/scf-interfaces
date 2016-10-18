@@ -139,7 +139,7 @@ public interface IScfRequestService {
      * @param loanBalance
      * @return
      */
-    String webGetInsterest(String anRequestNo, BigDecimal loanBalance);
+    String webGetInsterest(String anRequestNo, BigDecimal loanBalance, String anLoanDate, String endDate);
 
     /**
      * 查询待批融资
@@ -200,6 +200,7 @@ public interface IScfRequestService {
      * 查询经销商融资
      */
     public String webQuerySellerRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
+
     
   
 }

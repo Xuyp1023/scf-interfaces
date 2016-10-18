@@ -248,4 +248,14 @@ public interface IScfRepaymentService {
      */
     String webNotifyPay(Map<String, Object> anMap, String requestNo);
 
+    /**
+     * 分配还款
+     * @param anRequestNo
+     * @param anPayType
+     * @param anPayDate
+     * @param anTotalBalance
+     * @return
+     */
+    String webQueryDistributeFee(String anRequestNo, String anPayType, String anPayDate, BigDecimal anTotalBalance);
+
 }
