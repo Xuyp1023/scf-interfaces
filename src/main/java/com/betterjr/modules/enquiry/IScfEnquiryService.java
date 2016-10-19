@@ -95,7 +95,7 @@ public interface IScfEnquiryService {
      * @param anPageSize
      * @return
      */
-    String webQueryOfferByFactor(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+    String webQueryOfferByBill(String enquriyNo);
     
     /**
      * 票据版查询
@@ -105,7 +105,7 @@ public interface IScfEnquiryService {
      * @param anPageSize
      * @return
      */
-    String webQuerySingleOrderEnquiryList(Long custNo, int anFlag, int anPageNum, int anPageSize);
+    String webQuerySingleOrderEnquiryList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
     /**
      *  票据版查询
      * @param anId 询价id
@@ -127,5 +127,13 @@ public interface IScfEnquiryService {
      * @return
      */
     String webCustDropEnquiry(Long enquiryId, String dropReason, String description);
+
+    /**
+     * 无分页查查某个询价的报价列表
+     * @param map
+     * @param enquiryNo
+     * @return
+     */
+    public String webFindOfferList(String enquiryNo);
 
 }
