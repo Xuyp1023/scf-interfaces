@@ -29,4 +29,6 @@ public interface IScfReceivableService {
      */
     public String webAddReceivable(Map<String, Object> anMap, String anFileList, String anOtherFileList);
 
+    public String webSaveAduitReceivable(Long anId);
+
 }
