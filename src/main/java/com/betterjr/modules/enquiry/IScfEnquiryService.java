@@ -88,14 +88,14 @@ public interface IScfEnquiryService {
     String webFactorDropOffer(String anEnquiryNo, Long anFactorNo);
     
     /**
-     * 查看有哪些公司报了价
+     * 查看向只定公司发出询价的报价情况
      * @param anMap
      * @param anFlag
      * @param anPageNum
      * @param anPageSize
      * @return
      */
-    String webQueryOfferByBill(String enquriyNo);
+    String webQueryOfferByEnquiryObject(String enquriyNo);
     
     /**
      * 票据版查询
@@ -111,7 +111,7 @@ public interface IScfEnquiryService {
      * @param anId 询价id
      * @return
      */
-    String webFindSingleOrderEnquiryDetail(Long anId);
+    String webFindSingleOrderEnquiryDetail(String enquriyNo);
 
     /**
      * 询价企业放弃 某个保理公司的报价
