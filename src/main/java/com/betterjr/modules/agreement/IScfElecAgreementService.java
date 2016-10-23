@@ -172,6 +172,13 @@ public interface IScfElecAgreementService {
     public boolean saveSignedFile(String anAppNo, CustFileItem anFileItem);
     
     /***
+     * 查找详情
+     * @param anAppNo
+     * @return
+     */
+    public String webFindElecAgreementInfo(String anAppNo);
+    
+    /***
      * 添加保理合同
      * @param anElecAgreement
      * @param anFileList
