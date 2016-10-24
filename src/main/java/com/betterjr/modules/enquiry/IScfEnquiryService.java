@@ -136,4 +136,8 @@ public interface IScfEnquiryService {
      */
     public String webFindOfferList(String enquiryNo);
 
+    public String webSearchOfferList(Map<String, Object> map);
+
+    public String webQueryEnquiryObject(String enquiryNo, Long factorNo);
+
 }
