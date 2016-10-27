@@ -36,6 +36,13 @@ public interface IScfProductService {
     public String webQueryProductKeyAndValue(Long anCoreCustNo, Long anFactorNo);
 
     /**
+     * 微信端客户(供应商或经销商)查询保理产品
+     * 
+     * @return
+     */
+    public String webQueryProductKeyAndValue();
+
+    /**
      * 查询融资产品信息
      * 
      * @param anCoreCustNo
