@@ -42,4 +42,10 @@ public interface IScfOrderService {
      * 根据Id查看订单详情
      */
     public String webFindOrderDetailsById(Long anId);
+
+    /**
+     * 检查业务所需信息是否完成--贸易合同、发票
+     * 1:订单，2:票据;3:应收款;
+     */
+    public String webCheckInfoCompleted(String anIdList, String anRequestType);
 }
