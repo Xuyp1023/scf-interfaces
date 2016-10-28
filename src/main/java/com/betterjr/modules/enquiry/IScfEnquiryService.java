@@ -113,20 +113,13 @@ public interface IScfEnquiryService {
      */
     String webFindSingleOrderEnquiryDetail(String enquriyNo);
 
-    /**
-     * 询价企业放弃 某个保理公司的报价
-     * @param anEnquiryNo
-     * @param anFactorNo
-     * @return
-     */
-    String webCustDropOffer(String anEnquiryNo, Long anFactorNo);
 
     /**
      * 询价企业放询价
      * @param map
      * @return
      */
-    String webCustDropEnquiry(Long enquiryId, String dropReason, String description);
+    String webCustDropOffer(Long enquiryNo, Long offerId, String dropReason, String description);
 
     /**
      * 无分页查查某个询价的报价列表
