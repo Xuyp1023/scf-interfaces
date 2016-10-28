@@ -133,4 +133,6 @@ public interface IScfEnquiryService {
 
     public String webQueryEnquiryObject(String enquiryNo, Long factorNo);
 
+    void sentOfferMsg(Long offerId);
+
 }
