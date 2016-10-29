@@ -48,4 +48,10 @@ public interface IScfOrderService {
      * 1:订单，2:票据;3:应收款;
      */
     public String webCheckInfoCompleted(String anIdList, String anRequestType);
+
+    
+    /**
+     * 查出贸易合同不为1,未启用的贸易合同名称
+     */
+    public String webCheckAgreementStatus(Long anAcceptBillId);
 }
