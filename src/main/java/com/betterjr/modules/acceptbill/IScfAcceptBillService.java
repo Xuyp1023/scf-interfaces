@@ -22,6 +22,6 @@ public interface IScfAcceptBillService {
 
     public String webSaveSingleFileLink(Long anId, Long anFileId);
 
-    String webfindAcceptBillList(String anCustNo);
+    String webfindAcceptBillList(String anCustNo); 
     
 }
