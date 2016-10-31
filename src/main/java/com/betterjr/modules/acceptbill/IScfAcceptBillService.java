@@ -13,7 +13,7 @@ public interface IScfAcceptBillService {
     public String webAddAcceptBill(Map<String, Object> anMap, String anFileList, String anOtherFileList);
 
     public String webSaveAduitAcceptBill(Long anId);
-    
+
     public String webFindAllFile(Long anId);
 
     public String webQueryFinancedByFactor(Map<String, Object> anMap, Long anFactorNo);
@@ -22,6 +22,8 @@ public interface IScfAcceptBillService {
 
     public String webSaveSingleFileLink(Long anId, Long anFileId);
 
-    String webfindAcceptBillList(String anCustNo); 
-    
+    public String webfindAcceptBillList(String anCustNo);
+
+    public String findAcceptBillStatusById(Long anBillId);
+
 }
