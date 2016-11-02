@@ -22,7 +22,7 @@ public interface IScfAcceptBillService {
 
     public String webSaveSingleFileLink(Long anId, Long anFileId);
 
-    public String webfindAcceptBillList(String anCustNo);
+    public String webFindAcceptBillListByCustNo(String anCustNo);
 
     public String findAcceptBillStatusById(Long anBillId);
 
