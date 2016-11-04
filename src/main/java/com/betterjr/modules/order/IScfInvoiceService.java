@@ -27,4 +27,9 @@ public interface IScfInvoiceService {
      * 发票信息删除
      */
     public String webSaveDeleteInvoice(Long anId);
+    
+    /**
+     * 查询出具保理方案下的发票,用于完善资料
+     */
+    public String webQueryIncompletedInvoice(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 }
