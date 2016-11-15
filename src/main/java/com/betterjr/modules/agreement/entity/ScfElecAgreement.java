@@ -74,7 +74,6 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
      */
     @Column(name = "D_SIGN_DATE",  columnDefinition="VARCHAR" )
     @MetaData( value="合同正式签署时间", comments = "合同正式签署时间")
-    @OrderBy("DESC")
     private String signDate;
 
     /**
@@ -96,6 +95,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
      */
     @Column(name = "D_REGDATE",  columnDefinition="VARCHAR" )
     @MetaData( value="登记日期", comments = "登记日期")
+    @OrderBy("DESC")
     private String regDate;
 
     /**
