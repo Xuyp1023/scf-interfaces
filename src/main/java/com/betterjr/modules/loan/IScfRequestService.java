@@ -197,9 +197,16 @@ public interface IScfRequestService {
     public String webQuerySupplierRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
 
     /**
-     * 查询经销商融资
+     * 查询融资列表
      */
-    public String webQuerySellerRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
+	String webCustQueryRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+
+	/**
+	 * 放款
+	 * @param anMap
+	 * @return
+	 */
+	String webLoan(Map<String, Object> anMap);
 
     
   
