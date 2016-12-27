@@ -8,7 +8,6 @@ import java.util.Map;
  *
  */
 public interface IScfSupplyApprovalService {
-
 	/**
 	 * 融资申请
 	 * @param anContext
