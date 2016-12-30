@@ -56,4 +56,6 @@ public interface IScfSupplyApprovalService {
 	 */
 	void endFlow(Map<String, Object> anContext, int resultType);
 
+	void releaseSource(String anRequestNo);
+
 }
