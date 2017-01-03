@@ -57,4 +57,10 @@ public interface IScfSellerApprovalService {
 	 */
 	void endFlow(Map<String, Object> anContext, int resultType);
 
+	/**
+	 * 融资失败时-回滚所有融资数据
+	 * @param anRequestNo
+	 */
+	void releaseSource(String anRequestNo);
+
 }
