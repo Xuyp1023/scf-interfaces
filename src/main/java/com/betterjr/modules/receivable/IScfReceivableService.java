@@ -17,7 +17,7 @@ public interface IScfReceivableService {
     /**
      * 应收账款信息无分页查询
      */
-    public String webFindReceivableList(String anCustNo, String anIsOnlyNormal);
+    public String webFindReceivableList(Map<String, Object> anMap, String anIsOnlyNormal);
 
     /**
      * 应收账款详情查询

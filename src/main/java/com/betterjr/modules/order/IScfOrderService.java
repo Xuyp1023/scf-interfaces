@@ -16,7 +16,7 @@ public interface IScfOrderService {
     /**
      * 订单信息无分页查询
      */
-    public String webFindOrderList(String anCustNo, String anIsOnlyNormal);
+    public String webFindOrderList(Map<String, Object> anMap, String anIsOnlyNormal);
 
     /**
      * 通过融资申请查询相关信息
