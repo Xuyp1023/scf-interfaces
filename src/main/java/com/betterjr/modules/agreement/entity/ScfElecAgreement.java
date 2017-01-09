@@ -187,7 +187,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
     private static final long serialVersionUID = 1461746080033L;
 
     @Transient
-    private List<Map> signerlist;
+    private List<Map> signerList;
     
     public String getAppNo() {
         return appNo;
@@ -313,13 +313,12 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         this.balance = anBalance;
     }
  
-
-    public List<Map> getSignerlist() {
-        return this.signerlist;
+    public List<Map> getSignerList() {
+        return this.signerList;
     }
 
-    public void setSignerlist(List<Map> anSignerlist) {
-        this.signerlist = anSignerlist;
+    public void setSignerList(List<Map> anSignerList) {
+        this.signerList = anSignerList;
     }
 
     public String getSignId() {
@@ -412,7 +411,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         sb.append(", agreeType=").append(agreeType);
         sb.append(", balance=").append(balance);
         sb.append(", signId=").append(signId);
-        sb.append(", signerlist=").append(signerlist);
+        sb.append(", signerlist=").append(signerList);
         sb.append(", dealFlag=").append(dealFlag);
         sb.append(", supplier=").append(supplier);
         sb.append(", describe=").append(des);
