@@ -105,4 +105,23 @@ public interface IScfCreditService {
      */
     public void saveReleaseCredit(ScfCreditInfo anOccupyCredit);
 
+    /**
+     * 查询授信列表
+     * @param anCustNo
+     * @param anCoreCustNo
+     * @param anFactorNo
+     * @return
+     */
+	String webFindCreditList(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
+
+	/**
+	 * 查询授信列表(带金额)
+	 * @param anCustNo
+	 * @param anCoreCustNo
+	 * @param anFactorNo
+	 * @param anCreditMode
+	 * @return
+	 */
+	String webFindCreditSimpleData(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
+
 }

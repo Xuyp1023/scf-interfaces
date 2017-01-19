@@ -54,4 +54,6 @@ public interface IScfOrderService {
      * 查出贸易合同不为1,未启用的贸易合同名称
      */
     public String webCheckAgreementStatus(Long anAcceptBillId);
+
+	String webFindSubjectMaster(String anId, String anType);
 }
