@@ -56,4 +56,12 @@ public interface IScfOrderService {
     public String webCheckAgreementStatus(Long anAcceptBillId);
 
 	String webFindSubjectMaster(String anId, String anType);
+
+	/**
+	 * 根据资料id和资料类型查询融资实体
+	 * @param anInfoId
+	 * @param anInfoType
+	 * @return
+	 */
+	String webFindRequestByInfoId(Long anInfoId, String anInfoType);
 }
