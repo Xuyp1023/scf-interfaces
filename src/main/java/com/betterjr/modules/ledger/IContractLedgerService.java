@@ -55,4 +55,48 @@ public interface IContractLedgerService {
      */
     public String webFindContractLedgerRecode(Long anContractId);
     
+    /***
+     * 微信端添加合同台账信息
+     * @param anMap
+     * @return
+     */
+    public String webWechatAddContractLedger(Map<String, Object> anMap);
+    
+    /***
+     * 保存合同台账附件
+     * @param id 合同台账id
+     * @param fileTypeName 文件类型名称
+     * @param fileMediaId  文件
+     * @return
+     */
+    public String webSaveContractLedgerFile(Long anId,String anFileTypeName,String anFileMediaId);
+    
+    /***
+     * 修改微信端合同台账
+     * @param anMap
+     * @return
+     */
+    public String webWechatSaveContractLedger(Map<String, Object> anMap);
+    
+    /***
+     * 根据合同编号查询合同附件信息
+     * @param anContractId
+     * @return
+     */
+    public String webFindFileByContractId(Long anContractId);
+    
+    /***
+     * 删除合同台账
+     * @param anContractId
+     * @return
+     */
+    public String webDeleteContractById(Long anContractId);
+    
+    /***
+     * 删除合同附件
+     * @param anContractId
+     * @return
+     */
+    public String webDeleteContractFile(Long anContractId);
+    
 }
