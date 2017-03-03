@@ -56,4 +56,11 @@ public interface IScfCustAgreementService {
      * @param anType
      */
     public void webSaveCustAgreementStatus(Long anAgreeId, int anType);
+    
+    /***
+     * 删除合同信息
+     * @param anAgreeId
+     * @return
+     */
+    public String webDeleteContractAgree(Long anAgreeId);
 }
