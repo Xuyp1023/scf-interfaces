@@ -64,4 +64,12 @@ public interface IScfOrderService {
 	 * @return
 	 */
 	String webFindRequestByInfoId(Long anInfoId, String anInfoType);
+
+	/**
+	 * 根据标的物查询核心企业编号
+	 * @param anId
+	 * @param anType
+	 * @return
+	 */
+	String webFindCoreCustNo(String anId, String anType);
 }
