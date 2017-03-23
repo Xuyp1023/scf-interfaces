@@ -25,5 +25,14 @@ public interface IScfAcceptBillService {
     public String webFindAcceptBillListByCustNo(String anCustNo);
 
     public String findAcceptBillStatusById(Long anBillId);
+    
+    /***
+     * 保存票据附件
+     * @param id 票据id
+     * @param fileTypeName 文件类型名称
+     * @param fileMediaId  文件
+     * @return
+     */
+    public String webSaveBillFile(Long anBillId,String anFileTypeName,String anFileMediaId);
 
 }
