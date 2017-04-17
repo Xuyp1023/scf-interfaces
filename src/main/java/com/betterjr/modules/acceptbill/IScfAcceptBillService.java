@@ -11,6 +11,8 @@ public interface IScfAcceptBillService {
     public String webFindAcceptBillList(Map<String, Object> anMap, String anIsOnlyNormal);
 
     public String webAddAcceptBill(Map<String, Object> anMap, String anFileList, String anOtherFileList);
+    
+    public String webAddAcceptBillDO(Map<String, Object> anMap, String anFileList,boolean confirmFlag);
 
     public String webSaveAduitAcceptBill(Long anId);
 
