@@ -9,9 +9,29 @@ public interface IScfOrderService {
     public String webSaveModifyOrder(Map<String, Object> anMap, Long anId, String anFileList, String anOtherFileList);
     
     /**
+     * 订单V3信息编辑
+     */
+    public String webSaveModifyOrderDO(Map<String, Object> anMap, String anFileList, boolean confirmFlag);
+    
+    /**
      * 订单信息分页查询
      */
     public String webQueryOrder(Map<String, Object> anMap,String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+  
+    /**
+     * 订单信息分页查询
+     */
+    public String webQueryOrderDO (Map<String, Object> anMap,String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 订单未生效信息分页查询
+     */
+    public String webQueryIneffectiveOrderDO (Map<String, Object> anMap,String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,boolean anIsAudit);
+    
+    /**
+     * 订单已生效信息分页查询
+     */
+    public String webQueryEffectiveOrderDO (Map<String, Object> anMap,String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,boolean anIsCust);
 
     /**
      * 订单信息无分页查询
@@ -27,6 +47,11 @@ public interface IScfOrderService {
      * 新增订单信息
      */
     public String webAddOrder(Map<String, Object> anMap, String anFileList, String anOtherFileList);
+    
+    /**
+     * 新增订单V3信息
+     */
+    public String webAddOrderDO(Map<String, Object> anMap, String anFileList,boolean confirmFlag);
     
     /**
      * 检查订单下发票所关联订单是否勾选完成
