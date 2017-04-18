@@ -97,4 +97,10 @@ public interface IScfOrderService {
 	 * @return
 	 */
 	String webFindCoreCustNo(String anId, String anType);
+
+    public String webQueryCanAnnulOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+
+    public String webSaveAnnulOrder(String anRefNo, String anVersion);
+
+    public String webSaveAuditOrderByRefNoVersion(String anRefNo, String anVersion);
 }

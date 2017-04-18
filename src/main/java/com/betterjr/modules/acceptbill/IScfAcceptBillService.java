@@ -41,8 +41,18 @@ public interface IScfAcceptBillService {
 
     public String webSaveAnnulAcceptBill(String anRefNo, String anVersion);
     
+    public String webSaveCoreCustAnnulBill(String anRefNo, String anVersion);
+    
     public String webFindAcceptBillDOByRefNoVersion(String anRefNo, String anVersion);
 
     public String webSaveAuditBillDOByRefNoVersion(String anRefNo, String anVersion);
+
+    public String webQueryIneffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsAudit);
+
+    public String webQueryEffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsCust);
+
+    public String webQueryCanAnnulAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
 
 }
