@@ -103,4 +103,12 @@ public interface IScfOrderService {
     public String webSaveAnnulOrder(String anRefNo, String anVersion);
 
     public String webSaveAuditOrderByRefNoVersion(String anRefNo, String anVersion);
+
+    public String webQueryIneffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsAudit);
+
+    public String webQueryEffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsCust);
+
+    public String webfindOrderDetail(String anRefNo, String anVersion);
 }

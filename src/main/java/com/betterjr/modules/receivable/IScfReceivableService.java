@@ -31,4 +31,18 @@ public interface IScfReceivableService {
 
     public String webSaveAduitReceivable(Long anId);
 
+    public String webAddReceivableDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag);
+
+    public String webSaveModifyReceivableDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag);
+
+    public String webSaveAnnulReceivable(String anRefNo, String anVersion);
+
+    public String webSaveAuditReceivableByRefNoVersion(String anRefNo, String anVersion);
+
+    public String webFindReceivableByRefNoVersion(String anRefNo, String anVersion);
+
+    public String webQueryIneffectiveReceivable(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize, boolean anIsAudit);
+
+    public String webQueryEffectiveReceivable(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize, boolean anIsCust);
+
 }
