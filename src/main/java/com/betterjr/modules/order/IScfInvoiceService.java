@@ -1,6 +1,9 @@
 package com.betterjr.modules.order;
 
+import java.util.List;
 import java.util.Map;
+
+import com.betterjr.modules.order.entity.ScfInvoiceDOItem;
 
 public interface IScfInvoiceService {
     /**
@@ -33,9 +36,9 @@ public interface IScfInvoiceService {
      */
     public String webQueryIncompletedInvoice(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 
-    public String webAddInvoiceDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag);
+    public String webAddInvoiceDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag, List<ScfInvoiceDOItem> anInvoiceItemList);
 
-    public String webSaveModifyInvoiceDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag);
+    public String webSaveModifyInvoiceDO(Map<String, Object> anAnMap, String anFileList, boolean anConfirmFlag, List<ScfInvoiceDOItem> anList);
 
     public String webSaveAnnulInvoice(String anRefNo, String anVersion);
 
