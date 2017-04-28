@@ -74,5 +74,22 @@ public interface IScfProductConfigService {
 
 	String webQueryAssetDict(Long factorNo, int anFlag, int anPageNum, int anPageSize);
 
+	String webDelProductConfig(Long id);
+
+	/**
+	 * 
+	 * @param coreCustNo
+	 * @param anFactorNo
+	 * @return
+	 */
+	String webQueryProductKeyAndValue(Long coreCustNo, Long anFactorNo);
+
+	/**
+	 * 查询该产品关联的核心企业列表
+	 * @param anProductCode
+	 * @return
+	 */
+	String webFindCoreByProductList(String anProductCode);
+
 }
 
