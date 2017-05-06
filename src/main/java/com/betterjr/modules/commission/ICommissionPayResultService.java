@@ -101,7 +101,7 @@ public interface ICommissionPayResultService {
      * @param anPayResultRecords
      * @return
      */
-    String webConfirmSuccessPayResultRecords(Long anPayResultId, Long[] anPayResultRecords);
+    String webConfirmSuccessPayResultRecords(Long anPayResultId, String anPayResultRecords);
 
     /**
      *
@@ -109,7 +109,7 @@ public interface ICommissionPayResultService {
      * @param anPayResultRecords
      * @return
      */
-    String webConfirmFailurePayResultRecords(Long anPayResultId, Long[] anPayResultRecords);
+    String webConfirmFailurePayResultRecords(Long anPayResultId, String anPayResultRecords);
 
     /**
      *
