@@ -16,4 +16,6 @@ public interface IDeliveryService {
 
     String webSaveConfirmDelivery(String anRefNo);
 
+    String webQueryMonthlyRecordList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize);
+
 }
