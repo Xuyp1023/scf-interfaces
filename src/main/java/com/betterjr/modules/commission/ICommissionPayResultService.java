@@ -7,6 +7,8 @@
 // ============================================================================
 package com.betterjr.modules.commission;
 
+import java.util.Map;
+
 /**
  * @author liuwl
  *
@@ -19,7 +21,14 @@ public interface ICommissionPayResultService {
      * @param anCustNo
      * @return
      */
-    String webCreatePayResult(String anImportDate, String anPayDate, Long anCustNo);
+    String webCreatePayResult(Map<String, Object> anParam);
+
+    /**
+     *
+     * @param anPayResultId
+     * @return
+     */
+    String webCountPayResultRecord(Long anPayResultId);
 
     /**
      * 查询已导入数据
@@ -30,7 +39,14 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryUncheckCommissionRecord(Long anCustNo, String anImportDate, int anFlag, int anPageNum, int anPageSize);
+    String webQueryUncheckCommissionRecord(Map<String, Object> param, int anFlag, int anPageNum, int anPageSize);
+
+    /**
+     *
+     * @param anParam
+     * @return
+     */
+    String webFindCountCommissionRecord(Map<String, Object> anParam);
 
     /**
      * 查询未确认的日对账单
@@ -41,7 +57,7 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryNormalPayResultList(Long anCustNo, String anPayDate, int anFlag, int anPageNum, int anPageSize);
+    String webQueryNormalPayResultList(Map<String, Object> param, int anFlag, int anPageNum, int anPageSize);
 
     /**
      *
@@ -52,7 +68,7 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryConfirmPayResultList(Long anCustNo, String anPayDate, int anFlag, int anPageNum, int anPageSize);
+    String webQueryConfirmPayResultList(Map<String, Object> param, int anFlag, int anPageNum, int anPageSize);
 
     /**
      *
@@ -63,7 +79,7 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryAuditPayResultList(Long anCustNo, String anPayDate, int anFlag, int anPageNum, int anPageSize);
+    String webQueryAuditPayResultList(Map<String, Object> param, int anFlag, int anPageNum, int anPageSize);
 
     /**
      *
@@ -73,7 +89,16 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryUncheckPayResultRecords(Long anPayResultId, int anFlag, int anPageNum, int anPageSize);
+    String webQueryAllPayResultRecords(Long anPayResultId, int anFlag, int anPageNum, int anPageSize);
+    /**
+     *
+     * @param anPayResultId
+     * @param anFlag
+     * @param anPageNum
+     * @param anPageSize
+     * @return
+     */
+    String webQueryUncheckPayResultRecords(Map<String, Object> param, Long anPayResultId, int anFlag, int anPageNum, int anPageSize);
 
     /**
      *
