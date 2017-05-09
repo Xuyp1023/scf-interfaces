@@ -165,4 +165,10 @@ public interface ICommissionPayResultService {
      * @return
      */
     String webAuditPayResult(Long anPayResultId);
+
+    /**
+     * @param anRefNo
+     * @return
+     */
+    String webFindCommissionRecord(String anRefNo);
 }
