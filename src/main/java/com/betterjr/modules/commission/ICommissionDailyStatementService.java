@@ -26,6 +26,14 @@ public interface ICommissionDailyStatementService {
      * @return
      */
     public String webFindDailyStatementCount(String anMonth,Long anCustNo);
+
+    /***
+     * 根据对账月份查询日账单列表
+     * @param anMonth 对账月份
+     * @param anCustNo 对账企业
+     * @return
+     */
+    public String webFindDailyStatementInfoByMonth(String anMonth, Long anCustNo);
     
     /***
      * 查询日账单的列表基础信息
