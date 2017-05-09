@@ -12,10 +12,12 @@ public interface IDeliveryService {
 
     String webSaveDeleteStatement(Long anStatementId);
 
-    String webSaveExpressDelivery(String anRefNo);
+    String webSaveExpressDelivery(String anRefNo, String anDescription);
 
     String webSaveConfirmDelivery(String anRefNo);
 
     String webQueryMonthlyRecordList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize);
+
+    String webSaveDeleteRecord(Long anRecordId);
 
 }
