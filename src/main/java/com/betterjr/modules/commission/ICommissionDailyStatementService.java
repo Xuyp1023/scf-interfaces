@@ -109,4 +109,12 @@ public interface ICommissionDailyStatementService {
      * @return
      */
     public String webQueryDailyStatementRecordById(Long anDailyStatementId,int anPageNum,int anPageSize,String anFlag);
+    
+    /***
+     * 根据对账日期和对账企业查询日账单
+     * @param anPayDate
+     * @param anOwnCustNo
+     * @return
+     */
+    public String webFindDailyStatementByPayDate(String anPayDate,Long anOwnCustNo);
 }
