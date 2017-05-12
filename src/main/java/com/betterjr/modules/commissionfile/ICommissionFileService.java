@@ -12,4 +12,6 @@ public interface ICommissionFileService {
 
     String webSaveResolveFile(String anRefNo);
 
+    String webFindTemplateFile();
+
 }
