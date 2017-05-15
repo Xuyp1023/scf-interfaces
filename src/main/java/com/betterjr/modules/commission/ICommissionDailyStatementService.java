@@ -33,7 +33,7 @@ public interface ICommissionDailyStatementService {
      * @param anCustNo 对账企业
      * @return
      */
-    public String webFindDailyStatementInfoByMonth(String anMonth, Long anCustNo);
+    public String webFindDailyStatementInfoByMonth(String anMonth, Long anCustNo,String anBusinStatus);
     
     /***
      * 查询日账单的列表基础信息
@@ -74,7 +74,7 @@ public interface ICommissionDailyStatementService {
      * @param anPageSize
      * @return
      */
-    public String webQueryPayResultRecord(Long anOwnCustNo,String anPayDate,int anFlag, int anPageNum, int anPageSize);
+    public String webQueryPayResultRecord(Long anOwnCustNo,String anPayDate,String anPayStatus,int anFlag, int anPageNum, int anPageSize);
     
     /***
      * 根据支付日期查询佣金支付记录
