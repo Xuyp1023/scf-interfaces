@@ -111,4 +111,8 @@ public interface IScfOrderService {
             boolean anIsCust);
 
     public String webfindOrderDetail(String anRefNo, String anVersion);
+
+    public String webQueryExportOrderRecordList(Long anResolveFileid);
+
+    public String webSaveResolveFile(Map<String, Object> anAnMap);
 }
