@@ -55,4 +55,6 @@ public interface IScfAcceptBillService {
 
     public String webQueryCanAnnulAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
 
+    public String webSaveModifyAcceptBillFile(String anFileList, String anRefNo, String anVersion);
+
 }
