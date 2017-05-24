@@ -112,7 +112,7 @@ public interface IScfOrderService {
 
     public String webfindOrderDetail(String anRefNo, String anVersion);
 
-    public String webQueryExportOrderRecordList(Long anResolveFileid);
+    public String webQueryExportOrderRecordList(Long anResolveFileid, String anFlag, int anPageNum, int anPageSize);
 
     public String webSaveResolveFile(Map<String, Object> anAnMap);
 }
