@@ -9,6 +9,8 @@ public interface ICommissionFileService {
     String webQueryFileList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize);
 
     String webSaveDeleteFile(String anRefNo);
+    
+    String webSaveCannulFile(Long  anFileId);
 
     String webSaveResolveFile(String anRefNo);
 
