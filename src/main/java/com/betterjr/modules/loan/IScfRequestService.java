@@ -208,6 +208,13 @@ public interface IScfRequestService {
 	 */
 	String webLoan(Map<String, Object> anMap);
 
+	/**
+	 * 2.3.1-保存融资批复
+	 * @param anMap
+	 * @return
+	 */
+	String webAddScheme(Map<String, Object> anMap);
+
     
   
 }
