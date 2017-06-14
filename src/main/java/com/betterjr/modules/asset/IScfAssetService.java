@@ -10,5 +10,7 @@ public interface IScfAssetService {
      */
     public String webFindAsset(Map<String, Object> anMap);
 
+    public String webQueryCanUseBaseData(Long anCustNo, String anDataType, int anPageNum, int anPageSize, String anFlag);
+
 
 }
