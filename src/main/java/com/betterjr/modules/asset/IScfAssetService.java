@@ -12,5 +12,7 @@ public interface IScfAssetService {
 
     public String webQueryCanUseBaseData(Long anCustNo, String anDataType, int anPageNum, int anPageSize, String anFlag);
 
+    public String webFindAssetById(Long anAssetId);
+
 
 }
