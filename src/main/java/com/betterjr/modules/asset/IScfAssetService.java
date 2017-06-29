@@ -13,6 +13,8 @@ public interface IScfAssetService {
     public String webQueryCanUseBaseData(Long anCustNo,Long anCoreCustNo, String anDataType, String anIds, int anPageNum, int anPageSize, String anFlag);
 
     public String webFindAssetById(Long anAssetId);
+    
+    public String webSaveRejectOrBreakAsset(Long anAssetId);
 
 
 }
