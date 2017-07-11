@@ -15,6 +15,8 @@ public interface IScfAssetService {
     public String webFindAssetById(Long anAssetId);
     
     public String webSaveRejectOrBreakAsset(Long anAssetId);
+    
+    public String webSaveAssignmentAssetToFactory(Long anAssetId);
 
 
 }
