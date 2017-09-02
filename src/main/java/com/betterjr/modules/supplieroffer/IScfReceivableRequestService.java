@@ -138,4 +138,11 @@ public interface IScfReceivableRequestService {
      * @return
      */
     public String webQueryFinishReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    
+    /**
+     * 确定单个应付账款是否可以进行申请
+     * @param anRequestNo
+     * @return
+     */
+    public String webCheckVerifyReceivable(Long receivableId);
 }
