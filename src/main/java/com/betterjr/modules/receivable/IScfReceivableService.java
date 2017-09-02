@@ -37,7 +37,7 @@ public interface IScfReceivableService {
 
     public String webSaveAnnulReceivable(String anRefNo, String anVersion);
 
-    public String webSaveAuditReceivableByRefNoVersion(String anRefNo, String anVersion);
+    public String webSaveAuditReceivableByRefNoVersion(String anRefNo, String anVersion,Map<String, Object> anAnMap);
 
     public String webFindReceivableByRefNoVersion(String anRefNo, String anVersion);
 
