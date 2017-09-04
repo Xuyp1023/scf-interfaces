@@ -38,5 +38,10 @@ public interface IScfSupplierOfferService {
      */
     public String webQueryOfferPage (Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 
-
+    /**
+     * 查询结算中心
+     * @param anId
+     * @return
+     */
+    public String webQueryAllFactoryByCustNo(Long anId);
 }
