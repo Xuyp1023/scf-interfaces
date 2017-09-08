@@ -7,7 +7,7 @@ import java.util.Map;
  * @author tangzw
  *
  */
-public interface IContractTemplateService {
+public interface IScfContractTemplateService {
 
 	/**
 	 * 根据ID查询合同模板
