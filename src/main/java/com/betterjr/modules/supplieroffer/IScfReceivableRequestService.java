@@ -247,6 +247,32 @@ public interface IScfReceivableRequestService {
      */
     public String webQueryTwoFinishReceivableRequestWithFactory(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
     
+    /**
+     * 融资申请统一模式入口
+     * receivableId
+     * @param anMap
+     * @return
+     */
+    public String webSaveAddRequestTotal(Map<String,Object> anMap);
     
+    /**
+     * 供应商确认申请提交
+     * @param anMap
+     * @param anRequestNo
+     * @param anRequestPayDate
+     * @param anDescription
+     * @return
+     * requestProductCode  保理产品productCode
+     * custBankAccount
+     * custBankAccountName
+     * custBankName
+     */
+    public String webSaveSubmitRequestTotal(Map<String,Object> anMap,String anRequestNo,String anRequestPayDate,String anDescription);
     
+    /**
+     * 当前申请可用的保理产品列表
+     * @param requestNo
+     * @return
+     */
+    public String webQueryProductByRequestNo(String requestNo);
 }
