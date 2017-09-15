@@ -525,6 +525,20 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return elecAgreement; 
     }
     
+    /**
+     * 通过融资申请生成应收账款提前回款协议书电子合同
+     * @param anAgreeName
+     * @param anAgreeNo
+     * @param anBalance
+     * @return
+     */
+    public static ScfElecAgreement createByReceivable(String anAgreeName, String anAgreeNo,  BigDecimal anBalance,String agreementType){
+        
+        ScfElecAgreement elecAgreement = new ScfElecAgreement();
+        elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, agreementType, anBalance);
+        
+        return elecAgreement;
+    }
 
     /**
      * 添加三方协议
