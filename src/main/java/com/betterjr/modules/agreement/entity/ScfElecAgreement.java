@@ -4,7 +4,16 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
-import com.betterjr.common.annotation.*;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OrderBy;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.data.BaseRemoteEntity;
 import com.betterjr.common.data.NormalStatus;
 import com.betterjr.common.entity.BetterjrEntity;
@@ -13,126 +22,123 @@ import com.betterjr.common.selectkey.SerialGenerator;
 import com.betterjr.common.utils.BetterDateUtils;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import javax.persistence.*;
-
 @Access(AccessType.FIELD)
 @Entity
 @Table(name = "T_SCF_AGREEMENT")
-public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
+public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 电子签署合同的申请单号，日期加流水号的形式
      */
     @Id
-    @Column(name = "C_APPLICATIONNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="电子签署合同的申请单号", comments = "电子签署合同的申请单号，日期加流水号的形式")
+    @Column(name = "C_APPLICATIONNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "电子签署合同的申请单号", comments = "电子签署合同的申请单号，日期加流水号的形式")
     private String appNo;
 
     /**
      * 合同名称
      */
-    @Column(name = "C_AGREENAME",  columnDefinition="VARCHAR" )
-    @MetaData( value="合同名称", comments = "合同名称")
+    @Column(name = "C_AGREENAME", columnDefinition = "VARCHAR")
+    @MetaData(value = "合同名称", comments = "合同名称")
     private String agreeName;
 
     /**
      * 合同编号
      */
-    @Column(name = "C_AGREENO",  columnDefinition="VARCHAR" )
-    @MetaData( value="合同编号", comments = "合同编号")
+    @Column(name = "C_AGREENO", columnDefinition = "VARCHAR")
+    @MetaData(value = "合同编号", comments = "合同编号")
     private String agreeNo;
 
     /**
      * 订单申请单号；对应T_SCF_REQUEST中的申请单号；或者业务系统中的订单信息
      */
-    @Column(name = "C_REQUESTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="订单申请单号", comments = "订单申请单号；对应T_SCF_REQUEST中的申请单号；或者业务系统中的订单信息")
+    @Column(name = "C_REQUESTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "订单申请单号", comments = "订单申请单号；对应T_SCF_REQUEST中的申请单号；或者业务系统中的订单信息")
     private String requestNo;
 
     /**
      * 买方客户号
      */
-    @Column(name = "L_BUYER_NO",  columnDefinition="INTEGER" )
-    @MetaData( value="买方客户号", comments = "买方客户号")
+    @Column(name = "L_BUYER_NO", columnDefinition = "INTEGER")
+    @MetaData(value = "买方客户号", comments = "买方客户号")
     private Long buyerNo;
 
     /**
      * 卖方客户号
      */
-    @Column(name = "L_SUPPLIER_NO",  columnDefinition="INTEGER" )
-    @MetaData( value="卖方客户号", comments = "卖方客户号")
+    @Column(name = "L_SUPPLIER_NO", columnDefinition = "INTEGER")
+    @MetaData(value = "卖方客户号", comments = "卖方客户号")
     private Long supplierNo;
 
     /**
      * 保理公司编码
      */
-    @Column(name = "C_FACTORNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="保理公司编码", comments = "保理公司编码")
+    @Column(name = "C_FACTORNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "保理公司编码", comments = "保理公司编码")
     private String factorNo;
 
     /**
      * 合同正式签署时间
      */
-    @Column(name = "D_SIGN_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="合同正式签署时间", comments = "合同正式签署时间")
+    @Column(name = "D_SIGN_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "合同正式签署时间", comments = "合同正式签署时间")
     private String signDate;
 
     /**
      * 未签署的合同的批次号，对应fileinfo中的ID
      */
-    @Column(name = "N_BATCHNO",  columnDefinition="INTEGER" )
-    @MetaData( value="未签署的合同的批次号", comments = "未签署的合同的批次号，对应fileinfo中的ID")
+    @Column(name = "N_BATCHNO", columnDefinition = "INTEGER")
+    @MetaData(value = "未签署的合同的批次号", comments = "未签署的合同的批次号，对应fileinfo中的ID")
     private Long batchNo;
 
     /**
      * 已签署的合同的批次号，对应fileinfo中的ID
      */
-    @Column(name = "N_SIGN_BATCHNO",  columnDefinition="INTEGER" )
-    @MetaData( value="已签署的合同的批次号", comments = "已签署的合同的批次号，对应fileinfo中的ID")
+    @Column(name = "N_SIGN_BATCHNO", columnDefinition = "INTEGER")
+    @MetaData(value = "已签署的合同的批次号", comments = "已签署的合同的批次号，对应fileinfo中的ID")
     private Long signBatchNo;
 
     /**
      * 登记日期
      */
-    @Column(name = "D_REGDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="登记日期", comments = "登记日期")
+    @Column(name = "D_REGDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "登记日期", comments = "登记日期")
     @OrderBy("DESC")
     private String regDate;
 
     /**
      * 修改日期
      */
-    @Column(name = "D_MODIDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="修改日期", comments = "修改日期")
+    @Column(name = "D_MODIDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "修改日期", comments = "修改日期")
     private String modiDate;
 
     /**
      * 状态；0草稿，1签署完毕，2签署中，9作废
      */
-    @Column(name = "C_STATUS",  columnDefinition="VARCHAR" )
-    @MetaData( value="状态", comments = "状态；0草稿，1签署完毕，2签署中，9作废")
+    @Column(name = "C_STATUS", columnDefinition = "VARCHAR")
+    @MetaData(value = "状态", comments = "状态；0草稿，1签署完毕，2签署中，9作废")
     private String signStatus;
 
     /**
      * 电子合同类型，0：应收账款债权转让通知书，1：买方确认意见
      */
-    @Column(name = "C_AGREETYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="电子合同类型", comments = "电子合同类型，0：应收账款债权转让通知书，1：买方确认意见,2三方协议书，3保理合同")
+    @Column(name = "C_AGREETYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "电子合同类型", comments = "电子合同类型，0：应收账款债权转让通知书，1：买方确认意见,2三方协议书，3保理合同")
     private String agreeType;
 
     /**
      * 合同金额
      */
-    @Column(name = "F_BALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="合同金额", comments = "合同金额")
+    @Column(name = "F_BALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "合同金额", comments = "合同金额")
     private BigDecimal balance;
-    
+
     /**
      * 在电子合同签署服务方的编号
      */
     @Column(name = "C_SIGNID", columnDefinition = "VARCHAR")
     @MetaData(value = "在电子合同签署服务方的编号", comments = "在电子合同签署服务方的编号")
     private String signId;
-    
 
     /**
      * 处理状态，0未 处理，1已处理；指是否发送到基金公司，2发送失败
@@ -140,35 +146,35 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
     @Column(name = "C_DEAL", columnDefinition = "VARCHAR")
     @MetaData(value = "处理状态", comments = "数据发送处理状态")
     private String dealFlag;
-    
+
     /**
      * 供应商名称（卖方）
      */
     @Column(name = "C_SUPPLIER", columnDefinition = "VARCHAR")
     @MetaData(value = "供应商名称（卖方）", comments = "供应商名称（卖方）")
     private String supplier;
-    
+
     /**
      * 拒绝原因
      */
     @Column(name = "C_DESCRIBE", columnDefinition = "VARCHAR")
     @MetaData(value = "拒绝原因", comments = "拒绝原因")
     private String des;
-    
+
     /**
      * 法定代表人
      */
     @Column(name = "C_LAWNAME", columnDefinition = "VARCHAR")
     @MetaData(value = "法定代表人", comments = "法定代表人")
     private String resrepentName;
-    
+
     /**
      * 法定地址
      */
     @Column(name = "C_DELIVERYADDR", columnDefinition = "VARCHAR")
     @MetaData(value = "法定地址", comments = "法定地址")
     private String resrepentAddr;
-    
+
     /**
      * 合同开始时间
      */
@@ -182,18 +188,24 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
     @Column(name = "C_ENDDATE", columnDefinition = "VARCHAR")
     @MetaData(value = "合同结束时间", comments = "合同结束时间")
     private String agreeEndDate;
-    
- 
+
+    /**
+     * 电子合同模板编号
+     */
+    @Column(name = "L_TEMPLATEID", columnDefinition = "INTEGER")
+    @MetaData(value = "电子合同模板编号", comments = "电子合同模板编号")
+    private Long contractTemplateId;
+
     private static final long serialVersionUID = 1461746080033L;
 
     @Transient
     private List<Map> signerList;
-    
+
     public String getAppNo() {
         return appNo;
     }
 
-    public void setAppNo(String appNo) {
+    public void setAppNo(final String appNo) {
         this.appNo = appNo == null ? null : appNo.trim();
     }
 
@@ -201,7 +213,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return agreeName;
     }
 
-    public void setAgreeName(String agreeName) {
+    public void setAgreeName(final String agreeName) {
         this.agreeName = agreeName == null ? null : agreeName.trim();
     }
 
@@ -209,7 +221,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return agreeNo;
     }
 
-    public void setAgreeNo(String agreeNo) {
+    public void setAgreeNo(final String agreeNo) {
         this.agreeNo = agreeNo == null ? null : agreeNo.trim();
     }
 
@@ -217,7 +229,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return requestNo;
     }
 
-    public void setRequestNo(String requestNo) {
+    public void setRequestNo(final String requestNo) {
         this.requestNo = requestNo == null ? null : requestNo.trim();
     }
 
@@ -225,7 +237,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return buyerNo;
     }
 
-    public void setBuyerNo(Long buyerNo) {
+    public void setBuyerNo(final Long buyerNo) {
         this.buyerNo = buyerNo;
     }
 
@@ -233,7 +245,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return supplierNo;
     }
 
-    public void setSupplierNo(Long supplierNo) {
+    public void setSupplierNo(final Long supplierNo) {
         this.supplierNo = supplierNo;
     }
 
@@ -241,7 +253,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return factorNo;
     }
 
-    public void setFactorNo(String factorNo) {
+    public void setFactorNo(final String factorNo) {
         this.factorNo = factorNo == null ? null : factorNo.trim();
     }
 
@@ -250,7 +262,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return signDate;
     }
 
-    public void setSignDate(String signDate) {
+    public void setSignDate(final String signDate) {
         this.signDate = signDate == null ? null : signDate.trim();
     }
 
@@ -258,7 +270,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return batchNo;
     }
 
-    public void setBatchNo(Long batchNo) {
+    public void setBatchNo(final Long batchNo) {
         this.batchNo = batchNo;
     }
 
@@ -266,7 +278,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return signBatchNo;
     }
 
-    public void setSignBatchNo(Long signBatchNo) {
+    public void setSignBatchNo(final Long signBatchNo) {
         this.signBatchNo = signBatchNo;
     }
 
@@ -275,7 +287,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return regDate;
     }
 
-    public void setRegDate(String regDate) {
+    public void setRegDate(final String regDate) {
         this.regDate = regDate == null ? null : regDate.trim();
     }
 
@@ -284,16 +296,15 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return modiDate;
     }
 
-    public void setModiDate(String modiDate) {
+    public void setModiDate(final String modiDate) {
         this.modiDate = modiDate == null ? null : modiDate.trim();
     }
- 
 
     public String getSignStatus() {
         return this.signStatus;
     }
 
-    public void setSignStatus(String anSignStatus) {
+    public void setSignStatus(final String anSignStatus) {
         this.signStatus = anSignStatus;
     }
 
@@ -301,7 +312,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return agreeType;
     }
 
-    public void setAgreeType(String agreeType) {
+    public void setAgreeType(final String agreeType) {
         this.agreeType = agreeType == null ? null : agreeType.trim();
     }
 
@@ -309,15 +320,15 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.balance;
     }
 
-    public void setBalance(BigDecimal anBalance) {
+    public void setBalance(final BigDecimal anBalance) {
         this.balance = anBalance;
     }
- 
+
     public List<Map> getSignerList() {
         return this.signerList;
     }
 
-    public void setSignerList(List<Map> anSignerList) {
+    public void setSignerList(final List<Map> anSignerList) {
         this.signerList = anSignerList;
     }
 
@@ -325,7 +336,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.signId;
     }
 
-    public void setSignId(String anSignId) {
+    public void setSignId(final String anSignId) {
         this.signId = anSignId;
     }
 
@@ -333,20 +344,20 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.dealFlag;
     }
 
-    public void setDealFlag(String anDealFlag) {
+    public void setDealFlag(final String anDealFlag) {
         this.dealFlag = anDealFlag;
     }
 
-    public boolean hasSendSignOrder(){
+    public boolean hasSendSignOrder() {
 
         return "1".equals(this.getDealFlag()) == false;
     }
-    
+
     public String getSupplier() {
         return this.supplier;
     }
 
-    public void setSupplier(String anSupplier) {
+    public void setSupplier(final String anSupplier) {
         this.supplier = anSupplier;
     }
 
@@ -354,15 +365,15 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.des;
     }
 
-    public void setDes(String anDescribe) {
-        this.des= anDescribe;
+    public void setDes(final String anDescribe) {
+        this.des = anDescribe;
     }
 
     public String getResrepentName() {
         return this.resrepentName;
     }
 
-    public void setResrepentName(String anResrepentName) {
+    public void setResrepentName(final String anResrepentName) {
         this.resrepentName = anResrepentName;
     }
 
@@ -370,7 +381,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.resrepentAddr;
     }
 
-    public void setResrepentAddr(String anResrepentAddr) {
+    public void setResrepentAddr(final String anResrepentAddr) {
         this.resrepentAddr = anResrepentAddr;
     }
 
@@ -378,7 +389,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.agreeStartDate;
     }
 
-    public void setAgreeStartDate(String anAgreeStartDate) {
+    public void setAgreeStartDate(final String anAgreeStartDate) {
         this.agreeStartDate = anAgreeStartDate;
     }
 
@@ -386,13 +397,21 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         return this.agreeEndDate;
     }
 
-    public void setAgreeEndDate(String anAgreeEndDate) {
+    public void setAgreeEndDate(final String anAgreeEndDate) {
         this.agreeEndDate = anAgreeEndDate;
+    }
+
+    public Long getContractTemplateId() {
+        return this.contractTemplateId;
+    }
+
+    public void setContractTemplateId(final Long anContractTemplateId) {
+        this.contractTemplateId = anContractTemplateId;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append(" appNo=").append(appNo);
@@ -420,7 +439,7 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
     }
 
     @Override
-    public boolean equals(Object that) {
+    public boolean equals(final Object that) {
         if (this == that) {
             return true;
         }
@@ -430,23 +449,23 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         if (getClass() != that.getClass()) {
             return false;
         }
-        ScfElecAgreement other = (ScfElecAgreement) that;
+        final ScfElecAgreement other = (ScfElecAgreement) that;
         return (this.getAppNo() == null ? other.getAppNo() == null : this.getAppNo().equals(other.getAppNo()))
-            && (this.getAgreeName() == null ? other.getAgreeName() == null : this.getAgreeName().equals(other.getAgreeName()))
-            && (this.getAgreeNo() == null ? other.getAgreeNo() == null : this.getAgreeNo().equals(other.getAgreeNo()))
-            && (this.getRequestNo() == null ? other.getRequestNo() == null : this.getRequestNo().equals(other.getRequestNo()))
-            && (this.getBuyerNo() == null ? other.getBuyerNo() == null : this.getBuyerNo().equals(other.getBuyerNo()))
-            && (this.getSupplierNo() == null ? other.getSupplierNo() == null : this.getSupplierNo().equals(other.getSupplierNo()))
-            && (this.getFactorNo() == null ? other.getFactorNo() == null : this.getFactorNo().equals(other.getFactorNo()))
-            && (this.getSignDate() == null ? other.getSignDate() == null : this.getSignDate().equals(other.getSignDate()))
-            && (this.getBatchNo() == null ? other.getBatchNo() == null : this.getBatchNo().equals(other.getBatchNo()))
-            && (this.getSignBatchNo() == null ? other.getSignBatchNo() == null : this.getSignBatchNo().equals(other.getSignBatchNo()))
-            && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
-            && (this.getModiDate() == null ? other.getModiDate() == null : this.getModiDate().equals(other.getModiDate()))
-            && (this.getSignStatus() == null ? other.getSignStatus() == null : this.getSignStatus().equals(other.getSignStatus()))
-            && (this.getDealFlag() == null ? other.getDealFlag() == null : this.getDealFlag().equals(other.getDealFlag()))
-            && (this.getSupplier() == null ? other.getSupplier() == null : this.getSupplier().equals(other.getSupplier()))
-            && (this.getAgreeType() == null ? other.getAgreeType() == null : this.getAgreeType().equals(other.getAgreeType()));
+                && (this.getAgreeName() == null ? other.getAgreeName() == null : this.getAgreeName().equals(other.getAgreeName()))
+                && (this.getAgreeNo() == null ? other.getAgreeNo() == null : this.getAgreeNo().equals(other.getAgreeNo()))
+                && (this.getRequestNo() == null ? other.getRequestNo() == null : this.getRequestNo().equals(other.getRequestNo()))
+                && (this.getBuyerNo() == null ? other.getBuyerNo() == null : this.getBuyerNo().equals(other.getBuyerNo()))
+                && (this.getSupplierNo() == null ? other.getSupplierNo() == null : this.getSupplierNo().equals(other.getSupplierNo()))
+                && (this.getFactorNo() == null ? other.getFactorNo() == null : this.getFactorNo().equals(other.getFactorNo()))
+                && (this.getSignDate() == null ? other.getSignDate() == null : this.getSignDate().equals(other.getSignDate()))
+                && (this.getBatchNo() == null ? other.getBatchNo() == null : this.getBatchNo().equals(other.getBatchNo()))
+                && (this.getSignBatchNo() == null ? other.getSignBatchNo() == null : this.getSignBatchNo().equals(other.getSignBatchNo()))
+                && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
+                && (this.getModiDate() == null ? other.getModiDate() == null : this.getModiDate().equals(other.getModiDate()))
+                && (this.getSignStatus() == null ? other.getSignStatus() == null : this.getSignStatus().equals(other.getSignStatus()))
+                && (this.getDealFlag() == null ? other.getDealFlag() == null : this.getDealFlag().equals(other.getDealFlag()))
+                && (this.getSupplier() == null ? other.getSupplier() == null : this.getSupplier().equals(other.getSupplier()))
+                && (this.getAgreeType() == null ? other.getAgreeType() == null : this.getAgreeType().equals(other.getAgreeType()));
     }
 
     @Override
@@ -469,25 +488,27 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         result = prime * result + ((getAgreeType() == null) ? 0 : getAgreeType().hashCode());
         result = prime * result + ((getDealFlag() == null) ? 0 : getDealFlag().hashCode());
         result = prime * result + ((getSupplier() == null) ? 0 : getSupplier().hashCode());
-       return result;
+        return result;
     }
-    
+
     /**
      * 更新未签署的电子合同的信息
+     * 
      * @param anElecAgree
      */
-    public void updateInfo(ScfElecAgreement anElecAgree){
+    public void updateInfo(final ScfElecAgreement anElecAgree) {
         this.agreeName = anElecAgree.agreeName;
         this.agreeNo = anElecAgree.agreeNo;
         this.buyerNo = anElecAgree.buyerNo;
         this.supplierNo = anElecAgree.supplierNo;
     }
-    
+
     /**
      * 更新电子合同状态，如果是成功签署；则更新合同签署日期，否则之更新修改时间。
+     * 
      * @param anStatus
      */
-    public void fillElecAgreeStatus(String anStatus){
+    public void fillElecAgreeStatus(final String anStatus) {
         this.signStatus = anStatus;
         if (NormalStatus.VALID_STATUS.value.equals(anStatus)) {
             this.setSignDate(BetterDateUtils.getNumDate());
@@ -497,14 +518,19 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
 
     /**
      * 根据转让申请书，产生转让电子合同信息
-     * @param anRequest 申请单
-     * @param anAgreeName 电子合同名称
-     * @param anAgreeNo 电子合同编号
-     * @param anBalance 电子合同金额
+     * 
+     * @param anRequest
+     *            申请单
+     * @param anAgreeName
+     *            电子合同名称
+     * @param anAgreeNo
+     *            电子合同编号
+     * @param anBalance
+     *            电子合同金额
      * @return
      */
-    public static ScfElecAgreement createByNotice(String anAgreeName, String anAgreeNo, BigDecimal anBalance) {
-        ScfElecAgreement elecAgreement = new ScfElecAgreement();
+    public static ScfElecAgreement createByNotice(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+        final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "0", anBalance);
 
         return elecAgreement;
@@ -512,19 +538,24 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
 
     /**
      * 根据核心企业确认书，产生企业确认电子合同信息
-     * @param anRequest 申请单
-     * @param anAgreeName 电子合同名称
-     * @param anAgreeNo 电子合同编号
-     * @param anBalance 电子合同金额
+     * 
+     * @param anRequest
+     *            申请单
+     * @param anAgreeName
+     *            电子合同名称
+     * @param anAgreeNo
+     *            电子合同编号
+     * @param anBalance
+     *            电子合同金额
      * @return
      */
-    public static ScfElecAgreement createByOpinion(String anAgreeName, String anAgreeNo,  BigDecimal anBalance) {
-        ScfElecAgreement elecAgreement = new ScfElecAgreement();
+    public static ScfElecAgreement createByOpinion(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+        final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "1", anBalance);
-        
-        return elecAgreement; 
+
+        return elecAgreement;
     }
-    
+     
     /**
      * 通过融资申请生成应收账款提前回款协议书电子合同
      * @param anAgreeName
@@ -539,22 +570,27 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         
         return elecAgreement;
     }
-
+ 
     /**
      * 添加三方协议
-     * @param anRequest 申请单
-     * @param anAgreeName 电子合同名称
-     * @param anAgreeNo 电子合同编号
-     * @param anBalance 电子合同金额
+     * 
+     * @param anRequest
+     *            申请单
+     * @param anAgreeName
+     *            电子合同名称
+     * @param anAgreeNo
+     *            电子合同编号
+     * @param anBalance
+     *            电子合同金额
      */
-    public static ScfElecAgreement createByProtacal(String anAgreeName, String anAgreeNo,  BigDecimal anBalance) {
-        ScfElecAgreement elecAgreement = new ScfElecAgreement();
+    public static ScfElecAgreement createByProtacal(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+        final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "2", anBalance);
-        
-        return elecAgreement; 
+
+        return elecAgreement;
     }
-    
-    private void fillBaseInfo(String anAgreeName, String anAgreeNo, String anAgreeType, BigDecimal anBalance){
+
+    private void fillBaseInfo(final String anAgreeName, final String anAgreeNo, final String anAgreeType, final BigDecimal anBalance) {
         this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
         this.regDate = BetterDateUtils.getNumDate();
         this.modiDate = this.regDate;
@@ -565,27 +601,27 @@ public class ScfElecAgreement implements BetterjrEntity,BaseRemoteEntity {
         this.balance = anBalance;
         this.batchNo = 0L;
         this.signBatchNo = 0L;
-        this.dealFlag ="0";
+        this.dealFlag = "0";
     }
-    
-    public void initDefValue(String anSupplier){
+
+    public void initDefValue(final String anSupplier) {
         this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
         this.regDate = BetterDateUtils.getNumDate();
         this.modiDate = this.regDate;
         this.signStatus = "0";
-        this.dealFlag ="1";
-        this.supplier=anSupplier;
+        this.dealFlag = "1";
+        this.supplier = anSupplier;
     }
-    
-    public void modifyAgreement(ScfElecAgreement elecAgreement){
-        this.appNo=elecAgreement.getAppNo();
-        this.batchNo=elecAgreement.getBatchNo();
-        this.factorNo=elecAgreement.getFactorNo();
-        this.signStatus=elecAgreement.getSignStatus();
-        this.regDate=elecAgreement.getRegDate();
-        this.agreeType=elecAgreement.getAgreeType();
-        this.signDate=elecAgreement.getSignDate();
-        this.dealFlag=elecAgreement.getDealFlag();
+
+    public void modifyAgreement(final ScfElecAgreement elecAgreement) {
+        this.appNo = elecAgreement.getAppNo();
+        this.batchNo = elecAgreement.getBatchNo();
+        this.factorNo = elecAgreement.getFactorNo();
+        this.signStatus = elecAgreement.getSignStatus();
+        this.regDate = elecAgreement.getRegDate();
+        this.agreeType = elecAgreement.getAgreeType();
+        this.signDate = elecAgreement.getSignDate();
+        this.dealFlag = elecAgreement.getDealFlag();
         this.modiDate = BetterDateUtils.getNumDate();
     }
 }
