@@ -106,6 +106,13 @@ public interface IScfReceivableRequestService {
      */
     public String webFindOneByRequestNo(String anRequestNo);
     
+    /**
+     * 查询单条融资信息
+     * @param anRequestNo
+     * @return
+     */
+    public String webFindRequestByReceivableId(String anrefNo,String anVersion);
+    
     
     /**
      * 供应商查询还有那些融资申请可以再次提交

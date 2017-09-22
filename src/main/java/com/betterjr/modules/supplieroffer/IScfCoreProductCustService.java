@@ -19,4 +19,11 @@ public interface IScfCoreProductCustService {
      */
     public String webSaveAddAndUpdateProduct(Long anCustNo,Long anCoreCustNo,String anProductCodes);
 
+    /**
+     * 查询核心企业分配给供应商的融资产品信息
+     * @param anCustNo
+     * @param anCoreCustNo
+     * @return
+     */
+    public String webQueryCanUseProduct(Long anCustNo,Long anCoreCustNo);
 }
