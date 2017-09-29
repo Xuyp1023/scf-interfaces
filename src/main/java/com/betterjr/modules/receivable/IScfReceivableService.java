@@ -3,7 +3,7 @@ package com.betterjr.modules.receivable;
 import java.util.Map;
 
 public interface IScfReceivableService {
-    
+
     /**
      * 应收账款信息编辑
      */
@@ -37,7 +37,7 @@ public interface IScfReceivableService {
 
     public String webSaveAnnulReceivable(String anRefNo, String anVersion);
 
-    public String webSaveAuditReceivableByRefNoVersion(String anRefNo, String anVersion,Map<String, Object> anAnMap);
+    public String webSaveAuditReceivableByRefNoVersion(String anRefNo, String anVersion, Map<String, Object> anAnMap);
 
     public String webFindReceivableByRefNoVersion(String anRefNo, String anVersion);
 

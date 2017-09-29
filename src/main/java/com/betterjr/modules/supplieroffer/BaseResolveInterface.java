@@ -6,9 +6,9 @@ import java.util.Map;
 import com.betterjr.modules.supplieroffer.entity.ResolveResult;
 
 public interface BaseResolveInterface {
-    
-    public ResolveResult invokeResolve(List<Map<String,Object>> listData);
-    
+
+    public ResolveResult invokeResolve(List<Map<String, Object>> listData);
+
     public ResolveResult invokeDelete(Long commissionFileId);
 
 }
