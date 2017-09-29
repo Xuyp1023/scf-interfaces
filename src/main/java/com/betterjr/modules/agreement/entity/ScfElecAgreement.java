@@ -196,6 +196,13 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
     @MetaData(value = "电子合同模板编号", comments = "电子合同模板编号")
     private Long contractTemplateId;
 
+    /**
+     * 原始的HTML batchNo信息
+     */
+    @Column(name = "N_HTMLNO", columnDefinition = "INTEGER")
+    @MetaData(value = "原始的HTML batchNo信息", comments = "原始的HTML batchNo信息，对应fileinfo中的ID")
+    private Long htmlBatchNo;
+
     private static final long serialVersionUID = 1461746080033L;
 
     @Transient
@@ -409,6 +416,14 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         this.contractTemplateId = anContractTemplateId;
     }
 
+    public Long getHtmlBatchNo() {
+        return this.htmlBatchNo;
+    }
+
+    public void setHtmlBatchNo(final Long anHtmlBatchNo) {
+        this.htmlBatchNo = anHtmlBatchNo;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
@@ -434,6 +449,7 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         sb.append(", dealFlag=").append(dealFlag);
         sb.append(", supplier=").append(supplier);
         sb.append(", describe=").append(des);
+        sb.append(", htmlBatchNo=").append(htmlBatchNo);
         sb.append("]");
         return sb.toString();
     }
@@ -465,6 +481,7 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
                 && (this.getSignStatus() == null ? other.getSignStatus() == null : this.getSignStatus().equals(other.getSignStatus()))
                 && (this.getDealFlag() == null ? other.getDealFlag() == null : this.getDealFlag().equals(other.getDealFlag()))
                 && (this.getSupplier() == null ? other.getSupplier() == null : this.getSupplier().equals(other.getSupplier()))
+                && (this.getHtmlBatchNo() == null ? other.getHtmlBatchNo() == null : this.getHtmlBatchNo().equals(other.getHtmlBatchNo()))
                 && (this.getAgreeType() == null ? other.getAgreeType() == null : this.getAgreeType().equals(other.getAgreeType()));
     }
 
@@ -488,6 +505,7 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         result = prime * result + ((getAgreeType() == null) ? 0 : getAgreeType().hashCode());
         result = prime * result + ((getDealFlag() == null) ? 0 : getDealFlag().hashCode());
         result = prime * result + ((getSupplier() == null) ? 0 : getSupplier().hashCode());
+        result = prime * result + ((getHtmlBatchNo() == null) ? 0 : getHtmlBatchNo().hashCode());
         return result;
     }
 
@@ -555,22 +573,24 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
 
         return elecAgreement;
     }
-     
+
     /**
      * 通过融资申请生成应收账款提前回款协议书电子合同
+     * 
      * @param anAgreeName
      * @param anAgreeNo
      * @param anBalance
      * @return
      */
-    public static ScfElecAgreement createByReceivable(String anAgreeName, String anAgreeNo,  BigDecimal anBalance,String agreementType){
-        
-        ScfElecAgreement elecAgreement = new ScfElecAgreement();
+    public static ScfElecAgreement createByReceivable(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance,
+            final String agreementType) {
+
+        final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, agreementType, anBalance);
-        
+
         return elecAgreement;
     }
- 
+
     /**
      * 添加三方协议
      * 
