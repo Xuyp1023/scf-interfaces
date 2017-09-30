@@ -622,6 +622,7 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         this.batchNo = 0L;
         this.signBatchNo = 0L;
         this.dealFlag = "0";
+        this.htmlBatchNo = 0L;
     }
 
     public void initDefValue(final String anSupplier) {
@@ -643,5 +644,6 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         this.signDate = elecAgreement.getSignDate();
         this.dealFlag = elecAgreement.getDealFlag();
         this.modiDate = BetterDateUtils.getNumDate();
+        this.htmlBatchNo = elecAgreement.htmlBatchNo;
     }
 }
