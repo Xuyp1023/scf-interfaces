@@ -262,4 +262,5 @@ public interface IScfElecAgreementService {
      */
     public CustFileItem webFindSignedImage(String anAppNo, Long anBatchNo, Long anId);
 
+    public String webSaveElecAgreeImages(final String anAppNo);
 }
