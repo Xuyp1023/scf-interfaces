@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import com.betterjr.common.data.BaseRemoteEntity;
-import com.betterjr.common.utils.BetterStringUtils;
 
 @Access(AccessType.FIELD)
 @Entity
@@ -14,7 +13,5 @@ import com.betterjr.common.utils.BetterStringUtils;
 public class TempSaleAccoConfirm extends SaleAccoConfirmInfo implements BaseRemoteEntity {
 
     private static final long serialVersionUID = -8930350076932158190L;
-
-
 
 }

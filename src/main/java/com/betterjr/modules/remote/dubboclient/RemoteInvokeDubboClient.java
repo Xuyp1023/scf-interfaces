@@ -11,11 +11,11 @@ import com.betterjr.modules.remote.IRemoteInvoker;
 @Service
 public class RemoteInvokeDubboClient implements InvocationHandler {
 
-    @Reference(interfaceClass=IRemoteInvoker.class)
+    @Reference(interfaceClass = IRemoteInvoker.class)
     private IRemoteInvoker invoker;
-    
+
     private String faceNo;
-    
+
     @Override
     public Object invoke(Object anProxy, Method anMethod, Object[] anArgs) throws Throwable {
         String methodName = anMethod.getName();
@@ -32,7 +32,7 @@ public class RemoteInvokeDubboClient implements InvocationHandler {
         if ("equals".equals(methodName) && parameterTypes.length == 1) {
             return invoker.equals(anArgs[0]);
         }
-        return invoker.invoke(this.faceNo,anMethod, anArgs);
+        return invoker.invoke(this.faceNo, anMethod, anArgs);
     }
 
     public void setFaceNo(String anFaceNo) {

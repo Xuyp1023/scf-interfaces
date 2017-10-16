@@ -53,7 +53,7 @@ public class ScfCreditInfo {
         return custNo;
     }
 
-    public void setCustNo(Long custNo) {
+    public void setCustNo(final Long custNo) {
         this.custNo = custNo;
     }
 
@@ -61,7 +61,7 @@ public class ScfCreditInfo {
         return coreCustNo;
     }
 
-    public void setCoreCustNo(Long coreCustNo) {
+    public void setCoreCustNo(final Long coreCustNo) {
         this.coreCustNo = coreCustNo;
     }
 
@@ -69,7 +69,7 @@ public class ScfCreditInfo {
         return factorNo;
     }
 
-    public void setFactorNo(Long factorNo) {
+    public void setFactorNo(final Long factorNo) {
         this.factorNo = factorNo;
     }
 
@@ -77,7 +77,7 @@ public class ScfCreditInfo {
         return creditMode;
     }
 
-    public void setCreditMode(String creditMode) {
+    public void setCreditMode(final String creditMode) {
         this.creditMode = creditMode;
     }
 
@@ -85,7 +85,7 @@ public class ScfCreditInfo {
         return balance;
     }
 
-    public void setBalance(BigDecimal balance) {
+    public void setBalance(final BigDecimal balance) {
         this.balance = balance;
     }
 
@@ -93,7 +93,7 @@ public class ScfCreditInfo {
         return businFlag;
     }
 
-    public void setBusinFlag(String businFlag) {
+    public void setBusinFlag(final String businFlag) {
         this.businFlag = businFlag;
     }
 
@@ -101,7 +101,7 @@ public class ScfCreditInfo {
         return businId;
     }
 
-    public void setBusinId(Long businId) {
+    public void setBusinId(final Long businId) {
         this.businId = businId;
     }
 
@@ -109,7 +109,7 @@ public class ScfCreditInfo {
         return requestNo;
     }
 
-    public void setRequestNo(String requestNo) {
+    public void setRequestNo(final String requestNo) {
         this.requestNo = requestNo;
     }
 
@@ -117,7 +117,7 @@ public class ScfCreditInfo {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 

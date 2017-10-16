@@ -34,7 +34,6 @@ public interface IScfDeliveryNoticeService {
      * @param anMap
      * @return
      */
-    String webFindDeliveryNoticeList(Map<String, Object> anMap , String factorNo);
+    String webFindDeliveryNoticeList(Map<String, Object> anMap, String factorNo);
 
 }
-

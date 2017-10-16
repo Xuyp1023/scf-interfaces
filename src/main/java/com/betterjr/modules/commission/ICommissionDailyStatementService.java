@@ -9,7 +9,7 @@ import java.util.Map;
  */
 
 public interface ICommissionDailyStatementService {
-    
+
     /***
      * 分页查询
      * @param anParam
@@ -18,14 +18,14 @@ public interface ICommissionDailyStatementService {
      * @return
      */
     public String webQueryDailyStatement(Map<String, Object> anParam, int anPageNum, int anPageSize);
-    
+
     /***
      * 查询统计日账单的累计月总数
      * @param anMonth  对账月份
      * @param anCustNo 对账企业客户号
      * @return
      */
-    public String webFindDailyStatementCount(String anMonth,Long anCustNo);
+    public String webFindDailyStatementCount(String anMonth, Long anCustNo);
 
     /***
      * 根据对账月份查询日账单列表
@@ -33,14 +33,14 @@ public interface ICommissionDailyStatementService {
      * @param anCustNo 对账企业
      * @return
      */
-    public String webFindDailyStatementInfoByMonth(String anMonth, Long anCustNo,String anBusinStatus);
-    
+    public String webFindDailyStatementInfoByMonth(String anMonth, Long anCustNo, String anBusinStatus);
+
     /***
      * 查询日账单的列表基础信息
      * @param anParam 
      * @return
      */
-    public String webFindDailyStatementBasicsInfo(Map<String,Object> anParam);
+    public String webFindDailyStatementBasicsInfo(Map<String, Object> anParam);
 
     /***
      * 更新日报表状态
@@ -48,23 +48,23 @@ public interface ICommissionDailyStatementService {
      * @param anBusinStatus
      * @return
      */
-    public String webUpdateDailyStatement(Long anDailyStatementId,String anBusinStatus);
-    
+    public String webUpdateDailyStatement(Long anDailyStatementId, String anBusinStatus);
+
     /***
      * 删除日报表
      * @param anDailyStatementId
      * @return
      */
     public String webDelDailyStatement(Long anDailyStatementId);
-    
+
     /***
      * 查询佣金支付统计数据
      * @param anPayDate
      * @param anOwnCustNo
      * @return
      */
-    public String webFindPayResultCount(String anPayDate,Long anOwnCustNo);
-    
+    public String webFindPayResultCount(String anPayDate, Long anOwnCustNo);
+
     /***
      * 分页查询支付记录
      * @param anOwnCustNo
@@ -74,16 +74,17 @@ public interface ICommissionDailyStatementService {
      * @param anPageSize
      * @return
      */
-    public String webQueryPayResultRecord(Long anOwnCustNo,String anPayDate,String anPayStatus,int anFlag, int anPageNum, int anPageSize);
-    
+    public String webQueryPayResultRecord(Long anOwnCustNo, String anPayDate, String anPayStatus, int anFlag,
+            int anPageNum, int anPageSize);
+
     /***
      * 根据支付日期查询佣金支付记录
      * @param anPayDate
      * @param anOwnCustNo
      * @return
      */
-    public String webFindPayResultInfo(String anPayDate,Long anOwnCustNo);
-    
+    public String webFindPayResultInfo(String anPayDate, Long anOwnCustNo);
+
     /***
      * 添加日账单信息
      * @param anDailyRefNo
@@ -91,8 +92,8 @@ public interface ICommissionDailyStatementService {
      * @param anOwnCustNo
      * @return
      */
-    public String webSaveDailyStatement(String anDailyRefNo,String anPayDate,Long anOwnCustNo);
-    
+    public String webSaveDailyStatement(String anDailyRefNo, String anPayDate, Long anOwnCustNo);
+
     /***
      * 查询日账单详情
      * @param anDailyStatementId
@@ -108,13 +109,14 @@ public interface ICommissionDailyStatementService {
      * @param anFlag
      * @return
      */
-    public String webQueryDailyStatementRecordById(Long anDailyStatementId,int anPageNum,int anPageSize,String anFlag);
-    
+    public String webQueryDailyStatementRecordById(Long anDailyStatementId, int anPageNum, int anPageSize,
+            String anFlag);
+
     /***
      * 根据对账日期和对账企业查询日账单
      * @param anPayDate
      * @param anOwnCustNo
      * @return
      */
-    public String webFindDailyStatementByPayDate(String anPayDate,Long anOwnCustNo);
+    public String webFindDailyStatementByPayDate(String anPayDate, Long anOwnCustNo);
 }

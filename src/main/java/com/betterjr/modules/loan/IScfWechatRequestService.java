@@ -15,7 +15,7 @@ public interface IScfWechatRequestService {
      */
     String webRequestByOffer(String anId);
 
-   /**
+    /**
     * 修改票据申请的融资状态
     * @param anRequestNo
     * @param anTradeStatus
@@ -36,7 +36,5 @@ public interface IScfWechatRequestService {
      * @return
      */
     String webFindRequestByBill(String anBillsNo);
-
-
 
 }

@@ -28,7 +28,8 @@ public interface IScfReceivableRequestService {
      * @param isCust
      * @return
      */
-    public String webQueryReceivableRequestFour(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize, boolean isCust);
+    public String webQueryReceivableRequestFour(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize,
+            boolean isCust);
 
     /**
      * 模式四融资申请核心企业确认
@@ -62,7 +63,8 @@ public interface IScfReceivableRequestService {
      * @param anRequestPayDate
      * @return
      */
-    public String webSaveSubmitRequestTwo(String anRequestNo, String anRequestPayDate, String anDescription, Long anFactoryNo);
+    public String webSaveSubmitRequestTwo(String anRequestNo, String anRequestPayDate, String anDescription,
+            Long anFactoryNo);
 
     /**
      * 供应商签署合同（供应商和平台的两份合同）
@@ -80,7 +82,8 @@ public interface IScfReceivableRequestService {
      * @param anDescription
      * @return
      */
-    public String webSaveSupplierFinishConfirmRequest(String anRequestNo, String anRequestPayDate, String anDescription);
+    public String webSaveSupplierFinishConfirmRequest(String anRequestNo, String anRequestPayDate,
+            String anDescription);
 
     /**
      * 融资废止操作
@@ -133,7 +136,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 供应商查询已经完结的融资信息
@@ -144,7 +148,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryFinishReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryFinishReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 核心企业查询可以提交的融资信息
@@ -155,7 +160,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 核心企业查询已经融资结束的所有的申请信息
@@ -166,7 +172,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryFinishReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryFinishReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 确定单个应付账款是否可以进行申请
@@ -220,7 +227,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryReceivableRequestTwoWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryReceivableRequestTwoWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 模式 二供应商查询已经完结的融资信息
@@ -231,7 +239,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryTwoFinishReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryTwoFinishReceivableRequestWithSupplier(Map<String, Object> anMap, String anFlag,
+            int anPageNum, int anPageSize);
 
     /**
      * 模式二核心企业查询可以提交的融资信息
@@ -242,7 +251,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryTwoReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryTwoReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 模式二 核心企业查询已经融资结束的所有的申请信息
@@ -253,7 +263,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryTwoFinishReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryTwoFinishReceivableRequestWithCore(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 模式 2保理公司查询可以申请的申请
@@ -264,7 +275,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryTwoReceivableRequestWithFactory(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryTwoReceivableRequestWithFactory(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 模式2 保理公司查询已经融资结束的所有的申请信息
@@ -275,7 +287,8 @@ public interface IScfReceivableRequestService {
      * @param anPageSize
      * @return
      */
-    public String webQueryTwoFinishReceivableRequestWithFactory(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryTwoFinishReceivableRequestWithFactory(Map<String, Object> anMap, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 融资申请统一模式入口 receivableId
@@ -294,7 +307,8 @@ public interface IScfReceivableRequestService {
      * @param anDescription
      * @return requestProductCode 保理产品productCode custBankAccount custBankAccountName custBankName
      */
-    public String webSaveSubmitRequestTotal(Map<String, Object> anMap, String anRequestNo, String anRequestPayDate, String anDescription);
+    public String webSaveSubmitRequestTotal(Map<String, Object> anMap, String anRequestNo, String anRequestPayDate,
+            String anDescription);
 
     /**
      * 当前申请可用的保理产品列表

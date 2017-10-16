@@ -37,7 +37,8 @@ public interface IScfCreditService {
      * @param anPageSize
      * @return
      */
-    public String webQueryCreditDetail(Map<String, Object> anMap, Long anCreditId, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryCreditDetail(Map<String, Object> anMap, Long anCreditId, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 查询授信额度
@@ -112,16 +113,16 @@ public interface IScfCreditService {
      * @param anFactorNo
      * @return
      */
-	String webFindCreditList(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
+    String webFindCreditList(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
 
-	/**
-	 * 查询授信列表(带金额)
-	 * @param anCustNo
-	 * @param anCoreCustNo
-	 * @param anFactorNo
-	 * @param anCreditMode
-	 * @return
-	 */
-	String webFindCreditSimpleData(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
+    /**
+     * 查询授信列表(带金额)
+     * @param anCustNo
+     * @param anCoreCustNo
+     * @param anFactorNo
+     * @param anCreditMode
+     * @return
+     */
+    String webFindCreditSimpleData(Long anCustNo, Long anCoreCustNo, Long anFactorNo);
 
 }

@@ -14,7 +14,7 @@ public interface IScfProductService {
      * @return
      */
     public String webQueryProduct(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
-    
+
     /**
      * 融资产品信息分页查询
      * 

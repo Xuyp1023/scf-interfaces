@@ -1,17 +1,22 @@
 package com.betterjr.modules.fund.entity;
 
-import com.betterjr.common.annotation.*;
-import com.betterjr.common.data.BaseRemoteEntity;
-import com.betterjr.common.entity.BetterjrEntity;
-import com.betterjr.common.mapper.BeanMapper;
-import com.betterjr.common.selectkey.SerialGenerator;
-import com.betterjr.common.utils.BetterStringUtils;
-import com.betterjr.common.utils.MathExtend;
-
-import javax.persistence.*;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.betterjr.common.annotation.MetaData;
+import com.betterjr.common.data.BaseRemoteEntity;
+import com.betterjr.common.entity.BetterjrEntity;
+import com.betterjr.common.utils.MathExtend;
 
 @Access(AccessType.FIELD)
 @Entity
@@ -215,10 +220,10 @@ public class SaleFundDayInfo implements BetterjrEntity, BaseRemoteEntity {
     private static final long serialVersionUID = 1442557610328L;
 
     public boolean checkBond(String anBond) {
-        if (BetterStringUtils.isNotBlank(anBond) && this.fundInfo != null && BetterStringUtils.isNotBlank(this.fundInfo.getBrand())) {
+        if (StringUtils.isNotBlank(anBond) && this.fundInfo != null
+                && StringUtils.isNotBlank(this.fundInfo.getBrand())) {
             return anBond.equalsIgnoreCase(this.fundInfo.getBrand());
-        }
-        else {
+        } else {
             return true;
         }
     }
@@ -446,7 +451,7 @@ public class SaleFundDayInfo implements BetterjrEntity, BaseRemoteEntity {
 
     public BigDecimal computeShares(BigDecimal anBalance) {
 
-        return MathExtend.round(anBalance.divide(this.netValue,4,RoundingMode.UP));
+        return MathExtend.round(anBalance.divide(this.netValue, 4, RoundingMode.UP));
     }
 
     public Integer findFundOrder() {
@@ -471,11 +476,11 @@ public class SaleFundDayInfo implements BetterjrEntity, BaseRemoteEntity {
     public void setYearRate(BigDecimal anYearRate) {
         this.yearRate = anYearRate;
     }
-//    public SaleFundDayInfo(TempSaleFundDay tempInfo) {
-//        BeanMapper.copy(tempInfo, this);
-//        this.setId(SerialGenerator.getLongValue("SaleFundDayInfo.id"));
-//    }
-    
+    // public SaleFundDayInfo(TempSaleFundDay tempInfo) {
+    // BeanMapper.copy(tempInfo, this);
+    // this.setId(SerialGenerator.getLongValue("SaleFundDayInfo.id"));
+    // }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -528,33 +533,54 @@ public class SaleFundDayInfo implements BetterjrEntity, BaseRemoteEntity {
         SaleFundDayInfo other = (SaleFundDayInfo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
                 && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
-                && (this.getFundCode() == null ? other.getFundCode() == null : this.getFundCode().equals(other.getFundCode()))
-                && (this.getFundName() == null ? other.getFundName() == null : this.getFundName().equals(other.getFundName()))
-                && (this.getShareType() == null ? other.getShareType() == null : this.getShareType().equals(other.getShareType()))
-                && (this.getNetValueType() == null ? other.getNetValueType() == null : this.getNetValueType().equals(other.getNetValueType()))
-                && (this.getNetDate() == null ? other.getNetDate() == null : this.getNetDate().equals(other.getNetDate()))
-                && (this.getIssueDate() == null ? other.getIssueDate() == null : this.getIssueDate().equals(other.getIssueDate()))
-                && (this.getLastStatus() == null ? other.getLastStatus() == null : this.getLastStatus().equals(other.getLastStatus()))
+                && (this.getFundCode() == null ? other.getFundCode() == null
+                        : this.getFundCode().equals(other.getFundCode()))
+                && (this.getFundName() == null ? other.getFundName() == null
+                        : this.getFundName().equals(other.getFundName()))
+                && (this.getShareType() == null ? other.getShareType() == null
+                        : this.getShareType().equals(other.getShareType()))
+                && (this.getNetValueType() == null ? other.getNetValueType() == null
+                        : this.getNetValueType().equals(other.getNetValueType()))
+                && (this.getNetDate() == null ? other.getNetDate() == null
+                        : this.getNetDate().equals(other.getNetDate()))
+                && (this.getIssueDate() == null ? other.getIssueDate() == null
+                        : this.getIssueDate().equals(other.getIssueDate()))
+                && (this.getLastStatus() == null ? other.getLastStatus() == null
+                        : this.getLastStatus().equals(other.getLastStatus()))
                 && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-                && (this.getNextStatus() == null ? other.getNextStatus() == null : this.getNextStatus().equals(other.getNextStatus()))
+                && (this.getNextStatus() == null ? other.getNextStatus() == null
+                        : this.getNextStatus().equals(other.getNextStatus()))
                 && (this.getShares() == null ? other.getShares() == null : this.getShares().equals(other.getShares()))
                 && (this.getAsset() == null ? other.getAsset() == null : this.getAsset().equals(other.getAsset()))
-                && (this.getLastShares() == null ? other.getLastShares() == null : this.getLastShares().equals(other.getLastShares()))
-                && (this.getLastAsset() == null ? other.getLastAsset() == null : this.getLastAsset().equals(other.getLastAsset()))
-                && (this.getNetValue() == null ? other.getNetValue() == null : this.getNetValue().equals(other.getNetValue()))
-                && (this.getLastNetValue() == null ? other.getLastNetValue() == null : this.getLastNetValue().equals(other.getLastNetValue()))
+                && (this.getLastShares() == null ? other.getLastShares() == null
+                        : this.getLastShares().equals(other.getLastShares()))
+                && (this.getLastAsset() == null ? other.getLastAsset() == null
+                        : this.getLastAsset().equals(other.getLastAsset()))
+                && (this.getNetValue() == null ? other.getNetValue() == null
+                        : this.getNetValue().equals(other.getNetValue()))
+                && (this.getLastNetValue() == null ? other.getLastNetValue() == null
+                        : this.getLastNetValue().equals(other.getLastNetValue()))
                 && (this.getIncome() == null ? other.getIncome() == null : this.getIncome().equals(other.getIncome()))
-                && (this.getIncomeUnit() == null ? other.getIncomeUnit() == null : this.getIncomeUnit().equals(other.getIncomeUnit()))
-                && (this.getIncomeRatio() == null ? other.getIncomeRatio() == null : this.getIncomeRatio().equals(other.getIncomeRatio()))
-                && (this.getTotalNetValue() == null ? other.getTotalNetValue() == null : this.getTotalNetValue().equals(other.getTotalNetValue()))
-                && (this.getGuarantNetValue() == null ? other.getGuarantNetValue() == null : this.getGuarantNetValue().equals(
-                        other.getGuarantNetValue()))
-                && (this.getGuarantEndDate() == null ? other.getGuarantEndDate() == null : this.getGuarantEndDate().equals(other.getGuarantEndDate()))
-                && (this.getServiceRatio() == null ? other.getServiceRatio() == null : this.getServiceRatio().equals(other.getServiceRatio()))
-                && (this.getSwingRate() == null ? other.getSwingRate() == null : this.getSwingRate().equals(other.getSwingRate()))
-                && (this.getYearRate() == null ? other.getYearRate() == null : this.getYearRate().equals(other.getYearRate()))
-                && (this.getBuildRate() == null ? other.getBuildRate() == null : this.getBuildRate().equals(other.getBuildRate()))
-                && (this.getActiveRecord() == null ? other.getActiveRecord() == null : this.getActiveRecord().equals(other.getActiveRecord()));
+                && (this.getIncomeUnit() == null ? other.getIncomeUnit() == null
+                        : this.getIncomeUnit().equals(other.getIncomeUnit()))
+                && (this.getIncomeRatio() == null ? other.getIncomeRatio() == null
+                        : this.getIncomeRatio().equals(other.getIncomeRatio()))
+                && (this.getTotalNetValue() == null ? other.getTotalNetValue() == null
+                        : this.getTotalNetValue().equals(other.getTotalNetValue()))
+                && (this.getGuarantNetValue() == null ? other.getGuarantNetValue() == null
+                        : this.getGuarantNetValue().equals(other.getGuarantNetValue()))
+                && (this.getGuarantEndDate() == null ? other.getGuarantEndDate() == null
+                        : this.getGuarantEndDate().equals(other.getGuarantEndDate()))
+                && (this.getServiceRatio() == null ? other.getServiceRatio() == null
+                        : this.getServiceRatio().equals(other.getServiceRatio()))
+                && (this.getSwingRate() == null ? other.getSwingRate() == null
+                        : this.getSwingRate().equals(other.getSwingRate()))
+                && (this.getYearRate() == null ? other.getYearRate() == null
+                        : this.getYearRate().equals(other.getYearRate()))
+                && (this.getBuildRate() == null ? other.getBuildRate() == null
+                        : this.getBuildRate().equals(other.getBuildRate()))
+                && (this.getActiveRecord() == null ? other.getActiveRecord() == null
+                        : this.getActiveRecord().equals(other.getActiveRecord()));
     }
 
     @Override
@@ -595,8 +621,7 @@ public class SaleFundDayInfo implements BetterjrEntity, BaseRemoteEntity {
     public String findRiskLevel() {
         if (this.fundInfo != null) {
             return this.fundInfo.getRiskLevel();
-        }
-        else {
+        } else {
             return "00";
         }
     }

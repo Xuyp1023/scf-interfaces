@@ -18,8 +18,8 @@ public interface IScfAssetService {
      */
     public String webSaveAddAssetByReceivable(Map<String, Object> anMap);
 
-    public String webQueryCanUseBaseData(Long anCustNo, Long anCoreCustNo, String anDataType, String anIds, int anPageNum, int anPageSize,
-            String anFlag);
+    public String webQueryCanUseBaseData(Long anCustNo, Long anCoreCustNo, String anDataType, String anIds,
+            int anPageNum, int anPageSize, String anFlag);
 
     public String webFindAssetById(Long anAssetId);
 

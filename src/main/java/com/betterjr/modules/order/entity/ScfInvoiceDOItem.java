@@ -1,6 +1,7 @@
 package com.betterjr.modules.order.entity;
 
 import java.math.BigDecimal;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
+
 import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.entity.BetterjrEntity;
 import com.betterjr.common.mapper.CustDateJsonSerializer;
@@ -29,88 +31,88 @@ public class ScfInvoiceDOItem implements BetterjrEntity {
      * 流水号
      */
     @Id
-    @Column(name = "ID",  columnDefinition="INTEGER" )
-    @MetaData( value="流水号", comments = "流水号")
+    @Column(name = "ID", columnDefinition = "INTEGER")
+    @MetaData(value = "流水号", comments = "流水号")
     @OrderBy("DESC")
     private Long id;
-    
+
     /**
      * 发票号
      */
     @Id
-    @Column(name = "L_INVOICE_ID",  columnDefinition="INTEGER" )
-    @MetaData( value="发票号", comments = "发票号")
+    @Column(name = "L_INVOICE_ID", columnDefinition = "INTEGER")
+    @MetaData(value = "发票号", comments = "发票号")
     private Long invoiceId;
-    
+
     /**
      * 货物/应税劳务,服务名称
      */
-    @Column(name = "C_SERVICE_NAME",  columnDefinition="VARCHAR" )
-    @MetaData( value="货物/应税劳务,服务名称", comments = "货物/应税劳务,服务名称")
+    @Column(name = "C_SERVICE_NAME", columnDefinition = "VARCHAR")
+    @MetaData(value = "货物/应税劳务,服务名称", comments = "货物/应税劳务,服务名称")
     private String serviceName;
-    
+
     /**
      * 规格型号
      */
-    @Column(name = "C_DESCRIPTION",  columnDefinition="VARCHAR" )
-    @MetaData( value="规格型号", comments = "规格型号")
+    @Column(name = "C_DESCRIPTION", columnDefinition = "VARCHAR")
+    @MetaData(value = "规格型号", comments = "规格型号")
     private String description;
 
     /**
      * 商品价格
      */
-    @Column(name = "F_UNIT",  columnDefinition="DOUBLE" )
-    @MetaData( value="商品价格", comments = "商品价格")
+    @Column(name = "F_UNIT", columnDefinition = "DOUBLE")
+    @MetaData(value = "商品价格", comments = "商品价格")
     private BigDecimal unit;
 
     /**
      * 数量
      */
-    @Column(name = "N_AMOUNT",  columnDefinition="DOUBLE" )
-    @MetaData( value="数量", comments = "数量")
+    @Column(name = "N_AMOUNT", columnDefinition = "DOUBLE")
+    @MetaData(value = "数量", comments = "数量")
     private Integer amount;
 
     /**
      * 总额
      */
-    @Column(name = "F_BALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="总额", comments = "总额")
+    @Column(name = "F_BALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "总额", comments = "总额")
     private BigDecimal balance;
-    
+
     /**
      * 单位
      */
-    @Column(name = "C_COMPANY",  columnDefinition="VARCHAR" )
-    @MetaData( value="单位", comments = "单位")
+    @Column(name = "C_COMPANY", columnDefinition = "VARCHAR")
+    @MetaData(value = "单位", comments = "单位")
     private String company;
-    
+
     /**
      * 税率
      */
-    @Column(name = "F_INVOICE_TAX",  columnDefinition="DOUBLE" )
-    @MetaData( value="税率", comments = "税率")
+    @Column(name = "F_INVOICE_TAX", columnDefinition = "DOUBLE")
+    @MetaData(value = "税率", comments = "税率")
     private BigDecimal invoiceTax;
-    
+
     /**
      * 税金
      */
-    @Column(name = "F_INVOICE_TAX_BALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="税金", comments = "税金")
+    @Column(name = "F_INVOICE_TAX_BALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "税金", comments = "税金")
     private BigDecimal invoiceTaxBalance;
 
     /**
      * 创建日期
      */
-    @Column(name = "D_REG_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="创建日期", comments = "创建日期")
+    @Column(name = "D_REG_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "创建日期", comments = "创建日期")
     @JsonSerialize(using = CustDateJsonSerializer.class)
     private String regDate;
 
     /**
      * 创建时间
      */
-    @Column(name = "T_REG_TIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="创建时间", comments = "创建时间")
+    @Column(name = "T_REG_TIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "创建时间", comments = "创建时间")
     private String regTime;
 
     public Long getId() {
@@ -211,13 +213,13 @@ public class ScfInvoiceDOItem implements BetterjrEntity {
 
     @Override
     public String toString() {
-        return "ScfInvoiceDODetail [id=" + this.id + ", invoiceId=" + this.invoiceId + ", serviceName=" + this.serviceName + ", description="
-                + this.description + ", unit=" + this.unit + ", amount=" + this.amount + ", balance=" + this.balance + ", company=" + this.company
-                + ", invoiceTax=" + this.invoiceTax + ", invoiceTaxBalance=" + this.invoiceTaxBalance + ", regDate=" + this.regDate + ", regTime="
-                + this.regTime + "]";
+        return "ScfInvoiceDODetail [id=" + this.id + ", invoiceId=" + this.invoiceId + ", serviceName="
+                + this.serviceName + ", description=" + this.description + ", unit=" + this.unit + ", amount="
+                + this.amount + ", balance=" + this.balance + ", company=" + this.company + ", invoiceTax="
+                + this.invoiceTax + ", invoiceTaxBalance=" + this.invoiceTaxBalance + ", regDate=" + this.regDate
+                + ", regTime=" + this.regTime + "]";
     }
 
-   
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -245,67 +247,53 @@ public class ScfInvoiceDOItem implements BetterjrEntity {
         ScfInvoiceDOItem other = (ScfInvoiceDOItem) obj;
         if (this.amount == null) {
             if (other.amount != null) return false;
-        }
-        else if (!this.amount.equals(other.amount)) return false;
+        } else if (!this.amount.equals(other.amount)) return false;
         if (this.balance == null) {
             if (other.balance != null) return false;
-        }
-        else if (!this.balance.equals(other.balance)) return false;
+        } else if (!this.balance.equals(other.balance)) return false;
         if (this.company == null) {
             if (other.company != null) return false;
-        }
-        else if (!this.company.equals(other.company)) return false;
+        } else if (!this.company.equals(other.company)) return false;
         if (this.description == null) {
             if (other.description != null) return false;
-        }
-        else if (!this.description.equals(other.description)) return false;
+        } else if (!this.description.equals(other.description)) return false;
         if (this.id == null) {
             if (other.id != null) return false;
-        }
-        else if (!this.id.equals(other.id)) return false;
+        } else if (!this.id.equals(other.id)) return false;
         if (this.invoiceId == null) {
             if (other.invoiceId != null) return false;
-        }
-        else if (!this.invoiceId.equals(other.invoiceId)) return false;
+        } else if (!this.invoiceId.equals(other.invoiceId)) return false;
         if (this.invoiceTax == null) {
             if (other.invoiceTax != null) return false;
-        }
-        else if (!this.invoiceTax.equals(other.invoiceTax)) return false;
+        } else if (!this.invoiceTax.equals(other.invoiceTax)) return false;
         if (this.invoiceTaxBalance == null) {
             if (other.invoiceTaxBalance != null) return false;
-        }
-        else if (!this.invoiceTaxBalance.equals(other.invoiceTaxBalance)) return false;
+        } else if (!this.invoiceTaxBalance.equals(other.invoiceTaxBalance)) return false;
         if (this.regDate == null) {
             if (other.regDate != null) return false;
-        }
-        else if (!this.regDate.equals(other.regDate)) return false;
+        } else if (!this.regDate.equals(other.regDate)) return false;
         if (this.regTime == null) {
             if (other.regTime != null) return false;
-        }
-        else if (!this.regTime.equals(other.regTime)) return false;
+        } else if (!this.regTime.equals(other.regTime)) return false;
         if (this.serviceName == null) {
             if (other.serviceName != null) return false;
-        }
-        else if (!this.serviceName.equals(other.serviceName)) return false;
+        } else if (!this.serviceName.equals(other.serviceName)) return false;
         if (this.unit == null) {
             if (other.unit != null) return false;
-        }
-        else if (!this.unit.equals(other.unit)) return false;
+        } else if (!this.unit.equals(other.unit)) return false;
         return true;
     }
 
     public ScfInvoiceDOItem() {
         super();
-       
+
     }
 
     public void initAdd(Long anInviceId) {
-        this.id=SerialGenerator.getLongValue("ScfInvoiceDOItem.id");
-        this.invoiceId=anInviceId;
+        this.id = SerialGenerator.getLongValue("ScfInvoiceDOItem.id");
+        this.invoiceId = anInviceId;
         this.regDate = BetterDateUtils.getNumDate();
-        this.regTime=BetterDateUtils.getNumTime();
+        this.regTime = BetterDateUtils.getNumTime();
     }
-    
-    
 
 }

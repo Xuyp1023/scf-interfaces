@@ -5,18 +5,18 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResolveResult implements Serializable{
-    
+public class ResolveResult implements Serializable {
+
     /**
      * 
      */
     private static final long serialVersionUID = -3527018016187153199L;
 
     private int recordAmount;
-    
+
     private BigDecimal blance;
-    
-    private List<Object> listData=new ArrayList<>();
+
+    private List<Object> listData = new ArrayList<>();
 
     public int getRecordAmount() {
         return this.recordAmount;
@@ -41,16 +41,14 @@ public class ResolveResult implements Serializable{
     public void setListData(List<Object> anListData) {
         this.listData = anListData;
     }
-    
-    
-    public static ResolveResult getInitValue(){
-        
-        ResolveResult result=new ResolveResult();
+
+    public static ResolveResult getInitValue() {
+
+        ResolveResult result = new ResolveResult();
         result.setBlance(new BigDecimal(0));
         result.setRecordAmount(0);
         return result;
-        
+
     }
-    
 
 }

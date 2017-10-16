@@ -8,7 +8,7 @@ import java.util.Map;
  *
  */
 public interface IscfAssetRegisterService {
-    
+
     /**
      * 新增资产登记
      * @param anMap
@@ -22,7 +22,7 @@ public interface IscfAssetRegisterService {
      * @return
      */
     String webFindAssetRegister(String anRequestNo);
-	
+
     /**
      * 新增资产检查
      * @param anMap

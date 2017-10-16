@@ -3,7 +3,7 @@ package com.betterjr.modules.order;
 import java.util.Map;
 
 public interface IScfTransportService {
-    
+
     /**
      * 订单运输单据录入
      */
