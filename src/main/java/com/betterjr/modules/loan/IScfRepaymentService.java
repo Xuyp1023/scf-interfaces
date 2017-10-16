@@ -81,7 +81,7 @@ public interface IScfRepaymentService {
      * @return
      */
     String webFindRecordDetail(Map<String, Object> anMap, Long id);
-    
+
     /**
      * 保存还款
      * @param anMap
@@ -97,14 +97,16 @@ public interface IScfRepaymentService {
      * @param anPayDate 还款日期
      * @return
      */
-    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo, String anPayDate, BigDecimal totalBalance);
+    String webQueryRepaymentFee(String anRequestNo, String anPayType, String anFactorNo, String anPayDate,
+            BigDecimal totalBalance);
 
     /**
      * 经销商还款 -计算利息 -填入(本次还款额) 时  调用
      * @param anMap
      * @return
      */
-    String webQuerySellerRepaymentFee(String anRequestNo, String anPayType, String anPayDate, BigDecimal anTotalBalance);
+    String webQuerySellerRepaymentFee(String anRequestNo, String anPayType, String anPayDate,
+            BigDecimal anTotalBalance);
 
     /**
      * 计算还款方式-还款时，在选择还款日期后调用，用于填充还款方式
@@ -155,7 +157,7 @@ public interface IScfRepaymentService {
      * @return
      */
     String webCalculatLoanBalance(String anRequestNo, String anStartDate);
-    
+
     /**
      * 填入展期期限后调用，用于计算结束日期
      * @param anStartDate
@@ -180,7 +182,7 @@ public interface IScfRepaymentService {
      * @param anStartDate
      * @param payBalance
      * @return
-     */ 
+     */
     String webPayAssigned(String anRequestNo, String anStartDate, BigDecimal payBalance);
 
     /**
@@ -198,7 +200,8 @@ public interface IScfRepaymentService {
      * @param anPageSize
      * @return
      */
-    String webQueryExtensionList(Map<String, Object> anMap, String requestNo, int anFlag, int anPageNum, int anPageSize);
+    String webQueryExtensionList(Map<String, Object> anMap, String requestNo, int anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 无分页查展期列表
@@ -234,7 +237,6 @@ public interface IScfRepaymentService {
      * @return
      */
     String webFindPayRecordList(Map<String, Object> anMap);
-
 
     String webSaveModifyPressMoney(Map<String, Object> anMap, Long id);
 

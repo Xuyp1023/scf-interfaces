@@ -79,7 +79,7 @@ public class RemoteResultInfo<T> implements java.io.Serializable {
         sb.append(" [");
         sb.append("sucess = ").append(sucess);
         sb.append(", message=").append(message).append("\r\n");
-        
+
         for (Object obj : this.data) {
             sb.append(obj.toString());
         }

@@ -11,7 +11,6 @@ import com.betterjr.modules.document.data.DownloadFileInfo;
 import com.betterjr.modules.rule.annotation.AnnotRuleFunc;
 import com.betterjr.modules.rule.entity.RuleFuncType;
 
-
 @AnnotRuleService("fileWebServiceDubboService")
 public interface IFileWebService {
 
@@ -24,7 +23,8 @@ public interface IFileWebService {
      */
     @NoSession
     @AnnotRuleFunc(name = "queryDownloadList", fundType = RuleFuncType.OBJECT)
-    List<DownloadFileInfo> queryDownloadList(Long anCustNo, String anScfId, String anRequestNo, String anBusinType, String anFactorNo);
+    List<DownloadFileInfo> queryDownloadList(Long anCustNo, String anScfId, String anRequestNo, String anBusinType,
+            String anFactorNo);
 
     /**
      * 对应接口：downloadFile 供应链融资业务，需要下载文件的信息，需要在control层做转换

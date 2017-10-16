@@ -13,7 +13,6 @@ import javax.persistence.Table;
 import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.data.BaseRemoteEntity;
 import com.betterjr.common.entity.BetterjrEntity;
-import com.betterjr.common.utils.MathExtend;
 
 @Access(AccessType.FIELD)
 @Entity

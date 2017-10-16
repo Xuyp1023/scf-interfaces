@@ -65,7 +65,8 @@ public interface ICommissionInvoiceService {
      *            是否是用来确认页面的查询 true 是确认页面的查询 false 发票申请页面的查询
      * @return
      */
-    String webQueryCommissionInvoice(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize, boolean anIsConfirm);
+    String webQueryCommissionInvoice(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsConfirm);
 
     /**
      * 查询发票详情信息

@@ -9,9 +9,9 @@ public interface ICommissionInvoiceCustInfoService {
     String webQueryInvoiceCustInfoList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize);
 
     String webSaveUpdateInvoiceCustInfo(Map anParamMap);
-    
+
     String webSaveDeleteCustInfo(Long anCustInfoId);
-    
-    String webFindInvoiceCustInfoEffectiveByCustNo(Long anCustNo,Long anCoreCustNo);
-    
+
+    String webFindInvoiceCustInfoEffectiveByCustNo(Long anCustNo, Long anCoreCustNo);
+
 }

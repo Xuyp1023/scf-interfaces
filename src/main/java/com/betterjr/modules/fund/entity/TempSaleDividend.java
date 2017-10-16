@@ -1,7 +1,5 @@
 package com.betterjr.modules.fund.entity;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
@@ -10,9 +8,6 @@ import javax.persistence.Table;
 
 import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.data.BaseRemoteEntity;
-import com.betterjr.common.selectkey.SerialGenerator;
-import com.betterjr.common.utils.BetterDateUtils;
-import com.betterjr.common.utils.MathExtend;
 
 @Access(AccessType.FIELD)
 @Entity

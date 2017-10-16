@@ -16,24 +16,26 @@ public interface IScfOrderService {
     /**
      * 订单信息分页查询
      */
-    public String webQueryOrder(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryOrder(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 订单信息分页查询
      */
-    public String webQueryOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 订单未生效信息分页查询
      */
-    public String webQueryIneffectiveOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsAudit);
+    public String webQueryIneffectiveOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsAudit);
 
     /**
      * 订单已生效信息分页查询
      */
-    public String webQueryEffectiveOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsCust);
+    public String webQueryEffectiveOrderDO(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsCust);
 
     /**
      * 订单信息无分页查询
@@ -100,17 +102,18 @@ public interface IScfOrderService {
      */
     String webFindCoreCustNo(String anId, String anType);
 
-    public String webQueryCanAnnulOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryCanAnnulOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize);
 
     public String webSaveAnnulOrder(String anRefNo, String anVersion);
 
     public String webSaveAuditOrderByRefNoVersion(String anRefNo, String anVersion);
 
-    public String webQueryIneffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsAudit);
+    public String webQueryIneffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsAudit);
 
-    public String webQueryEffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsCust);
+    public String webQueryEffectiveOrder(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsCust);
 
     public String webfindOrderDetail(String anRefNo, String anVersion);
 

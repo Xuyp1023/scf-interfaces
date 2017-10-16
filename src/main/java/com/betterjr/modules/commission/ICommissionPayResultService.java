@@ -90,6 +90,7 @@ public interface ICommissionPayResultService {
      * @return
      */
     String webQueryAllPayResultRecords(Long anPayResultId, int anFlag, int anPageNum, int anPageSize);
+
     /**
      *
      * @param anPayResultId
@@ -98,7 +99,8 @@ public interface ICommissionPayResultService {
      * @param anPageSize
      * @return
      */
-    String webQueryUncheckPayResultRecords(Map<String, Object> param, Long anPayResultId, int anFlag, int anPageNum, int anPageSize);
+    String webQueryUncheckPayResultRecords(Map<String, Object> param, Long anPayResultId, int anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      *

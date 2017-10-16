@@ -1,6 +1,12 @@
 package com.betterjr.modules.supplychain.data;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.time.DateUtils;
 
 import com.betterjr.common.utils.BetterDateUtils;
 
@@ -42,7 +48,7 @@ public class ScfClientDataProcess implements java.io.Serializable {
         if (result == null) {
             result = new ArrayList();
         }
-        
+
         return result;
     }
 
@@ -70,8 +76,8 @@ public class ScfClientDataProcess implements java.io.Serializable {
         this.workType = anWorkType;
         this.workStatus = "0";
         this.workDate = BetterDateUtils.formatNumberDate(new Date());
-        this.startDate = BetterDateUtils.formatNumberDate(BetterDateUtils.addYears(new Date(), -6));
-        this.endDate = BetterDateUtils.formatNumberDate(BetterDateUtils.addDays(new Date(), 1));
+        this.startDate = BetterDateUtils.formatNumberDate(DateUtils.addYears(new Date(), -6));
+        this.endDate = BetterDateUtils.formatNumberDate(DateUtils.addDays(new Date(), 1));
     }
 
     public String getWorkType() {
@@ -114,6 +120,7 @@ public class ScfClientDataProcess implements java.io.Serializable {
         this.endDate = anEndDate;
     }
 
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());

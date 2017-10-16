@@ -467,22 +467,38 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
         }
         final ScfElecAgreement other = (ScfElecAgreement) that;
         return (this.getAppNo() == null ? other.getAppNo() == null : this.getAppNo().equals(other.getAppNo()))
-                && (this.getAgreeName() == null ? other.getAgreeName() == null : this.getAgreeName().equals(other.getAgreeName()))
-                && (this.getAgreeNo() == null ? other.getAgreeNo() == null : this.getAgreeNo().equals(other.getAgreeNo()))
-                && (this.getRequestNo() == null ? other.getRequestNo() == null : this.getRequestNo().equals(other.getRequestNo()))
-                && (this.getBuyerNo() == null ? other.getBuyerNo() == null : this.getBuyerNo().equals(other.getBuyerNo()))
-                && (this.getSupplierNo() == null ? other.getSupplierNo() == null : this.getSupplierNo().equals(other.getSupplierNo()))
-                && (this.getFactorNo() == null ? other.getFactorNo() == null : this.getFactorNo().equals(other.getFactorNo()))
-                && (this.getSignDate() == null ? other.getSignDate() == null : this.getSignDate().equals(other.getSignDate()))
-                && (this.getBatchNo() == null ? other.getBatchNo() == null : this.getBatchNo().equals(other.getBatchNo()))
-                && (this.getSignBatchNo() == null ? other.getSignBatchNo() == null : this.getSignBatchNo().equals(other.getSignBatchNo()))
-                && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
-                && (this.getModiDate() == null ? other.getModiDate() == null : this.getModiDate().equals(other.getModiDate()))
-                && (this.getSignStatus() == null ? other.getSignStatus() == null : this.getSignStatus().equals(other.getSignStatus()))
-                && (this.getDealFlag() == null ? other.getDealFlag() == null : this.getDealFlag().equals(other.getDealFlag()))
-                && (this.getSupplier() == null ? other.getSupplier() == null : this.getSupplier().equals(other.getSupplier()))
-                && (this.getHtmlBatchNo() == null ? other.getHtmlBatchNo() == null : this.getHtmlBatchNo().equals(other.getHtmlBatchNo()))
-                && (this.getAgreeType() == null ? other.getAgreeType() == null : this.getAgreeType().equals(other.getAgreeType()));
+                && (this.getAgreeName() == null ? other.getAgreeName() == null
+                        : this.getAgreeName().equals(other.getAgreeName()))
+                && (this.getAgreeNo() == null ? other.getAgreeNo() == null
+                        : this.getAgreeNo().equals(other.getAgreeNo()))
+                && (this.getRequestNo() == null ? other.getRequestNo() == null
+                        : this.getRequestNo().equals(other.getRequestNo()))
+                && (this.getBuyerNo() == null ? other.getBuyerNo() == null
+                        : this.getBuyerNo().equals(other.getBuyerNo()))
+                && (this.getSupplierNo() == null ? other.getSupplierNo() == null
+                        : this.getSupplierNo().equals(other.getSupplierNo()))
+                && (this.getFactorNo() == null ? other.getFactorNo() == null
+                        : this.getFactorNo().equals(other.getFactorNo()))
+                && (this.getSignDate() == null ? other.getSignDate() == null
+                        : this.getSignDate().equals(other.getSignDate()))
+                && (this.getBatchNo() == null ? other.getBatchNo() == null
+                        : this.getBatchNo().equals(other.getBatchNo()))
+                && (this.getSignBatchNo() == null ? other.getSignBatchNo() == null
+                        : this.getSignBatchNo().equals(other.getSignBatchNo()))
+                && (this.getRegDate() == null ? other.getRegDate() == null
+                        : this.getRegDate().equals(other.getRegDate()))
+                && (this.getModiDate() == null ? other.getModiDate() == null
+                        : this.getModiDate().equals(other.getModiDate()))
+                && (this.getSignStatus() == null ? other.getSignStatus() == null
+                        : this.getSignStatus().equals(other.getSignStatus()))
+                && (this.getDealFlag() == null ? other.getDealFlag() == null
+                        : this.getDealFlag().equals(other.getDealFlag()))
+                && (this.getSupplier() == null ? other.getSupplier() == null
+                        : this.getSupplier().equals(other.getSupplier()))
+                && (this.getHtmlBatchNo() == null ? other.getHtmlBatchNo() == null
+                        : this.getHtmlBatchNo().equals(other.getHtmlBatchNo()))
+                && (this.getAgreeType() == null ? other.getAgreeType() == null
+                        : this.getAgreeType().equals(other.getAgreeType()));
     }
 
     @Override
@@ -547,7 +563,8 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
      *            电子合同金额
      * @return
      */
-    public static ScfElecAgreement createByNotice(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+    public static ScfElecAgreement createByNotice(final String anAgreeName, final String anAgreeNo,
+            final BigDecimal anBalance) {
         final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "0", anBalance);
 
@@ -567,7 +584,8 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
      *            电子合同金额
      * @return
      */
-    public static ScfElecAgreement createByOpinion(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+    public static ScfElecAgreement createByOpinion(final String anAgreeName, final String anAgreeNo,
+            final BigDecimal anBalance) {
         final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "1", anBalance);
 
@@ -582,8 +600,8 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
      * @param anBalance
      * @return
      */
-    public static ScfElecAgreement createByReceivable(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance,
-            final String agreementType) {
+    public static ScfElecAgreement createByReceivable(final String anAgreeName, final String anAgreeNo,
+            final BigDecimal anBalance, final String agreementType) {
 
         final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, agreementType, anBalance);
@@ -603,15 +621,18 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
      * @param anBalance
      *            电子合同金额
      */
-    public static ScfElecAgreement createByProtacal(final String anAgreeName, final String anAgreeNo, final BigDecimal anBalance) {
+    public static ScfElecAgreement createByProtacal(final String anAgreeName, final String anAgreeNo,
+            final BigDecimal anBalance) {
         final ScfElecAgreement elecAgreement = new ScfElecAgreement();
         elecAgreement.fillBaseInfo(anAgreeName, anAgreeNo, "2", anBalance);
 
         return elecAgreement;
     }
 
-    private void fillBaseInfo(final String anAgreeName, final String anAgreeNo, final String anAgreeType, final BigDecimal anBalance) {
-        this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
+    private void fillBaseInfo(final String anAgreeName, final String anAgreeNo, final String anAgreeType,
+            final BigDecimal anBalance) {
+        this.appNo = BetterDateUtils.getNumDate()
+                .concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
         this.regDate = BetterDateUtils.getNumDate();
         this.modiDate = this.regDate;
         this.agreeName = anAgreeName;
@@ -626,7 +647,8 @@ public class ScfElecAgreement implements BetterjrEntity, BaseRemoteEntity {
     }
 
     public void initDefValue(final String anSupplier) {
-        this.appNo = BetterDateUtils.getNumDate().concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
+        this.appNo = BetterDateUtils.getNumDate()
+                .concat(Long.toHexString(SerialGenerator.getLongValue("ScfElecAgreement.id")));
         this.regDate = BetterDateUtils.getNumDate();
         this.modiDate = this.regDate;
         this.signStatus = "0";

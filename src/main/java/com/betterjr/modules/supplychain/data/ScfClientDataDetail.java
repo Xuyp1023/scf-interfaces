@@ -1,5 +1,5 @@
 package com.betterjr.modules.supplychain.data;
- 
+
 public class ScfClientDataDetail implements java.io.Serializable, Cloneable {
     private static final long serialVersionUID = -1863720109216478785L;
 
@@ -118,20 +118,20 @@ public class ScfClientDataDetail implements java.io.Serializable, Cloneable {
         this.count = anCount;
     }
 
-    public boolean hasValid(){
-       return "1".equals(this.workStatus); 
+    public boolean hasValid() {
+        return "1".equals(this.workStatus);
     }
-    
+
     public void putDataValue(String anData) {
         this.data = anData;
         if ((this.data != null) && (this.data.trim().length() > 10)) {
             this.workStatus = "1";
-        }
-        else {
+        } else {
             this.workStatus = "0";
         }
     }
 
+    @Override
     public ScfClientDataDetail clone() {
         try {
             return (ScfClientDataDetail) super.clone();
@@ -141,6 +141,7 @@ public class ScfClientDataDetail implements java.io.Serializable, Cloneable {
         }
     }
 
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());

@@ -4,9 +4,11 @@ import java.util.Map;
 
 public interface IScfAcceptBillService {
 
-    public String webQueryAcceptBill(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryAcceptBill(Map<String, Object> anMap, String anIsOnlyNormal, String anFlag, int anPageNum,
+            int anPageSize);
 
-    public String webSaveModifyAcceptBill(Map<String, Object> anMap, Long anId, String anFileList, String anOtherFileList);
+    public String webSaveModifyAcceptBill(Map<String, Object> anMap, Long anId, String anFileList,
+            String anOtherFileList);
 
     public String webSaveModifyAcceptBillDO(Map<String, Object> anMap, String anFileList, boolean anConfirmFlag);
 
@@ -51,13 +53,14 @@ public interface IScfAcceptBillService {
 
     public String webSaveAuditBillDOByRefNoVersion(String anRefNo, String anVersion);
 
-    public String webQueryIneffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsAudit);
+    public String webQueryIneffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsAudit);
 
-    public String webQueryEffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize,
-            boolean anIsCust);
+    public String webQueryEffectiveAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize, boolean anIsCust);
 
-    public String webQueryCanAnnulAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag, int anPageNum, int anPageSize);
+    public String webQueryCanAnnulAcceptBill(Map<String, Object> anAnMap, String anIsOnlyNormal, String anFlag,
+            int anPageNum, int anPageSize);
 
     public String webSaveModifyAcceptBillFile(String anFileList, String anRefNo, String anVersion);
 

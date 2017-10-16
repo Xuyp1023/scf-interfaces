@@ -9,8 +9,10 @@ import com.betterjr.modules.remote.dubboclient.WebServiceInvokeDubboClient;
 
 public class RemoteInvokeUtils {
 
-    static RemoteInvokeDubboClient handler=SpringContextHolder.getBean(RemoteInvokeDubboClient.class);
-    static WebServiceInvokeDubboClient webServiceHandler=SpringContextHolder.getBean(WebServiceInvokeDubboClient.class);
+    static RemoteInvokeDubboClient handler = SpringContextHolder.getBean(RemoteInvokeDubboClient.class);
+    static WebServiceInvokeDubboClient webServiceHandler = SpringContextHolder
+            .getBean(WebServiceInvokeDubboClient.class);
+
     /**
      * 获取接口服务dubbo代理
      * 
@@ -20,15 +22,16 @@ public class RemoteInvokeUtils {
 
         try {
             handler.setFaceNo(anFaceNo);
-            return (T) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[] { anClass }, handler);
+            return (T) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[] { anClass },
+                    handler);
         }
         catch (Exception e) {
             String className = anClass.getSimpleName();
-            throw new BetterjrClientProtocolException(25201, "Create " + className + " Class InstantiationException ", e);
+            throw new BetterjrClientProtocolException(25201, "Create " + className + " Class InstantiationException ",
+                    e);
         }
     }
-    
-    
+
     /**
      * 获取web service dubbo client
      * 
@@ -36,7 +39,5 @@ public class RemoteInvokeUtils {
     public static WebServiceInvokeDubboClient getWebServiceClient() {
         return webServiceHandler;
     }
-
-
 
 }

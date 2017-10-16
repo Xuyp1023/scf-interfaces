@@ -4,7 +4,8 @@ import java.util.Map;
 
 public interface IDeliveryService {
 
-    String webQueryFileList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize, boolean anIsPostCust);
+    String webQueryFileList(Map<String, Object> anAnMap, String anFlag, int anPageNum, int anPageSize,
+            boolean anIsPostCust);
 
     String webFindDeliveryRecord(String anRefNo);
 

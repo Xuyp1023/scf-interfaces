@@ -1,9 +1,16 @@
 package com.betterjr.modules.fund.entity;
 
-import com.betterjr.common.annotation.*;
-import com.betterjr.common.entity.BetterjrEntity;
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.betterjr.common.annotation.MetaData;
+import com.betterjr.common.entity.BetterjrEntity;
 
 @Access(AccessType.FIELD)
 @Entity
@@ -13,246 +20,246 @@ public class SaleDividendInfo implements BetterjrEntity {
      * 编号
      */
     @Id
-    @Column(name = "ID",  columnDefinition="INTEGER" )
-    @MetaData( value="编号", comments = "编号")
+    @Column(name = "ID", columnDefinition = "INTEGER")
+    @MetaData(value = "编号", comments = "编号")
     private Long id;
 
     /**
      * 客户编号
      */
-    @Column(name = "L_CUSTNO",  columnDefinition="INTEGER" )
-    @MetaData( value="客户编号", comments = "客户编号")
+    @Column(name = "L_CUSTNO", columnDefinition = "INTEGER")
+    @MetaData(value = "客户编号", comments = "客户编号")
     private Long custNo;
 
     /**
      * TA代码
      */
-    @Column(name = "C_TANO",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA代码", comments = "TA代码")
+    @Column(name = "C_TANO", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA代码", comments = "TA代码")
     private String tano;
 
     /**
      * 红利/红利再投资基数，登记日基金持有人的基金份数
      */
-    @Column(name = "F_BASESHARES",  columnDefinition="DOUBLE" )
-    @MetaData( value="红利/红利再投资基数", comments = "红利/红利再投资基数，登记日基金持有人的基金份数")
+    @Column(name = "F_BASESHARES", columnDefinition = "DOUBLE")
+    @MetaData(value = "红利/红利再投资基数", comments = "红利/红利再投资基数，登记日基金持有人的基金份数")
     private BigDecimal baseShares;
 
     /**
      * 交易确认日期 
      */
-    @Column(name = "D_CDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易确认日期 ", comments = "交易确认日期 ")
+    @Column(name = "D_CDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易确认日期 ", comments = "交易确认日期 ")
     private String confirmDate;
 
     /**
      * 结算币种
      */
-    @Column(name = "C_CURRENCY",  columnDefinition="VARCHAR" )
-    @MetaData( value="结算币种", comments = "结算币种")
+    @Column(name = "C_CURRENCY", columnDefinition = "VARCHAR")
+    @MetaData(value = "结算币种", comments = "结算币种")
     private String currency;
 
     /**
      * 基金账户红利再投资基金份数，投资人实得红股，含被续冻的红股 
      */
-    @Column(name = "F_REALSHARES",  columnDefinition="DOUBLE" )
-    @MetaData( value="基金账户红利再投资基金份数", comments = "基金账户红利再投资基金份数，投资人实得红股，含被续冻的红股 ")
+    @Column(name = "F_REALSHARES", columnDefinition = "DOUBLE")
+    @MetaData(value = "基金账户红利再投资基金份数", comments = "基金账户红利再投资基金份数，投资人实得红股，含被续冻的红股 ")
     private BigDecimal realShares;
 
     /**
      * 分红日/发放日
      */
-    @Column(name = "D_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="分红日/发放日", comments = "分红日/发放日")
+    @Column(name = "D_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "分红日/发放日", comments = "分红日/发放日")
     private String tradeDate;
 
     /**
      * 基金账户红利资金，红利总金额,含冻结红利及再投资的红利
      */
-    @Column(name = "F_PROFIT",  columnDefinition="DOUBLE" )
-    @MetaData( value="基金账户红利资金", comments = "基金账户红利资金，红利总金额,含冻结红利及再投资的红利")
+    @Column(name = "F_PROFIT", columnDefinition = "DOUBLE")
+    @MetaData(value = "基金账户红利资金", comments = "基金账户红利资金，红利总金额,含冻结红利及再投资的红利")
     private BigDecimal profit;
 
     /**
      * 除权日 
      */
-    @Column(name = "D_XRDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="除权日 ", comments = "除权日 ")
+    @Column(name = "D_XRDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "除权日 ", comments = "除权日 ")
     private String xrDate;
 
     /**
      * 每笔交易确认金额，实发红利资金，不含冻结红利及再投资的红利
      */
-    @Column(name = "F_CONFIRMBALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="每笔交易确认金额", comments = "每笔交易确认金额，实发红利资金，不含冻结红利及再投资的红利")
+    @Column(name = "F_CONFIRMBALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "每笔交易确认金额", comments = "每笔交易确认金额，实发红利资金，不含冻结红利及再投资的红利")
     private BigDecimal confirmBalance;
 
     /**
      * 基金代码
      */
-    @Column(name = "C_FUNDCODE",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金代码", comments = "基金代码")
+    @Column(name = "C_FUNDCODE", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金代码", comments = "基金代码")
     private String fundCode;
 
     /**
      * 分红登记日期
      */
-    @Column(name = "D_REGDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="分红登记日期", comments = "分红登记日期")
+    @Column(name = "D_REGDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "分红登记日期", comments = "分红登记日期")
     private String regDate;
 
     /**
      * 交易账号
      */
-    @Column(name = "C_TRADEACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易账号", comments = "交易账号")
+    @Column(name = "C_TRADEACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易账号", comments = "交易账号")
     private String tradeAccount;
 
     /**
      * 销售人代码
      */
-    @Column(name = "C_AGENCYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="销售人代码", comments = "销售人代码")
+    @Column(name = "C_AGENCYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "销售人代码", comments = "销售人代码")
     private String agencyNo;
 
     /**
      * 网点编码
      */
-    @Column(name = "C_NETNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="网点编码", comments = "网点编码")
+    @Column(name = "C_NETNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "网点编码", comments = "网点编码")
     private String netNo;
 
     /**
      * 基金账户
      */
-    @Column(name = "C_FUNDACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金账户", comments = "基金账户")
+    @Column(name = "C_FUNDACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金账户", comments = "基金账户")
     private String fundAccount;
 
     /**
      * 单位基金分红金额（含税），每千份分两元，则此处填 2。 
      */
-    @Column(name = "F_DIVIDENDPERUNIT",  columnDefinition="DOUBLE" )
-    @MetaData( value="单位基金分红金额（含税）", comments = "单位基金分红金额（含税），每千份分两元，则此处填 2。 ")
+    @Column(name = "F_DIVIDENDPERUNIT", columnDefinition = "DOUBLE")
+    @MetaData(value = "单位基金分红金额（含税）", comments = "单位基金分红金额（含税），每千份分两元，则此处填 2。 ")
     private BigDecimal dividentPerUnit;
 
     /**
      * 分红方式 0-红利转投，1-现金分红
      */
-    @Column(name = "C_BONUSTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="分红方式 0-红利转投", comments = "分红方式 0-红利转投，1-现金分红")
+    @Column(name = "C_BONUSTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "分红方式 0-红利转投", comments = "分红方式 0-红利转投，1-现金分红")
     private String bonusType;
 
     /**
      * 交易数据下传日期 
      */
-    @Column(name = "D_ISSUEDDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易数据下传日期 ", comments = "交易数据下传日期 ")
+    @Column(name = "D_ISSUEDDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易数据下传日期 ", comments = "交易数据下传日期 ")
     private String issuedDate;
 
     /**
      * 手续费
      */
-    @Column(name = "F_FARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="手续费", comments = "手续费")
+    @Column(name = "F_FARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "手续费", comments = "手续费")
     private BigDecimal fare;
 
     /**
      * 代理费
      */
-    @Column(name = "F_AGENCYFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="代理费", comments = "代理费")
+    @Column(name = "F_AGENCYFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "代理费", comments = "代理费")
     private BigDecimal agencyFare;
 
     /**
      * 再投资，需要冻结的份额。（由于原份额冻结）
      */
-    @Column(name = "F_FROZENSHARES",  columnDefinition="DOUBLE" )
-    @MetaData( value="再投资", comments = "再投资，需要冻结的份额。（由于原份额冻结）")
+    @Column(name = "F_FROZENSHARES", columnDefinition = "DOUBLE")
+    @MetaData(value = "再投资", comments = "再投资，需要冻结的份额。（由于原份额冻结）")
     private BigDecimal frozenShares;
 
     /**
      * 单位净值
      */
-    @Column(name = "F_NETVALUE",  columnDefinition="DOUBLE" )
-    @MetaData( value="单位净值", comments = "单位净值")
+    @Column(name = "F_NETVALUE", columnDefinition = "DOUBLE")
+    @MetaData(value = "单位净值", comments = "单位净值")
     private BigDecimal netValue;
 
     /**
      * 其他费用
      */
-    @Column(name = "F_OTHERFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="其他费用", comments = "其他费用")
+    @Column(name = "F_OTHERFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "其他费用", comments = "其他费用")
     private BigDecimal otherFare;
 
     /**
      * 其他费用2
      */
-    @Column(name = "F_OTHERFARE2",  columnDefinition="DOUBLE" )
-    @MetaData( value="其他费用2", comments = "其他费用2")
+    @Column(name = "F_OTHERFARE2", columnDefinition = "DOUBLE")
+    @MetaData(value = "其他费用2", comments = "其他费用2")
     private BigDecimal otherFare2;
 
     /**
      * 客户类型；0个人，1机构
      */
-    @Column(name = "C_CUSTTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户类型", comments = "客户类型；0个人，1机构")
+    @Column(name = "C_CUSTTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户类型", comments = "客户类型；0个人，1机构")
     private String custType;
 
     /**
      * 红利比例 
      */
-    @Column(name = "F_DIVIDENDRATIO",  columnDefinition="DOUBLE" )
-    @MetaData( value="红利比例 ", comments = "红利比例 ")
+    @Column(name = "F_DIVIDENDRATIO", columnDefinition = "DOUBLE")
+    @MetaData(value = "红利比例 ", comments = "红利比例 ")
     private BigDecimal devidendRatio;
 
     /**
      * 确认单号
      */
-    @Column(name = "C_CSERIALNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="确认单号", comments = "确认单号")
+    @Column(name = "C_CSERIALNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "确认单号", comments = "确认单号")
     private String confirmSerialno;
 
     /**
      * 印花税
      */
-    @Column(name = "F_STAMPTAX",  columnDefinition="DOUBLE" )
-    @MetaData( value="印花税", comments = "印花税")
+    @Column(name = "F_STAMPTAX", columnDefinition = "DOUBLE")
+    @MetaData(value = "印花税", comments = "印花税")
     private BigDecimal stampTax;
 
     /**
      * 现金分红需要冻结的金额；由TA保管，不下发给销售机构
      */
-    @Column(name = "F_FROZENBALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="现金分红需要冻结的金额", comments = "现金分红需要冻结的金额；由TA保管，不下发给销售机构")
+    @Column(name = "F_FROZENBALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "现金分红需要冻结的金额", comments = "现金分红需要冻结的金额；由TA保管，不下发给销售机构")
     private BigDecimal frozenBalance;
 
     /**
      * 过户费
      */
-    @Column(name = "F_TAFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="过户费", comments = "过户费")
+    @Column(name = "F_TAFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "过户费", comments = "过户费")
     private BigDecimal taFare;
 
     /**
      * 份额类型  A前收费,B后收费
      */
-    @Column(name = "C_SHARETYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="份额类型  A前收费,B后收费", comments = "份额类型  A前收费,B后收费")
+    @Column(name = "C_SHARETYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "份额类型  A前收费,B后收费", comments = "份额类型  A前收费,B后收费")
     private String shareType;
 
     /**
      * 分红类型 0-普通分红，1-质押基金分红，2-货币基金收益结转，3-保本基金赔付，4-专户到期处理
      */
-    @Column(name = "C_DIVIDENDTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="分红类型 0-普通分红", comments = "分红类型 0-普通分红，1-质押基金分红，2-货币基金收益结转，3-保本基金赔付，4-专户到期处理")
+    @Column(name = "C_DIVIDENDTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "分红类型 0-普通分红", comments = "分红类型 0-普通分红，1-质押基金分红，2-货币基金收益结转，3-保本基金赔付，4-专户到期处理")
     private String dividendType;
 
     /**
      * 分红单位， 举例：每千份分多少，则分红单位就为一千
      */
-    @Column(name = "F_DRAWBONUSUNIT",  columnDefinition="DOUBLE" )
-    @MetaData( value="分红单位", comments = "分红单位， 举例：每千份分多少，则分红单位就为一千")
+    @Column(name = "F_DRAWBONUSUNIT", columnDefinition = "DOUBLE")
+    @MetaData(value = "分红单位", comments = "分红单位， 举例：每千份分多少，则分红单位就为一千")
     private BigDecimal drawBonusUnit;
 
     private static final long serialVersionUID = 1443795724629L;
@@ -596,40 +603,67 @@ public class SaleDividendInfo implements BetterjrEntity {
         }
         SaleDividendInfo other = (SaleDividendInfo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
-            && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
-            && (this.getBaseShares() == null ? other.getBaseShares() == null : this.getBaseShares().equals(other.getBaseShares()))
-            && (this.getConfirmDate() == null ? other.getConfirmDate() == null : this.getConfirmDate().equals(other.getConfirmDate()))
-            && (this.getCurrency() == null ? other.getCurrency() == null : this.getCurrency().equals(other.getCurrency()))
-            && (this.getRealShares() == null ? other.getRealShares() == null : this.getRealShares().equals(other.getRealShares()))
-            && (this.getTradeDate() == null ? other.getTradeDate() == null : this.getTradeDate().equals(other.getTradeDate()))
-            && (this.getProfit() == null ? other.getProfit() == null : this.getProfit().equals(other.getProfit()))
-            && (this.getXrDate() == null ? other.getXrDate() == null : this.getXrDate().equals(other.getXrDate()))
-            && (this.getConfirmBalance() == null ? other.getConfirmBalance() == null : this.getConfirmBalance().equals(other.getConfirmBalance()))
-            && (this.getFundCode() == null ? other.getFundCode() == null : this.getFundCode().equals(other.getFundCode()))
-            && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
-            && (this.getTradeAccount() == null ? other.getTradeAccount() == null : this.getTradeAccount().equals(other.getTradeAccount()))
-            && (this.getAgencyNo() == null ? other.getAgencyNo() == null : this.getAgencyNo().equals(other.getAgencyNo()))
-            && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
-            && (this.getFundAccount() == null ? other.getFundAccount() == null : this.getFundAccount().equals(other.getFundAccount()))
-            && (this.getDividentPerUnit() == null ? other.getDividentPerUnit() == null : this.getDividentPerUnit().equals(other.getDividentPerUnit()))
-            && (this.getBonusType() == null ? other.getBonusType() == null : this.getBonusType().equals(other.getBonusType()))
-            && (this.getIssuedDate() == null ? other.getIssuedDate() == null : this.getIssuedDate().equals(other.getIssuedDate()))
-            && (this.getFare() == null ? other.getFare() == null : this.getFare().equals(other.getFare()))
-            && (this.getAgencyFare() == null ? other.getAgencyFare() == null : this.getAgencyFare().equals(other.getAgencyFare()))
-            && (this.getFrozenShares() == null ? other.getFrozenShares() == null : this.getFrozenShares().equals(other.getFrozenShares()))
-            && (this.getNetValue() == null ? other.getNetValue() == null : this.getNetValue().equals(other.getNetValue()))
-            && (this.getOtherFare() == null ? other.getOtherFare() == null : this.getOtherFare().equals(other.getOtherFare()))
-            && (this.getOtherFare2() == null ? other.getOtherFare2() == null : this.getOtherFare2().equals(other.getOtherFare2()))
-            && (this.getCustType() == null ? other.getCustType() == null : this.getCustType().equals(other.getCustType()))
-            && (this.getDevidendRatio() == null ? other.getDevidendRatio() == null : this.getDevidendRatio().equals(other.getDevidendRatio()))
-            && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
-            && (this.getStampTax() == null ? other.getStampTax() == null : this.getStampTax().equals(other.getStampTax()))
-            && (this.getFrozenBalance() == null ? other.getFrozenBalance() == null : this.getFrozenBalance().equals(other.getFrozenBalance()))
-            && (this.getTaFare() == null ? other.getTaFare() == null : this.getTaFare().equals(other.getTaFare()))
-            && (this.getShareType() == null ? other.getShareType() == null : this.getShareType().equals(other.getShareType()))
-            && (this.getDividendType() == null ? other.getDividendType() == null : this.getDividendType().equals(other.getDividendType()))
-            && (this.getDrawBonusUnit() == null ? other.getDrawBonusUnit() == null : this.getDrawBonusUnit().equals(other.getDrawBonusUnit()));
+                && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
+                && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
+                && (this.getBaseShares() == null ? other.getBaseShares() == null
+                        : this.getBaseShares().equals(other.getBaseShares()))
+                && (this.getConfirmDate() == null ? other.getConfirmDate() == null
+                        : this.getConfirmDate().equals(other.getConfirmDate()))
+                && (this.getCurrency() == null ? other.getCurrency() == null
+                        : this.getCurrency().equals(other.getCurrency()))
+                && (this.getRealShares() == null ? other.getRealShares() == null
+                        : this.getRealShares().equals(other.getRealShares()))
+                && (this.getTradeDate() == null ? other.getTradeDate() == null
+                        : this.getTradeDate().equals(other.getTradeDate()))
+                && (this.getProfit() == null ? other.getProfit() == null : this.getProfit().equals(other.getProfit()))
+                && (this.getXrDate() == null ? other.getXrDate() == null : this.getXrDate().equals(other.getXrDate()))
+                && (this.getConfirmBalance() == null ? other.getConfirmBalance() == null
+                        : this.getConfirmBalance().equals(other.getConfirmBalance()))
+                && (this.getFundCode() == null ? other.getFundCode() == null
+                        : this.getFundCode().equals(other.getFundCode()))
+                && (this.getRegDate() == null ? other.getRegDate() == null
+                        : this.getRegDate().equals(other.getRegDate()))
+                && (this.getTradeAccount() == null ? other.getTradeAccount() == null
+                        : this.getTradeAccount().equals(other.getTradeAccount()))
+                && (this.getAgencyNo() == null ? other.getAgencyNo() == null
+                        : this.getAgencyNo().equals(other.getAgencyNo()))
+                && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
+                && (this.getFundAccount() == null ? other.getFundAccount() == null
+                        : this.getFundAccount().equals(other.getFundAccount()))
+                && (this.getDividentPerUnit() == null ? other.getDividentPerUnit() == null
+                        : this.getDividentPerUnit().equals(other.getDividentPerUnit()))
+                && (this.getBonusType() == null ? other.getBonusType() == null
+                        : this.getBonusType().equals(other.getBonusType()))
+                && (this.getIssuedDate() == null ? other.getIssuedDate() == null
+                        : this.getIssuedDate().equals(other.getIssuedDate()))
+                && (this.getFare() == null ? other.getFare() == null : this.getFare().equals(other.getFare()))
+                && (this.getAgencyFare() == null ? other.getAgencyFare() == null
+                        : this.getAgencyFare().equals(other.getAgencyFare()))
+                && (this.getFrozenShares() == null ? other.getFrozenShares() == null
+                        : this.getFrozenShares().equals(other.getFrozenShares()))
+                && (this.getNetValue() == null ? other.getNetValue() == null
+                        : this.getNetValue().equals(other.getNetValue()))
+                && (this.getOtherFare() == null ? other.getOtherFare() == null
+                        : this.getOtherFare().equals(other.getOtherFare()))
+                && (this.getOtherFare2() == null ? other.getOtherFare2() == null
+                        : this.getOtherFare2().equals(other.getOtherFare2()))
+                && (this.getCustType() == null ? other.getCustType() == null
+                        : this.getCustType().equals(other.getCustType()))
+                && (this.getDevidendRatio() == null ? other.getDevidendRatio() == null
+                        : this.getDevidendRatio().equals(other.getDevidendRatio()))
+                && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null
+                        : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
+                && (this.getStampTax() == null ? other.getStampTax() == null
+                        : this.getStampTax().equals(other.getStampTax()))
+                && (this.getFrozenBalance() == null ? other.getFrozenBalance() == null
+                        : this.getFrozenBalance().equals(other.getFrozenBalance()))
+                && (this.getTaFare() == null ? other.getTaFare() == null : this.getTaFare().equals(other.getTaFare()))
+                && (this.getShareType() == null ? other.getShareType() == null
+                        : this.getShareType().equals(other.getShareType()))
+                && (this.getDividendType() == null ? other.getDividendType() == null
+                        : this.getDividendType().equals(other.getDividendType()))
+                && (this.getDrawBonusUnit() == null ? other.getDrawBonusUnit() == null
+                        : this.getDrawBonusUnit().equals(other.getDrawBonusUnit()));
     }
 
     @Override

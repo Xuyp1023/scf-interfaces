@@ -3,7 +3,7 @@ package com.betterjr.modules.enquiry;
 import java.util.Map;
 
 public interface IScfEnquiryService {
-    
+
     /**
      * 查询询价列表
      */
@@ -18,12 +18,12 @@ public interface IScfEnquiryService {
      * 查询询价详情
      */
     public String webFindEnquiryDetail(Long anId);
-    
+
     /**
      * 修改询价
      */
     public String webSaveModifyEnquiry(Map<String, Object> anMap, Long anId);
-    
+
     /**
      * 查询报价列表
      */
@@ -33,7 +33,7 @@ public interface IScfEnquiryService {
      * 新增报价
      */
     public String webAddOffer(Map<String, Object> anMap);
-    
+
     /**
      * 修改报价
      */
@@ -86,7 +86,7 @@ public interface IScfEnquiryService {
      * @return
      */
     String webFactorDropOffer(String anEnquiryNo, Long anFactorNo);
-    
+
     /**
      * 查看向只定公司发出询价的报价情况
      * @param anMap
@@ -96,7 +96,7 @@ public interface IScfEnquiryService {
      * @return
      */
     String webQueryOfferByEnquiryObject(String enquriyNo);
-    
+
     /**
      * 票据版查询
      * @param custNo
@@ -106,13 +106,13 @@ public interface IScfEnquiryService {
      * @return
      */
     String webQuerySingleOrderEnquiryList(Map<String, Object> anMap, int anFlag, int anPageNum, int anPageSize);
+
     /**
      *  票据版查询
      * @param anId 询价id
      * @return
      */
     String webFindSingleOrderEnquiryDetail(String enquriyNo);
-
 
     /**
      * 询价企业放询价

@@ -1,646 +1,651 @@
 package com.betterjr.modules.fund.entity;
 
-import com.betterjr.common.annotation.*;
-import com.betterjr.common.data.BaseRemoteEntity;
-import com.betterjr.common.entity.BetterjrEntity;
-
 import java.math.BigDecimal;
 
-import javax.persistence.*;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.betterjr.common.annotation.MetaData;
+import com.betterjr.common.data.BaseRemoteEntity;
+import com.betterjr.common.entity.BetterjrEntity;
 
 @Access(AccessType.FIELD)
 @Entity
 @Table(name = "T_SALE_CONFIRM")
-public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
+public class SaleConfirmInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 编号
      */
     @Id
-    @Column(name = "ID",  columnDefinition="INTEGER" )
-    @MetaData( value="编号", comments = "编号")
+    @Column(name = "ID", columnDefinition = "INTEGER")
+    @MetaData(value = "编号", comments = "编号")
     private Long id;
 
     /**
      * 客户编号
      */
-    @Column(name = "L_CUSTNO",  columnDefinition="INTEGER" )
-    @MetaData( value="客户编号", comments = "客户编号")
+    @Column(name = "L_CUSTNO", columnDefinition = "INTEGER")
+    @MetaData(value = "客户编号", comments = "客户编号")
     private Long custNo;
 
     /**
      * TA代码
      */
-    @Column(name = "C_TANO",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA代码", comments = "TA代码")
+    @Column(name = "C_TANO", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA代码", comments = "TA代码")
     private String tano;
 
     /**
      * 客户类型；0个人，1机构
      */
-    @Column(name = "C_CUSTTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户类型", comments = "客户类型；0个人，1机构")
+    @Column(name = "C_CUSTTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户类型", comments = "客户类型；0个人，1机构")
     private String custType;
 
     /**
      * 交易账户
      */
-    @Column(name = "C_TRADEACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易账户", comments = "交易账户")
+    @Column(name = "C_TRADEACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易账户", comments = "交易账户")
     private String tradeAccount;
 
     /**
      * 基金账户
      */
-    @Column(name = "C_FUNDACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金账户", comments = "基金账户")
+    @Column(name = "C_FUNDACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金账户", comments = "基金账户")
     private String fundAccount;
 
     /**
      * 销售人代码
      */
-    @Column(name = "C_AGENCYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="销售人代码", comments = "销售人代码")
+    @Column(name = "C_AGENCYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "销售人代码", comments = "销售人代码")
     private String agencyNo;
 
     /**
      * 分中心
      */
-    @Column(name = "C_PAYCENTER",  columnDefinition="VARCHAR" )
-    @MetaData( value="分中心", comments = "分中心")
+    @Column(name = "C_PAYCENTER", columnDefinition = "VARCHAR")
+    @MetaData(value = "分中心", comments = "分中心")
     private String payCenterNo;
 
     /**
      * 网点编码
      */
-    @Column(name = "C_NETNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="网点编码", comments = "网点编码")
+    @Column(name = "C_NETNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "网点编码", comments = "网点编码")
     private String netNo;
 
     /**
      * 申请日期
      */
-    @Column(name = "D_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="申请日期", comments = "申请日期")
+    @Column(name = "D_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "申请日期", comments = "申请日期")
     private String tradeDate;
 
     /**
      * TA确认日期
      */
-    @Column(name = "D_CDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA确认日期", comments = "TA确认日期")
+    @Column(name = "D_CDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA确认日期", comments = "TA确认日期")
     private String confirmDate;
 
     /**
      * 申请单号
      */
-    @Column(name = "C_REQUESTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="申请单号", comments = "申请单号")
+    @Column(name = "C_REQUESTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "申请单号", comments = "申请单号")
     private String requestNo;
 
     /**
      * 确认单号
      */
-    @Column(name = "C_CSERIALNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="确认单号", comments = "确认单号")
+    @Column(name = "C_CSERIALNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "确认单号", comments = "确认单号")
     private String confirmSerialno;
 
     /**
      * 基金代码
      */
-    @Column(name = "C_FUNDCODE",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金代码", comments = "基金代码")
+    @Column(name = "C_FUNDCODE", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金代码", comments = "基金代码")
     private String fundCode;
 
     /**
      * 份额类别
      */
-    @Column(name = "C_SHARETYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="份额类别", comments = "份额类别")
+    @Column(name = "C_SHARETYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "份额类别", comments = "份额类别")
     private String shareType;
 
     /**
      * 业务代码
      */
-    @Column(name = "C_BUSINFLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="业务代码", comments = "业务代码")
+    @Column(name = "C_BUSINFLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "业务代码", comments = "业务代码")
     private String businFlag;
 
     /**
      * 申请金额
      */
-    @Column(name = "F_BALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="申请金额", comments = "申请金额")
+    @Column(name = "F_BALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "申请金额", comments = "申请金额")
     private BigDecimal balance;
 
     /**
      * 申请份额
      */
-    @Column(name = "F_SHARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="申请份额", comments = "申请份额")
+    @Column(name = "F_SHARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "申请份额", comments = "申请份额")
     private BigDecimal shares;
 
     /**
      * 确认金额
      */
-    @Column(name = "F_CONFIRMBALANCE",  columnDefinition="DOUBLE" )
-    @MetaData( value="确认金额", comments = "确认金额")
+    @Column(name = "F_CONFIRMBALANCE", columnDefinition = "DOUBLE")
+    @MetaData(value = "确认金额", comments = "确认金额")
     private BigDecimal confirmBalance;
 
     /**
      * 确认份额
      */
-    @Column(name = "F_CONFIRMSHARES",  columnDefinition="DOUBLE" )
-    @MetaData( value="确认份额", comments = "确认份额")
+    @Column(name = "F_CONFIRMSHARES", columnDefinition = "DOUBLE")
+    @MetaData(value = "确认份额", comments = "确认份额")
     private BigDecimal confirmShares;
 
     /**
      * 净值
      */
-    @Column(name = "F_NETVALUE",  columnDefinition="DOUBLE" )
-    @MetaData( value="净值", comments = "净值")
+    @Column(name = "F_NETVALUE", columnDefinition = "DOUBLE")
+    @MetaData(value = "净值", comments = "净值")
     private BigDecimal netValue;
 
     /**
      * 折扣率
      */
-    @Column(name = "F_DISCOUNT",  columnDefinition="DOUBLE" )
-    @MetaData( value="折扣率", comments = "折扣率")
+    @Column(name = "F_DISCOUNT", columnDefinition = "DOUBLE")
+    @MetaData(value = "折扣率", comments = "折扣率")
     private BigDecimal discount;
 
     /**
      * 后收手续费折扣率
      */
-    @Column(name = "F_BACKDISCOUNT",  columnDefinition="DOUBLE" )
-    @MetaData( value="后收手续费折扣率", comments = "后收手续费折扣率")
+    @Column(name = "F_BACKDISCOUNT", columnDefinition = "DOUBLE")
+    @MetaData(value = "后收手续费折扣率", comments = "后收手续费折扣率")
     private BigDecimal backDiscount;
 
     /**
      * 费率
      */
-    @Column(name = "F_RATIO",  columnDefinition="DOUBLE" )
-    @MetaData( value="费率", comments = "费率")
+    @Column(name = "F_RATIO", columnDefinition = "DOUBLE")
+    @MetaData(value = "费率", comments = "费率")
     private BigDecimal ratio;
 
     /**
      * 收益
      */
-    @Column(name = "F_PROFIT",  columnDefinition="DOUBLE" )
-    @MetaData( value="收益", comments = "收益")
+    @Column(name = "F_PROFIT", columnDefinition = "DOUBLE")
+    @MetaData(value = "收益", comments = "收益")
     private BigDecimal profit;
 
     /**
      * 手续费
      */
-    @Column(name = "F_FARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="手续费", comments = "手续费")
+    @Column(name = "F_FARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "手续费", comments = "手续费")
     private BigDecimal fare;
 
     /**
      * 交易费
      */
-    @Column(name = "F_DEALFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="交易费", comments = "交易费")
+    @Column(name = "F_DEALFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "交易费", comments = "交易费")
     private BigDecimal dealFare;
 
     /**
      * 过户费
      */
-    @Column(name = "F_TAFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="过户费", comments = "过户费")
+    @Column(name = "F_TAFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "过户费", comments = "过户费")
     private BigDecimal taFare;
 
     /**
      * 后手续费
      */
-    @Column(name = "F_AFTERFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="后手续费", comments = "后手续费")
+    @Column(name = "F_AFTERFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "后手续费", comments = "后手续费")
     private BigDecimal afterFare;
 
     /**
      * 代理费
      */
-    @Column(name = "F_AGENCYFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="代理费", comments = "代理费")
+    @Column(name = "F_AGENCYFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "代理费", comments = "代理费")
     private BigDecimal agencyFare;
 
     /**
      * 印花税
      */
-    @Column(name = "F_STAMPTAX",  columnDefinition="DOUBLE" )
-    @MetaData( value="印花税", comments = "印花税")
+    @Column(name = "F_STAMPTAX", columnDefinition = "DOUBLE")
+    @MetaData(value = "印花税", comments = "印花税")
     private BigDecimal stampTax;
 
     /**
      * 税金
      */
-    @Column(name = "F_TAX",  columnDefinition="DOUBLE" )
-    @MetaData( value="税金", comments = "税金")
+    @Column(name = "F_TAX", columnDefinition = "DOUBLE")
+    @MetaData(value = "税金", comments = "税金")
     private BigDecimal tax;
 
     /**
      * 分红方式
      */
-    @Column(name = "C_BONUSTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="分红方式", comments = "分红方式")
+    @Column(name = "C_BONUSTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "分红方式", comments = "分红方式")
     private String bonusType;
 
     /**
      * 业务完成标志,0未完成,1已完成
      */
-    @Column(name = "C_FINISHED",  columnDefinition="VARCHAR" )
-    @MetaData( value="业务完成标志,0未完成,1已完成", comments = "业务完成标志,0未完成,1已完成")
+    @Column(name = "C_FINISHED", columnDefinition = "VARCHAR")
+    @MetaData(value = "业务完成标志,0未完成,1已完成", comments = "业务完成标志,0未完成,1已完成")
     private Boolean finished;
 
     /**
      * TA发起业务标志 0-由代销商发起，1-由TA发起
      */
-    @Column(name = "C_FROMTA",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA发起业务标志 0-由代销商发起", comments = "TA发起业务标志 0-由代销商发起，1-由TA发起")
+    @Column(name = "C_FROMTA", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA发起业务标志 0-由代销商发起", comments = "TA发起业务标志 0-由代销商发起，1-由TA发起")
     private Boolean fromTA;
 
     /**
      * 错误代码
      */
-    @Column(name = "C_ERRCODE",  columnDefinition="VARCHAR" )
-    @MetaData( value="错误代码", comments = "错误代码")
+    @Column(name = "C_ERRCODE", columnDefinition = "VARCHAR")
+    @MetaData(value = "错误代码", comments = "错误代码")
     private String errCode;
 
     /**
      * 交易处理返回代码系统处理后返回错误信息
      */
-    @Column(name = "C_CAUSE",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易处理返回代码系统处理后返回错误信息", comments = "交易处理返回代码系统处理后返回错误信息")
+    @Column(name = "C_CAUSE", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易处理返回代码系统处理后返回错误信息", comments = "交易处理返回代码系统处理后返回错误信息")
     private String confirmCause;
 
     /**
      * 其他费用
      */
-    @Column(name = "F_OTHERFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="其他费用", comments = "其他费用")
+    @Column(name = "F_OTHERFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "其他费用", comments = "其他费用")
     private BigDecimal otherFare;
 
     /**
      * 其他费用2
      */
-    @Column(name = "F_OTHERFARE2",  columnDefinition="DOUBLE" )
-    @MetaData( value="其他费用2", comments = "其他费用2")
+    @Column(name = "F_OTHERFARE2", columnDefinition = "DOUBLE")
+    @MetaData(value = "其他费用2", comments = "其他费用2")
     private BigDecimal otherFare2;
 
     /**
      * 打印凭证
      */
-    @Column(name = "C_VOUCHERFLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="打印凭证", comments = "打印凭证")
+    @Column(name = "C_VOUCHERFLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "打印凭证", comments = "打印凭证")
     private Boolean voucherFlag;
 
     /**
      * 基金账户利息金额 
      */
-    @Column(name = "F_INTEREST",  columnDefinition="DOUBLE" )
-    @MetaData( value="基金账户利息金额 ", comments = "基金账户利息金额 ")
+    @Column(name = "F_INTEREST", columnDefinition = "DOUBLE")
+    @MetaData(value = "基金账户利息金额 ", comments = "基金账户利息金额 ")
     private BigDecimal interest;
 
     /**
      * 利息税
      */
-    @Column(name = "F_INTERESTTAX",  columnDefinition="DOUBLE" )
-    @MetaData( value="利息税", comments = "利息税")
+    @Column(name = "F_INTERESTTAX", columnDefinition = "DOUBLE")
+    @MetaData(value = "利息税", comments = "利息税")
     private BigDecimal interestTax;
 
     /**
      * 利息产生的基金份数
      */
-    @Column(name = "F_SHAREBYINTEREST",  columnDefinition="DOUBLE" )
-    @MetaData( value="利息产生的基金份数", comments = "利息产生的基金份数")
+    @Column(name = "F_SHAREBYINTEREST", columnDefinition = "DOUBLE")
+    @MetaData(value = "利息产生的基金份数", comments = "利息产生的基金份数")
     private BigDecimal shareByInterest;
 
     /**
      * 未付收益
      */
-    @Column(name = "F_INCOME",  columnDefinition="DOUBLE" )
-    @MetaData( value="未付收益", comments = "未付收益")
+    @Column(name = "F_INCOME", columnDefinition = "DOUBLE")
+    @MetaData(value = "未付收益", comments = "未付收益")
     private BigDecimal income;
 
     /**
      * 兑付的未付收益
      */
-    @Column(name = "F_INVESTINCOME",  columnDefinition="DOUBLE" )
-    @MetaData( value="兑付的未付收益", comments = "兑付的未付收益")
+    @Column(name = "F_INVESTINCOME", columnDefinition = "DOUBLE")
+    @MetaData(value = "兑付的未付收益", comments = "兑付的未付收益")
     private BigDecimal investIncome;
 
     /**
      * 交易价格
      */
-    @Column(name = "F_PRICE",  columnDefinition="DOUBLE" )
-    @MetaData( value="交易价格", comments = "交易价格")
+    @Column(name = "F_PRICE", columnDefinition = "DOUBLE")
+    @MetaData(value = "交易价格", comments = "交易价格")
     private BigDecimal price;
 
     /**
      * 对方基金交易价格
      */
-    @Column(name = "F_TAGET_PRICE",  columnDefinition="DOUBLE" )
-    @MetaData( value="对方基金交易价格", comments = "对方基金交易价格")
+    @Column(name = "F_TAGET_PRICE", columnDefinition = "DOUBLE")
+    @MetaData(value = "对方基金交易价格", comments = "对方基金交易价格")
     private BigDecimal tagetPrice;
 
     /**
      * 对方基金代码
      */
-    @Column(name = "C_TAGET_FUNDCODE",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方基金代码", comments = "对方基金代码")
+    @Column(name = "C_TAGET_FUNDCODE", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方基金代码", comments = "对方基金代码")
     private String tagetFundCode;
 
     /**
      * 对方份额类别
      */
-    @Column(name = "C_TAGET_SHARETYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方份额类别", comments = "对方份额类别")
+    @Column(name = "C_TAGET_SHARETYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方份额类别", comments = "对方份额类别")
     private String tagetShareType;
 
     /**
      * 对方交易账户
      */
-    @Column(name = "C_TAGET_TRADEACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方交易账户", comments = "对方交易账户")
+    @Column(name = "C_TAGET_TRADEACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方交易账户", comments = "对方交易账户")
     private String tagetTradeAccount;
 
     /**
      * 对方基金账号
      */
-    @Column(name = "C_TAGET_FUNDACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方基金账号", comments = "对方基金账号")
+    @Column(name = "C_TAGET_FUNDACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方基金账号", comments = "对方基金账号")
     private String tagetFundAccount;
 
     /**
      * 对方销售商
      */
-    @Column(name = "C_TAGET_AGENCYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方销售商", comments = "对方销售商")
+    @Column(name = "C_TAGET_AGENCYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方销售商", comments = "对方销售商")
     private String tagetAgencyNo;
 
     /**
      * 对方网点   转销售商、非交易过户时使用
      */
-    @Column(name = "C_TAGET_NETNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方网点   转销售商、非交易过户时使用", comments = "对方网点   转销售商、非交易过户时使用")
+    @Column(name = "C_TAGET_NETNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方网点   转销售商、非交易过户时使用", comments = "对方网点   转销售商、非交易过户时使用")
     private String tagetNetNo;
 
     /**
      * 对方基金单位净值
      */
-    @Column(name = "F_TAGET_NETVALUE",  columnDefinition="DOUBLE" )
-    @MetaData( value="对方基金单位净值", comments = "对方基金单位净值")
+    @Column(name = "F_TAGET_NETVALUE", columnDefinition = "DOUBLE")
+    @MetaData(value = "对方基金单位净值", comments = "对方基金单位净值")
     private BigDecimal tagetNetValue;
 
     /**
      * 对方基金确认份额
      */
-    @Column(name = "F_TAGET_CONFIRMSHARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="对方基金确认份额", comments = "对方基金确认份额")
+    @Column(name = "F_TAGET_CONFIRMSHARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "对方基金确认份额", comments = "对方基金确认份额")
     private BigDecimal tagetConfirmShares;
 
     /**
      * 对方城市区域代码
      */
-    @Column(name = "C_TAGET_CITYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方城市区域代码", comments = "对方城市区域代码")
+    @Column(name = "C_TAGET_CITYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方城市区域代码", comments = "对方城市区域代码")
     private String tagetCityNo;
 
     /**
      * 补差费折扣率
      */
-    @Column(name = "F_TAGET_DISCOUNT",  columnDefinition="DOUBLE" )
-    @MetaData( value="补差费折扣率", comments = "补差费折扣率")
+    @Column(name = "F_TAGET_DISCOUNT", columnDefinition = "DOUBLE")
+    @MetaData(value = "补差费折扣率", comments = "补差费折扣率")
     private BigDecimal tagetDiscount;
 
     /**
      * 应收手续费
      */
-    @Column(name = "F_ORIGINFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="应收手续费", comments = "应收手续费")
+    @Column(name = "F_ORIGINFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "应收手续费", comments = "应收手续费")
     private BigDecimal originFare;
 
     /**
      * 经纪人
      */
-    @Column(name = "C_BROKER",  columnDefinition="VARCHAR" )
-    @MetaData( value="经纪人", comments = "经纪人")
+    @Column(name = "C_BROKER", columnDefinition = "VARCHAR")
+    @MetaData(value = "经纪人", comments = "经纪人")
     private String broker;
 
     /**
      * 城市地区代码
      */
-    @Column(name = "C_CITYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="城市地区代码", comments = "城市地区代码")
+    @Column(name = "C_CITYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "城市地区代码", comments = "城市地区代码")
     private String cityNo;
 
     /**
      * 客户经理代码
      */
-    @Column(name = "C_CUSTMANAGER",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户经理代码", comments = "客户经理代码")
+    @Column(name = "C_CUSTMANAGER", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户经理代码", comments = "客户经理代码")
     private String custManager;
 
     /**
      * 已兑付的份额
      */
-    @Column(name = "F_INVESTSHARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="已兑付的份额", comments = "已兑付的份额")
+    @Column(name = "F_INVESTSHARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "已兑付的份额", comments = "已兑付的份额")
     private BigDecimal investShare;
 
     /**
      * 原TA确认流水号
      */
-    @Column(name = "C_OLD_CSERIALNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="原TA确认流水号", comments = "原TA确认流水号")
+    @Column(name = "C_OLD_CSERIALNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "原TA确认流水号", comments = "原TA确认流水号")
     private String originConfirmNo;
 
     /**
      * 原申请单编号
      */
-    @Column(name = "C_OLD_REQUESTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="原申请单编号", comments = "原申请单编号")
+    @Column(name = "C_OLD_REQUESTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "原申请单编号", comments = "原申请单编号")
     private String originRequestNo;
 
     /**
      * 原申请日期
      */
-    @Column(name = "D_OLD_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="原申请日期", comments = "原申请日期")
+    @Column(name = "D_OLD_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "原申请日期", comments = "原申请日期")
     private String originTradeDate;
 
     /**
      * 原销售佣金折扣率  对投资人的总佣金折扣率，取值为投资人实付佣金/投资人应付佣金
      */
-    @Column(name = "F_OLD_DISCOUNT",  columnDefinition="DOUBLE" )
-    @MetaData( value="原销售佣金折扣率  对投资人的总佣金折扣率", comments = "原销售佣金折扣率  对投资人的总佣金折扣率，取值为投资人实付佣金/投资人应付佣金")
+    @Column(name = "F_OLD_DISCOUNT", columnDefinition = "DOUBLE")
+    @MetaData(value = "原销售佣金折扣率  对投资人的总佣金折扣率", comments = "原销售佣金折扣率  对投资人的总佣金折扣率，取值为投资人实付佣金/投资人应付佣金")
     private BigDecimal originDiscount;
 
     /**
      * TA的原确认日期
      */
-    @Column(name = "D_OLD_CDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA的原确认日期", comments = "TA的原确认日期")
+    @Column(name = "D_OLD_CDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA的原确认日期", comments = "TA的原确认日期")
     private String originConfirmDate;
 
     /**
      * 预约赎回日期
      */
-    @Column(name = "D_SUBREDEM_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="预约赎回日期", comments = "预约赎回日期")
+    @Column(name = "D_SUBREDEM_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "预约赎回日期", comments = "预约赎回日期")
     private String subRedemDate;
 
     /**
      * 交易申请有效天数
      */
-    @Column(name = "N_VALIDPERIOD",  columnDefinition="INTEGER" )
-    @MetaData( value="交易申请有效天数", comments = "交易申请有效天数")
+    @Column(name = "N_VALIDPERIOD", columnDefinition = "INTEGER")
+    @MetaData(value = "交易申请有效天数", comments = "交易申请有效天数")
     private Integer validPeriod;
 
     /**
      * 强制赎回原因；0-小于最低持有数，1-司法执行，2-政策原因
      */
-    @Column(name = "C_REDEMRESON",  columnDefinition="VARCHAR" )
-    @MetaData( value="强制赎回原因", comments = "强制赎回原因；0-小于最低持有数，1-司法执行，2-政策原因")
+    @Column(name = "C_REDEMRESON", columnDefinition = "VARCHAR")
+    @MetaData(value = "强制赎回原因", comments = "强制赎回原因；0-小于最低持有数，1-司法执行，2-政策原因")
     private String redemReson;
 
     /**
      * TA客户编号
      */
-    @Column(name = "C_TACUSTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA客户编号", comments = "TA客户编号")
+    @Column(name = "C_TACUSTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA客户编号", comments = "TA客户编号")
     private String taCustNo;
 
     /**
      * 份额注册日期
      */
-    @Column(name = "D_REGDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="份额注册日期", comments = "份额注册日期")
+    @Column(name = "D_REGDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "份额注册日期", comments = "份额注册日期")
     private String regDate;
 
     /**
      * 业务种类，0普通业务，1预约业务，2赎回转认购，3钱柜充值提现，6赎回转申购
      */
-    @Column(name = "C_BUSINCLASS",  columnDefinition="VARCHAR" )
-    @MetaData( value="业务种类", comments = "业务种类，0普通业务，1预约业务，2赎回转认购，3钱柜充值提现，6赎回转申购")
+    @Column(name = "C_BUSINCLASS", columnDefinition = "VARCHAR")
+    @MetaData(value = "业务种类", comments = "业务种类，0普通业务，1预约业务，2赎回转认购，3钱柜充值提现，6赎回转申购")
     private String businClass;
 
     /**
      * 明细字段，默认0；1表示明细；只有在组合交易中，该字段才能为1
      */
-    @Column(name = "C_DETAIL",  columnDefinition="VARCHAR" )
-    @MetaData( value="明细字段", comments = "明细字段，默认0；1表示明细；只有在组合交易中，该字段才能为1")
+    @Column(name = "C_DETAIL", columnDefinition = "VARCHAR")
+    @MetaData(value = "明细字段", comments = "明细字段，默认0；1表示明细；只有在组合交易中，该字段才能为1")
     private Boolean detail;
 
     /**
      * 巨额赎回处理标志 0-取消，1-顺延
      */
-    @Column(name = "C_LARGEREDEEM_FLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="巨额赎回处理标志 0-取消", comments = "巨额赎回处理标志 0-取消，1-顺延")
+    @Column(name = "C_LARGEREDEEM_FLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "巨额赎回处理标志 0-取消", comments = "巨额赎回处理标志 0-取消，1-顺延")
     private Boolean largeRedeem;
 
     /**
      * 申请时间
      */
-    @Column(name = "T_TIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="申请时间", comments = "申请时间")
+    @Column(name = "T_TIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "申请时间", comments = "申请时间")
     private String tradeTime;
 
     /**
      * 交易数据下传日期 
      */
-    @Column(name = "D_ISSUEDDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易数据下传日期 ", comments = "交易数据下传日期 ")
+    @Column(name = "D_ISSUEDDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易数据下传日期 ", comments = "交易数据下传日期 ")
     private String issuedDate;
 
     /**
      * 预约赎回日期
      */
-    @Column(name = "D_REDEEM_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="预约赎回日期", comments = "预约赎回日期")
+    @Column(name = "D_REDEEM_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "预约赎回日期", comments = "预约赎回日期")
     private String redeemDate;
 
     /**
      * 交易后端收费总额
      */
-    @Column(name = "F_TOTALBACKFARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="交易后端收费总额", comments = "交易后端收费总额")
+    @Column(name = "F_TOTALBACKFARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "交易后端收费总额", comments = "交易后端收费总额")
     private BigDecimal totalBackFare;
 
     /**
      * 转入/转出标识
      */
-    @Column(name = "C_TRANSFERFLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="转入/转出标识", comments = "转入/转出标识")
+    @Column(name = "C_TRANSFERFLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "转入/转出标识", comments = "转入/转出标识")
     private Boolean transferFlag;
 
     /**
      * 结算币种
      */
-    @Column(name = "C_CURRENCY",  columnDefinition="VARCHAR" )
-    @MetaData( value="结算币种", comments = "结算币种")
+    @Column(name = "C_CURRENCY", columnDefinition = "VARCHAR")
+    @MetaData(value = "结算币种", comments = "结算币种")
     private String currency;
 
     /**
      * 红利比例 
      */
-    @Column(name = "F_DIVIDENDRATIO",  columnDefinition="DOUBLE" )
-    @MetaData( value="红利比例 ", comments = "红利比例 ")
+    @Column(name = "F_DIVIDENDRATIO", columnDefinition = "DOUBLE")
+    @MetaData(value = "红利比例 ", comments = "红利比例 ")
     private BigDecimal devidendRatio;
 
     /**
      * 促销活动代码
      */
-    @Column(name = "C_PROMOTION",  columnDefinition="VARCHAR" )
-    @MetaData( value="促销活动代码", comments = "促销活动代码")
+    @Column(name = "C_PROMOTION", columnDefinition = "VARCHAR")
+    @MetaData(value = "促销活动代码", comments = "促销活动代码")
     private String promotion;
 
     /**
      * 受理方式 ；0柜台，1电话，2网上交易，3传真，4手机，5其它
      */
-    @Column(name = "C_ACCEPT",  columnDefinition="VARCHAR" )
-    @MetaData( value="受理方式 ", comments = "受理方式 ；0柜台，1电话，2网上交易，3传真，4手机，5其它")
+    @Column(name = "C_ACCEPT", columnDefinition = "VARCHAR")
+    @MetaData(value = "受理方式 ", comments = "受理方式 ；0柜台，1电话，2网上交易，3传真，4手机，5其它")
     private String acceptMode;
 
     /**
      * 冻结原因
      */
-    @Column(name = "C_FROZENCAUSE",  columnDefinition="VARCHAR" )
-    @MetaData( value="冻结原因", comments = "冻结原因")
+    @Column(name = "C_FROZENCAUSE", columnDefinition = "VARCHAR")
+    @MetaData(value = "冻结原因", comments = "冻结原因")
     private String frozenCause;
 
     /**
      * 摘要/说明 
      */
-    @Column(name = "C_SPECIFICATION",  columnDefinition="VARCHAR" )
-    @MetaData( value="摘要/说明 ", comments = "摘要/说明 ")
+    @Column(name = "C_SPECIFICATION", columnDefinition = "VARCHAR")
+    @MetaData(value = "摘要/说明 ", comments = "摘要/说明 ")
     private String specification;
 
     /**
      * 解冻红利
      */
-    @Column(name = "F_UNFROZENBALA",  columnDefinition="DECIMAL" )
-    @MetaData( value="解冻红利", comments = "解冻红利")
+    @Column(name = "F_UNFROZENBALA", columnDefinition = "DECIMAL")
+    @MetaData(value = "解冻红利", comments = "解冻红利")
     private BigDecimal fUnfrozenbala;
 
     /**
      * 冻结方式 ；0-原份额冻结，1-原份额+红股/红利冻结
      */
-    @Column(name = "C_FROZENMETHOD",  columnDefinition="VARCHAR" )
-    @MetaData( value="冻结方式 ", comments = "冻结方式 ；0-原份额冻结，1-原份额+红股/红利冻结")
+    @Column(name = "C_FROZENMETHOD", columnDefinition = "VARCHAR")
+    @MetaData(value = "冻结方式 ", comments = "冻结方式 ；0-原份额冻结，1-原份额+红股/红利冻结")
     private String frozenMethod;
 
     /**
      * 冻结截止日期
      */
-    @Column(name = "D_FROZENENDLINE",  columnDefinition="VARCHAR" )
-    @MetaData( value="冻结截止日期", comments = "冻结截止日期")
+    @Column(name = "D_FROZENENDLINE", columnDefinition = "VARCHAR")
+    @MetaData(value = "冻结截止日期", comments = "冻结截止日期")
     private String frozenEndLine;
 
     /**
      * 交易确认状态
      */
-    @Column(name = "C_STATUS",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易确认状态", comments = "交易确认状态")
+    @Column(name = "C_STATUS", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易确认状态", comments = "交易确认状态")
     private String tradeStatus;
 
     /**
@@ -656,7 +661,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
@@ -664,7 +669,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custNo;
     }
 
-    public void setCustNo(Long custNo) {
+    public void setCustNo(final Long custNo) {
         this.custNo = custNo;
     }
 
@@ -672,7 +677,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tano;
     }
 
-    public void setTano(String tano) {
+    public void setTano(final String tano) {
         this.tano = tano == null ? null : tano.trim();
     }
 
@@ -680,7 +685,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custType;
     }
 
-    public void setCustType(String custType) {
+    public void setCustType(final String custType) {
         this.custType = custType == null ? null : custType.trim();
     }
 
@@ -688,7 +693,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeAccount;
     }
 
-    public void setTradeAccount(String tradeAccount) {
+    public void setTradeAccount(final String tradeAccount) {
         this.tradeAccount = tradeAccount == null ? null : tradeAccount.trim();
     }
 
@@ -696,7 +701,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fundAccount;
     }
 
-    public void setFundAccount(String fundAccount) {
+    public void setFundAccount(final String fundAccount) {
         this.fundAccount = fundAccount == null ? null : fundAccount.trim();
     }
 
@@ -704,7 +709,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return agencyNo;
     }
 
-    public void setAgencyNo(String agencyNo) {
+    public void setAgencyNo(final String agencyNo) {
         this.agencyNo = agencyNo == null ? null : agencyNo.trim();
     }
 
@@ -712,7 +717,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return payCenterNo;
     }
 
-    public void setPayCenterNo(String payCenterNo) {
+    public void setPayCenterNo(final String payCenterNo) {
         this.payCenterNo = payCenterNo == null ? null : payCenterNo.trim();
     }
 
@@ -720,7 +725,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return netNo;
     }
 
-    public void setNetNo(String netNo) {
+    public void setNetNo(final String netNo) {
         this.netNo = netNo == null ? null : netNo.trim();
     }
 
@@ -728,7 +733,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeDate;
     }
 
-    public void setTradeDate(String tradeDate) {
+    public void setTradeDate(final String tradeDate) {
         this.tradeDate = tradeDate == null ? null : tradeDate.trim();
     }
 
@@ -736,7 +741,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmDate;
     }
 
-    public void setConfirmDate(String confirmDate) {
+    public void setConfirmDate(final String confirmDate) {
         this.confirmDate = confirmDate == null ? null : confirmDate.trim();
     }
 
@@ -744,7 +749,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return requestNo;
     }
 
-    public void setRequestNo(String requestNo) {
+    public void setRequestNo(final String requestNo) {
         this.requestNo = requestNo == null ? null : requestNo.trim();
     }
 
@@ -752,7 +757,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmSerialno;
     }
 
-    public void setConfirmSerialno(String confirmSerialno) {
+    public void setConfirmSerialno(final String confirmSerialno) {
         this.confirmSerialno = confirmSerialno == null ? null : confirmSerialno.trim();
     }
 
@@ -760,7 +765,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fundCode;
     }
 
-    public void setFundCode(String fundCode) {
+    public void setFundCode(final String fundCode) {
         this.fundCode = fundCode == null ? null : fundCode.trim();
     }
 
@@ -768,7 +773,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return shareType;
     }
 
-    public void setShareType(String shareType) {
+    public void setShareType(final String shareType) {
         this.shareType = shareType == null ? null : shareType.trim();
     }
 
@@ -776,7 +781,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return businFlag;
     }
 
-    public void setBusinFlag(String businFlag) {
+    public void setBusinFlag(final String businFlag) {
         this.businFlag = businFlag == null ? null : businFlag.trim();
     }
 
@@ -784,16 +789,15 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return balance;
     }
 
-    public void setBalance(BigDecimal balance) {
+    public void setBalance(final BigDecimal balance) {
         this.balance = balance;
     }
- 
 
     public BigDecimal getShares() {
         return this.shares;
     }
 
-    public void setShares(BigDecimal anShares) {
+    public void setShares(final BigDecimal anShares) {
         this.shares = anShares;
     }
 
@@ -801,7 +805,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmBalance;
     }
 
-    public void setConfirmBalance(BigDecimal confirmBalance) {
+    public void setConfirmBalance(final BigDecimal confirmBalance) {
         this.confirmBalance = confirmBalance;
     }
 
@@ -809,7 +813,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmShares;
     }
 
-    public void setConfirmShares(BigDecimal confirmShares) {
+    public void setConfirmShares(final BigDecimal confirmShares) {
         this.confirmShares = confirmShares;
     }
 
@@ -817,7 +821,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return netValue;
     }
 
-    public void setNetValue(BigDecimal netValue) {
+    public void setNetValue(final BigDecimal netValue) {
         this.netValue = netValue;
     }
 
@@ -825,7 +829,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return discount;
     }
 
-    public void setDiscount(BigDecimal discount) {
+    public void setDiscount(final BigDecimal discount) {
         this.discount = discount;
     }
 
@@ -833,7 +837,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return backDiscount;
     }
 
-    public void setBackDiscount(BigDecimal backDiscount) {
+    public void setBackDiscount(final BigDecimal backDiscount) {
         this.backDiscount = backDiscount;
     }
 
@@ -841,7 +845,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return ratio;
     }
 
-    public void setRatio(BigDecimal ratio) {
+    public void setRatio(final BigDecimal ratio) {
         this.ratio = ratio;
     }
 
@@ -849,7 +853,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return profit;
     }
 
-    public void setProfit(BigDecimal profit) {
+    public void setProfit(final BigDecimal profit) {
         this.profit = profit;
     }
 
@@ -857,7 +861,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fare;
     }
 
-    public void setFare(BigDecimal fare) {
+    public void setFare(final BigDecimal fare) {
         this.fare = fare;
     }
 
@@ -865,7 +869,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return dealFare;
     }
 
-    public void setDealFare(BigDecimal dealFare) {
+    public void setDealFare(final BigDecimal dealFare) {
         this.dealFare = dealFare;
     }
 
@@ -873,7 +877,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return taFare;
     }
 
-    public void setTaFare(BigDecimal taFare) {
+    public void setTaFare(final BigDecimal taFare) {
         this.taFare = taFare;
     }
 
@@ -881,7 +885,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return afterFare;
     }
 
-    public void setAfterFare(BigDecimal afterFare) {
+    public void setAfterFare(final BigDecimal afterFare) {
         this.afterFare = afterFare;
     }
 
@@ -889,7 +893,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return agencyFare;
     }
 
-    public void setAgencyFare(BigDecimal agencyFare) {
+    public void setAgencyFare(final BigDecimal agencyFare) {
         this.agencyFare = agencyFare;
     }
 
@@ -897,7 +901,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return stampTax;
     }
 
-    public void setStampTax(BigDecimal stampTax) {
+    public void setStampTax(final BigDecimal stampTax) {
         this.stampTax = stampTax;
     }
 
@@ -905,7 +909,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tax;
     }
 
-    public void setTax(BigDecimal tax) {
+    public void setTax(final BigDecimal tax) {
         this.tax = tax;
     }
 
@@ -913,7 +917,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return bonusType;
     }
 
-    public void setBonusType(String bonusType) {
+    public void setBonusType(final String bonusType) {
         this.bonusType = bonusType == null ? null : bonusType.trim();
     }
 
@@ -921,7 +925,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return finished;
     }
 
-    public void setFinished(Boolean finished) {
+    public void setFinished(final Boolean finished) {
         this.finished = finished;
     }
 
@@ -929,7 +933,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fromTA;
     }
 
-    public void setFromTA(Boolean fromTA) {
+    public void setFromTA(final Boolean fromTA) {
         this.fromTA = fromTA;
     }
 
@@ -937,7 +941,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return errCode;
     }
 
-    public void setErrCode(String errCode) {
+    public void setErrCode(final String errCode) {
         this.errCode = errCode == null ? null : errCode.trim();
     }
 
@@ -945,7 +949,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmCause;
     }
 
-    public void setConfirmCause(String confirmCause) {
+    public void setConfirmCause(final String confirmCause) {
         this.confirmCause = confirmCause == null ? null : confirmCause.trim();
     }
 
@@ -953,7 +957,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return otherFare;
     }
 
-    public void setOtherFare(BigDecimal otherFare) {
+    public void setOtherFare(final BigDecimal otherFare) {
         this.otherFare = otherFare;
     }
 
@@ -961,7 +965,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return otherFare2;
     }
 
-    public void setOtherFare2(BigDecimal otherFare2) {
+    public void setOtherFare2(final BigDecimal otherFare2) {
         this.otherFare2 = otherFare2;
     }
 
@@ -969,7 +973,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return voucherFlag;
     }
 
-    public void setVoucherFlag(Boolean voucherFlag) {
+    public void setVoucherFlag(final Boolean voucherFlag) {
         this.voucherFlag = voucherFlag;
     }
 
@@ -977,7 +981,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return interest;
     }
 
-    public void setInterest(BigDecimal interest) {
+    public void setInterest(final BigDecimal interest) {
         this.interest = interest;
     }
 
@@ -985,7 +989,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return interestTax;
     }
 
-    public void setInterestTax(BigDecimal interestTax) {
+    public void setInterestTax(final BigDecimal interestTax) {
         this.interestTax = interestTax;
     }
 
@@ -993,7 +997,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return shareByInterest;
     }
 
-    public void setShareByInterest(BigDecimal shareByInterest) {
+    public void setShareByInterest(final BigDecimal shareByInterest) {
         this.shareByInterest = shareByInterest;
     }
 
@@ -1001,7 +1005,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return income;
     }
 
-    public void setIncome(BigDecimal income) {
+    public void setIncome(final BigDecimal income) {
         this.income = income;
     }
 
@@ -1009,7 +1013,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return investIncome;
     }
 
-    public void setInvestIncome(BigDecimal investIncome) {
+    public void setInvestIncome(final BigDecimal investIncome) {
         this.investIncome = investIncome;
     }
 
@@ -1017,7 +1021,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(final BigDecimal price) {
         this.price = price;
     }
 
@@ -1025,7 +1029,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetPrice;
     }
 
-    public void setTagetPrice(BigDecimal tagetPrice) {
+    public void setTagetPrice(final BigDecimal tagetPrice) {
         this.tagetPrice = tagetPrice;
     }
 
@@ -1033,7 +1037,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetFundCode;
     }
 
-    public void setTagetFundCode(String tagetFundCode) {
+    public void setTagetFundCode(final String tagetFundCode) {
         this.tagetFundCode = tagetFundCode == null ? null : tagetFundCode.trim();
     }
 
@@ -1041,7 +1045,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetShareType;
     }
 
-    public void setTagetShareType(String tagetShareType) {
+    public void setTagetShareType(final String tagetShareType) {
         this.tagetShareType = tagetShareType == null ? null : tagetShareType.trim();
     }
 
@@ -1049,7 +1053,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetTradeAccount;
     }
 
-    public void setTagetTradeAccount(String tagetTradeAccount) {
+    public void setTagetTradeAccount(final String tagetTradeAccount) {
         this.tagetTradeAccount = tagetTradeAccount == null ? null : tagetTradeAccount.trim();
     }
 
@@ -1057,7 +1061,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetFundAccount;
     }
 
-    public void setTagetFundAccount(String tagetFundAccount) {
+    public void setTagetFundAccount(final String tagetFundAccount) {
         this.tagetFundAccount = tagetFundAccount == null ? null : tagetFundAccount.trim();
     }
 
@@ -1065,7 +1069,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetAgencyNo;
     }
 
-    public void setTagetAgencyNo(String tagetAgencyNo) {
+    public void setTagetAgencyNo(final String tagetAgencyNo) {
         this.tagetAgencyNo = tagetAgencyNo == null ? null : tagetAgencyNo.trim();
     }
 
@@ -1073,7 +1077,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetNetNo;
     }
 
-    public void setTagetNetNo(String tagetNetNo) {
+    public void setTagetNetNo(final String tagetNetNo) {
         this.tagetNetNo = tagetNetNo == null ? null : tagetNetNo.trim();
     }
 
@@ -1081,7 +1085,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetNetValue;
     }
 
-    public void setTagetNetValue(BigDecimal tagetNetValue) {
+    public void setTagetNetValue(final BigDecimal tagetNetValue) {
         this.tagetNetValue = tagetNetValue;
     }
 
@@ -1089,7 +1093,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetConfirmShares;
     }
 
-    public void setTagetConfirmShares(BigDecimal tagetConfirmShares) {
+    public void setTagetConfirmShares(final BigDecimal tagetConfirmShares) {
         this.tagetConfirmShares = tagetConfirmShares;
     }
 
@@ -1097,7 +1101,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetCityNo;
     }
 
-    public void setTagetCityNo(String tagetCityNo) {
+    public void setTagetCityNo(final String tagetCityNo) {
         this.tagetCityNo = tagetCityNo == null ? null : tagetCityNo.trim();
     }
 
@@ -1105,7 +1109,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetDiscount;
     }
 
-    public void setTagetDiscount(BigDecimal tagetDiscount) {
+    public void setTagetDiscount(final BigDecimal tagetDiscount) {
         this.tagetDiscount = tagetDiscount;
     }
 
@@ -1113,7 +1117,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originFare;
     }
 
-    public void setOriginFare(BigDecimal originFare) {
+    public void setOriginFare(final BigDecimal originFare) {
         this.originFare = originFare;
     }
 
@@ -1121,7 +1125,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return broker;
     }
 
-    public void setBroker(String broker) {
+    public void setBroker(final String broker) {
         this.broker = broker == null ? null : broker.trim();
     }
 
@@ -1129,7 +1133,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return cityNo;
     }
 
-    public void setCityNo(String cityNo) {
+    public void setCityNo(final String cityNo) {
         this.cityNo = cityNo == null ? null : cityNo.trim();
     }
 
@@ -1137,7 +1141,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custManager;
     }
 
-    public void setCustManager(String custManager) {
+    public void setCustManager(final String custManager) {
         this.custManager = custManager == null ? null : custManager.trim();
     }
 
@@ -1145,7 +1149,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return investShare;
     }
 
-    public void setInvestShare(BigDecimal investShare) {
+    public void setInvestShare(final BigDecimal investShare) {
         this.investShare = investShare;
     }
 
@@ -1153,7 +1157,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originConfirmNo;
     }
 
-    public void setOriginConfirmNo(String originConfirmNo) {
+    public void setOriginConfirmNo(final String originConfirmNo) {
         this.originConfirmNo = originConfirmNo == null ? null : originConfirmNo.trim();
     }
 
@@ -1161,7 +1165,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originRequestNo;
     }
 
-    public void setOriginRequestNo(String originRequestNo) {
+    public void setOriginRequestNo(final String originRequestNo) {
         this.originRequestNo = originRequestNo == null ? null : originRequestNo.trim();
     }
 
@@ -1169,7 +1173,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originTradeDate;
     }
 
-    public void setOriginTradeDate(String originTradeDate) {
+    public void setOriginTradeDate(final String originTradeDate) {
         this.originTradeDate = originTradeDate == null ? null : originTradeDate.trim();
     }
 
@@ -1177,7 +1181,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originDiscount;
     }
 
-    public void setOriginDiscount(BigDecimal originDiscount) {
+    public void setOriginDiscount(final BigDecimal originDiscount) {
         this.originDiscount = originDiscount;
     }
 
@@ -1185,7 +1189,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return originConfirmDate;
     }
 
-    public void setOriginConfirmDate(String originConfirmDate) {
+    public void setOriginConfirmDate(final String originConfirmDate) {
         this.originConfirmDate = originConfirmDate == null ? null : originConfirmDate.trim();
     }
 
@@ -1193,7 +1197,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return subRedemDate;
     }
 
-    public void setSubRedemDate(String subRedemDate) {
+    public void setSubRedemDate(final String subRedemDate) {
         this.subRedemDate = subRedemDate == null ? null : subRedemDate.trim();
     }
 
@@ -1201,7 +1205,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return validPeriod;
     }
 
-    public void setValidPeriod(Integer validPeriod) {
+    public void setValidPeriod(final Integer validPeriod) {
         this.validPeriod = validPeriod;
     }
 
@@ -1209,7 +1213,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return redemReson;
     }
 
-    public void setRedemReson(String redemReson) {
+    public void setRedemReson(final String redemReson) {
         this.redemReson = redemReson == null ? null : redemReson.trim();
     }
 
@@ -1217,7 +1221,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return taCustNo;
     }
 
-    public void setTaCustNo(String taCustNo) {
+    public void setTaCustNo(final String taCustNo) {
         this.taCustNo = taCustNo == null ? null : taCustNo.trim();
     }
 
@@ -1225,7 +1229,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return regDate;
     }
 
-    public void setRegDate(String regDate) {
+    public void setRegDate(final String regDate) {
         this.regDate = regDate == null ? null : regDate.trim();
     }
 
@@ -1233,7 +1237,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return businClass;
     }
 
-    public void setBusinClass(String businClass) {
+    public void setBusinClass(final String businClass) {
         this.businClass = businClass == null ? null : businClass.trim();
     }
 
@@ -1241,7 +1245,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return detail;
     }
 
-    public void setDetail(Boolean detail) {
+    public void setDetail(final Boolean detail) {
         this.detail = detail;
     }
 
@@ -1249,7 +1253,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return largeRedeem;
     }
 
-    public void setLargeRedeem(Boolean largeRedeem) {
+    public void setLargeRedeem(final Boolean largeRedeem) {
         this.largeRedeem = largeRedeem;
     }
 
@@ -1257,7 +1261,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeTime;
     }
 
-    public void setTradeTime(String tradeTime) {
+    public void setTradeTime(final String tradeTime) {
         this.tradeTime = tradeTime == null ? null : tradeTime.trim();
     }
 
@@ -1265,7 +1269,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return issuedDate;
     }
 
-    public void setIssuedDate(String issuedDate) {
+    public void setIssuedDate(final String issuedDate) {
         this.issuedDate = issuedDate == null ? null : issuedDate.trim();
     }
 
@@ -1273,7 +1277,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return redeemDate;
     }
 
-    public void setRedeemDate(String redeemDate) {
+    public void setRedeemDate(final String redeemDate) {
         this.redeemDate = redeemDate == null ? null : redeemDate.trim();
     }
 
@@ -1281,7 +1285,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return totalBackFare;
     }
 
-    public void setTotalBackFare(BigDecimal totalBackFare) {
+    public void setTotalBackFare(final BigDecimal totalBackFare) {
         this.totalBackFare = totalBackFare;
     }
 
@@ -1289,7 +1293,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return transferFlag;
     }
 
-    public void setTransferFlag(Boolean transferFlag) {
+    public void setTransferFlag(final Boolean transferFlag) {
         this.transferFlag = transferFlag;
     }
 
@@ -1297,7 +1301,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+    public void setCurrency(final String currency) {
         this.currency = currency == null ? null : currency.trim();
     }
 
@@ -1305,7 +1309,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return devidendRatio;
     }
 
-    public void setDevidendRatio(BigDecimal devidendRatio) {
+    public void setDevidendRatio(final BigDecimal devidendRatio) {
         this.devidendRatio = devidendRatio;
     }
 
@@ -1313,7 +1317,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return promotion;
     }
 
-    public void setPromotion(String promotion) {
+    public void setPromotion(final String promotion) {
         this.promotion = promotion == null ? null : promotion.trim();
     }
 
@@ -1321,7 +1325,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return acceptMode;
     }
 
-    public void setAcceptMode(String acceptMode) {
+    public void setAcceptMode(final String acceptMode) {
         this.acceptMode = acceptMode == null ? null : acceptMode.trim();
     }
 
@@ -1329,7 +1333,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return frozenCause;
     }
 
-    public void setFrozenCause(String frozenCause) {
+    public void setFrozenCause(final String frozenCause) {
         this.frozenCause = frozenCause == null ? null : frozenCause.trim();
     }
 
@@ -1337,7 +1341,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return specification;
     }
 
-    public void setSpecification(String specification) {
+    public void setSpecification(final String specification) {
         this.specification = specification == null ? null : specification.trim();
     }
 
@@ -1345,7 +1349,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fUnfrozenbala;
     }
 
-    public void setfUnfrozenbala(BigDecimal fUnfrozenbala) {
+    public void setfUnfrozenbala(final BigDecimal fUnfrozenbala) {
         this.fUnfrozenbala = fUnfrozenbala;
     }
 
@@ -1353,7 +1357,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return frozenMethod;
     }
 
-    public void setFrozenMethod(String frozenMethod) {
+    public void setFrozenMethod(final String frozenMethod) {
         this.frozenMethod = frozenMethod == null ? null : frozenMethod.trim();
     }
 
@@ -1361,7 +1365,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return frozenEndLine;
     }
 
-    public void setFrozenEndLine(String frozenEndLine) {
+    public void setFrozenEndLine(final String frozenEndLine) {
         this.frozenEndLine = frozenEndLine == null ? null : frozenEndLine.trim();
     }
 
@@ -1369,7 +1373,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeStatus;
     }
 
-    public void setTradeStatus(String tradeStatus) {
+    public void setTradeStatus(final String tradeStatus) {
         this.tradeStatus = tradeStatus == null ? null : tradeStatus.trim();
     }
 
@@ -1377,19 +1381,21 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleRequestNo;
     }
 
-    public void setSaleRequestNo(String anSaleRequestNo) {
+    public void setSaleRequestNo(final String anSaleRequestNo) {
         this.saleRequestNo = anSaleRequestNo;
     }
 
-    public SaleConfirmInfo(){
+    public SaleConfirmInfo() {
 
     }
-    public SaleConfirmInfo(SaleConfirmInfo confirmInfo){
-        
+
+    public SaleConfirmInfo(final SaleConfirmInfo confirmInfo) {
+
     }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
@@ -1489,7 +1495,7 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
     }
 
     @Override
-    public boolean equals(Object that) {
+    public boolean equals(final Object that) {
         if (this == that) {
             return true;
         }
@@ -1499,98 +1505,173 @@ public class SaleConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         if (getClass() != that.getClass()) {
             return false;
         }
-        SaleConfirmInfo other = (SaleConfirmInfo) that;
+        final SaleConfirmInfo other = (SaleConfirmInfo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
-            && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
-            && (this.getCustType() == null ? other.getCustType() == null : this.getCustType().equals(other.getCustType()))
-            && (this.getTradeAccount() == null ? other.getTradeAccount() == null : this.getTradeAccount().equals(other.getTradeAccount()))
-            && (this.getFundAccount() == null ? other.getFundAccount() == null : this.getFundAccount().equals(other.getFundAccount()))
-            && (this.getAgencyNo() == null ? other.getAgencyNo() == null : this.getAgencyNo().equals(other.getAgencyNo()))
-            && (this.getPayCenterNo() == null ? other.getPayCenterNo() == null : this.getPayCenterNo().equals(other.getPayCenterNo()))
-            && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
-            && (this.getTradeDate() == null ? other.getTradeDate() == null : this.getTradeDate().equals(other.getTradeDate()))
-            && (this.getConfirmDate() == null ? other.getConfirmDate() == null : this.getConfirmDate().equals(other.getConfirmDate()))
-            && (this.getRequestNo() == null ? other.getRequestNo() == null : this.getRequestNo().equals(other.getRequestNo()))
-            && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
-            && (this.getFundCode() == null ? other.getFundCode() == null : this.getFundCode().equals(other.getFundCode()))
-            && (this.getShareType() == null ? other.getShareType() == null : this.getShareType().equals(other.getShareType()))
-            && (this.getBusinFlag() == null ? other.getBusinFlag() == null : this.getBusinFlag().equals(other.getBusinFlag()))
-            && (this.getBalance() == null ? other.getBalance() == null : this.getBalance().equals(other.getBalance()))
-            && (this.getShares() == null ? other.getShares() == null : this.getShares().equals(other.getShares()))
-            && (this.getConfirmBalance() == null ? other.getConfirmBalance() == null : this.getConfirmBalance().equals(other.getConfirmBalance()))
-            && (this.getConfirmShares() == null ? other.getConfirmShares() == null : this.getConfirmShares().equals(other.getConfirmShares()))
-            && (this.getNetValue() == null ? other.getNetValue() == null : this.getNetValue().equals(other.getNetValue()))
-            && (this.getDiscount() == null ? other.getDiscount() == null : this.getDiscount().equals(other.getDiscount()))
-            && (this.getBackDiscount() == null ? other.getBackDiscount() == null : this.getBackDiscount().equals(other.getBackDiscount()))
-            && (this.getRatio() == null ? other.getRatio() == null : this.getRatio().equals(other.getRatio()))
-            && (this.getProfit() == null ? other.getProfit() == null : this.getProfit().equals(other.getProfit()))
-            && (this.getFare() == null ? other.getFare() == null : this.getFare().equals(other.getFare()))
-            && (this.getDealFare() == null ? other.getDealFare() == null : this.getDealFare().equals(other.getDealFare()))
-            && (this.getTaFare() == null ? other.getTaFare() == null : this.getTaFare().equals(other.getTaFare()))
-            && (this.getAfterFare() == null ? other.getAfterFare() == null : this.getAfterFare().equals(other.getAfterFare()))
-            && (this.getAgencyFare() == null ? other.getAgencyFare() == null : this.getAgencyFare().equals(other.getAgencyFare()))
-            && (this.getStampTax() == null ? other.getStampTax() == null : this.getStampTax().equals(other.getStampTax()))
-            && (this.getTax() == null ? other.getTax() == null : this.getTax().equals(other.getTax()))
-            && (this.getBonusType() == null ? other.getBonusType() == null : this.getBonusType().equals(other.getBonusType()))
-            && (this.getFinished() == null ? other.getFinished() == null : this.getFinished().equals(other.getFinished()))
-            && (this.getFromTA() == null ? other.getFromTA() == null : this.getFromTA().equals(other.getFromTA()))
-            && (this.getErrCode() == null ? other.getErrCode() == null : this.getErrCode().equals(other.getErrCode()))
-            && (this.getConfirmCause() == null ? other.getConfirmCause() == null : this.getConfirmCause().equals(other.getConfirmCause()))
-            && (this.getOtherFare() == null ? other.getOtherFare() == null : this.getOtherFare().equals(other.getOtherFare()))
-            && (this.getOtherFare2() == null ? other.getOtherFare2() == null : this.getOtherFare2().equals(other.getOtherFare2()))
-            && (this.getVoucherFlag() == null ? other.getVoucherFlag() == null : this.getVoucherFlag().equals(other.getVoucherFlag()))
-            && (this.getInterest() == null ? other.getInterest() == null : this.getInterest().equals(other.getInterest()))
-            && (this.getInterestTax() == null ? other.getInterestTax() == null : this.getInterestTax().equals(other.getInterestTax()))
-            && (this.getShareByInterest() == null ? other.getShareByInterest() == null : this.getShareByInterest().equals(other.getShareByInterest()))
-            && (this.getIncome() == null ? other.getIncome() == null : this.getIncome().equals(other.getIncome()))
-            && (this.getInvestIncome() == null ? other.getInvestIncome() == null : this.getInvestIncome().equals(other.getInvestIncome()))
-            && (this.getPrice() == null ? other.getPrice() == null : this.getPrice().equals(other.getPrice()))
-            && (this.getTagetPrice() == null ? other.getTagetPrice() == null : this.getTagetPrice().equals(other.getTagetPrice()))
-            && (this.getTagetFundCode() == null ? other.getTagetFundCode() == null : this.getTagetFundCode().equals(other.getTagetFundCode()))
-            && (this.getTagetShareType() == null ? other.getTagetShareType() == null : this.getTagetShareType().equals(other.getTagetShareType()))
-            && (this.getTagetTradeAccount() == null ? other.getTagetTradeAccount() == null : this.getTagetTradeAccount().equals(other.getTagetTradeAccount()))
-            && (this.getTagetFundAccount() == null ? other.getTagetFundAccount() == null : this.getTagetFundAccount().equals(other.getTagetFundAccount()))
-            && (this.getTagetAgencyNo() == null ? other.getTagetAgencyNo() == null : this.getTagetAgencyNo().equals(other.getTagetAgencyNo()))
-            && (this.getTagetNetNo() == null ? other.getTagetNetNo() == null : this.getTagetNetNo().equals(other.getTagetNetNo()))
-            && (this.getTagetNetValue() == null ? other.getTagetNetValue() == null : this.getTagetNetValue().equals(other.getTagetNetValue()))
-            && (this.getTagetConfirmShares() == null ? other.getTagetConfirmShares() == null : this.getTagetConfirmShares().equals(other.getTagetConfirmShares()))
-            && (this.getTagetCityNo() == null ? other.getTagetCityNo() == null : this.getTagetCityNo().equals(other.getTagetCityNo()))
-            && (this.getTagetDiscount() == null ? other.getTagetDiscount() == null : this.getTagetDiscount().equals(other.getTagetDiscount()))
-            && (this.getOriginFare() == null ? other.getOriginFare() == null : this.getOriginFare().equals(other.getOriginFare()))
-            && (this.getBroker() == null ? other.getBroker() == null : this.getBroker().equals(other.getBroker()))
-            && (this.getCityNo() == null ? other.getCityNo() == null : this.getCityNo().equals(other.getCityNo()))
-            && (this.getCustManager() == null ? other.getCustManager() == null : this.getCustManager().equals(other.getCustManager()))
-            && (this.getInvestShare() == null ? other.getInvestShare() == null : this.getInvestShare().equals(other.getInvestShare()))
-            && (this.getOriginConfirmNo() == null ? other.getOriginConfirmNo() == null : this.getOriginConfirmNo().equals(other.getOriginConfirmNo()))
-            && (this.getOriginRequestNo() == null ? other.getOriginRequestNo() == null : this.getOriginRequestNo().equals(other.getOriginRequestNo()))
-            && (this.getOriginTradeDate() == null ? other.getOriginTradeDate() == null : this.getOriginTradeDate().equals(other.getOriginTradeDate()))
-            && (this.getOriginDiscount() == null ? other.getOriginDiscount() == null : this.getOriginDiscount().equals(other.getOriginDiscount()))
-            && (this.getOriginConfirmDate() == null ? other.getOriginConfirmDate() == null : this.getOriginConfirmDate().equals(other.getOriginConfirmDate()))
-            && (this.getSubRedemDate() == null ? other.getSubRedemDate() == null : this.getSubRedemDate().equals(other.getSubRedemDate()))
-            && (this.getValidPeriod() == null ? other.getValidPeriod() == null : this.getValidPeriod().equals(other.getValidPeriod()))
-            && (this.getRedemReson() == null ? other.getRedemReson() == null : this.getRedemReson().equals(other.getRedemReson()))
-            && (this.getTaCustNo() == null ? other.getTaCustNo() == null : this.getTaCustNo().equals(other.getTaCustNo()))
-            && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
-            && (this.getBusinClass() == null ? other.getBusinClass() == null : this.getBusinClass().equals(other.getBusinClass()))
-            && (this.getDetail() == null ? other.getDetail() == null : this.getDetail().equals(other.getDetail()))
-            && (this.getLargeRedeem() == null ? other.getLargeRedeem() == null : this.getLargeRedeem().equals(other.getLargeRedeem()))
-            && (this.getTradeTime() == null ? other.getTradeTime() == null : this.getTradeTime().equals(other.getTradeTime()))
-            && (this.getIssuedDate() == null ? other.getIssuedDate() == null : this.getIssuedDate().equals(other.getIssuedDate()))
-            && (this.getRedeemDate() == null ? other.getRedeemDate() == null : this.getRedeemDate().equals(other.getRedeemDate()))
-            && (this.getTotalBackFare() == null ? other.getTotalBackFare() == null : this.getTotalBackFare().equals(other.getTotalBackFare()))
-            && (this.getTransferFlag() == null ? other.getTransferFlag() == null : this.getTransferFlag().equals(other.getTransferFlag()))
-            && (this.getCurrency() == null ? other.getCurrency() == null : this.getCurrency().equals(other.getCurrency()))
-            && (this.getDevidendRatio() == null ? other.getDevidendRatio() == null : this.getDevidendRatio().equals(other.getDevidendRatio()))
-            && (this.getPromotion() == null ? other.getPromotion() == null : this.getPromotion().equals(other.getPromotion()))
-            && (this.getAcceptMode() == null ? other.getAcceptMode() == null : this.getAcceptMode().equals(other.getAcceptMode()))
-            && (this.getFrozenCause() == null ? other.getFrozenCause() == null : this.getFrozenCause().equals(other.getFrozenCause()))
-            && (this.getSpecification() == null ? other.getSpecification() == null : this.getSpecification().equals(other.getSpecification()))
-            && (this.getfUnfrozenbala() == null ? other.getfUnfrozenbala() == null : this.getfUnfrozenbala().equals(other.getfUnfrozenbala()))
-            && (this.getFrozenMethod() == null ? other.getFrozenMethod() == null : this.getFrozenMethod().equals(other.getFrozenMethod()))
-            && (this.getFrozenEndLine() == null ? other.getFrozenEndLine() == null : this.getFrozenEndLine().equals(other.getFrozenEndLine()))
-            && (this.getTradeStatus() == null ? other.getTradeStatus() == null : this.getTradeStatus().equals(other.getTradeStatus()))
-        && (this.getSaleRequestNo() == null ? other.getSaleRequestNo() == null : this.getSaleRequestNo().equals(other.getSaleRequestNo()));
+                && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
+                && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
+                && (this.getCustType() == null ? other.getCustType() == null
+                        : this.getCustType().equals(other.getCustType()))
+                && (this.getTradeAccount() == null ? other.getTradeAccount() == null
+                        : this.getTradeAccount().equals(other.getTradeAccount()))
+                && (this.getFundAccount() == null ? other.getFundAccount() == null
+                        : this.getFundAccount().equals(other.getFundAccount()))
+                && (this.getAgencyNo() == null ? other.getAgencyNo() == null
+                        : this.getAgencyNo().equals(other.getAgencyNo()))
+                && (this.getPayCenterNo() == null ? other.getPayCenterNo() == null
+                        : this.getPayCenterNo().equals(other.getPayCenterNo()))
+                && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
+                && (this.getTradeDate() == null ? other.getTradeDate() == null
+                        : this.getTradeDate().equals(other.getTradeDate()))
+                && (this.getConfirmDate() == null ? other.getConfirmDate() == null
+                        : this.getConfirmDate().equals(other.getConfirmDate()))
+                && (this.getRequestNo() == null ? other.getRequestNo() == null
+                        : this.getRequestNo().equals(other.getRequestNo()))
+                && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null
+                        : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
+                && (this.getFundCode() == null ? other.getFundCode() == null
+                        : this.getFundCode().equals(other.getFundCode()))
+                && (this.getShareType() == null ? other.getShareType() == null
+                        : this.getShareType().equals(other.getShareType()))
+                && (this.getBusinFlag() == null ? other.getBusinFlag() == null
+                        : this.getBusinFlag().equals(other.getBusinFlag()))
+                && (this.getBalance() == null ? other.getBalance() == null
+                        : this.getBalance().equals(other.getBalance()))
+                && (this.getShares() == null ? other.getShares() == null : this.getShares().equals(other.getShares()))
+                && (this.getConfirmBalance() == null ? other.getConfirmBalance() == null
+                        : this.getConfirmBalance().equals(other.getConfirmBalance()))
+                && (this.getConfirmShares() == null ? other.getConfirmShares() == null
+                        : this.getConfirmShares().equals(other.getConfirmShares()))
+                && (this.getNetValue() == null ? other.getNetValue() == null
+                        : this.getNetValue().equals(other.getNetValue()))
+                && (this.getDiscount() == null ? other.getDiscount() == null
+                        : this.getDiscount().equals(other.getDiscount()))
+                && (this.getBackDiscount() == null ? other.getBackDiscount() == null
+                        : this.getBackDiscount().equals(other.getBackDiscount()))
+                && (this.getRatio() == null ? other.getRatio() == null : this.getRatio().equals(other.getRatio()))
+                && (this.getProfit() == null ? other.getProfit() == null : this.getProfit().equals(other.getProfit()))
+                && (this.getFare() == null ? other.getFare() == null : this.getFare().equals(other.getFare()))
+                && (this.getDealFare() == null ? other.getDealFare() == null
+                        : this.getDealFare().equals(other.getDealFare()))
+                && (this.getTaFare() == null ? other.getTaFare() == null : this.getTaFare().equals(other.getTaFare()))
+                && (this.getAfterFare() == null ? other.getAfterFare() == null
+                        : this.getAfterFare().equals(other.getAfterFare()))
+                && (this.getAgencyFare() == null ? other.getAgencyFare() == null
+                        : this.getAgencyFare().equals(other.getAgencyFare()))
+                && (this.getStampTax() == null ? other.getStampTax() == null
+                        : this.getStampTax().equals(other.getStampTax()))
+                && (this.getTax() == null ? other.getTax() == null : this.getTax().equals(other.getTax()))
+                && (this.getBonusType() == null ? other.getBonusType() == null
+                        : this.getBonusType().equals(other.getBonusType()))
+                && (this.getFinished() == null ? other.getFinished() == null
+                        : this.getFinished().equals(other.getFinished()))
+                && (this.getFromTA() == null ? other.getFromTA() == null : this.getFromTA().equals(other.getFromTA()))
+                && (this.getErrCode() == null ? other.getErrCode() == null
+                        : this.getErrCode().equals(other.getErrCode()))
+                && (this.getConfirmCause() == null ? other.getConfirmCause() == null
+                        : this.getConfirmCause().equals(other.getConfirmCause()))
+                && (this.getOtherFare() == null ? other.getOtherFare() == null
+                        : this.getOtherFare().equals(other.getOtherFare()))
+                && (this.getOtherFare2() == null ? other.getOtherFare2() == null
+                        : this.getOtherFare2().equals(other.getOtherFare2()))
+                && (this.getVoucherFlag() == null ? other.getVoucherFlag() == null
+                        : this.getVoucherFlag().equals(other.getVoucherFlag()))
+                && (this.getInterest() == null ? other.getInterest() == null
+                        : this.getInterest().equals(other.getInterest()))
+                && (this.getInterestTax() == null ? other.getInterestTax() == null
+                        : this.getInterestTax().equals(other.getInterestTax()))
+                && (this.getShareByInterest() == null ? other.getShareByInterest() == null
+                        : this.getShareByInterest().equals(other.getShareByInterest()))
+                && (this.getIncome() == null ? other.getIncome() == null : this.getIncome().equals(other.getIncome()))
+                && (this.getInvestIncome() == null ? other.getInvestIncome() == null
+                        : this.getInvestIncome().equals(other.getInvestIncome()))
+                && (this.getPrice() == null ? other.getPrice() == null : this.getPrice().equals(other.getPrice()))
+                && (this.getTagetPrice() == null ? other.getTagetPrice() == null
+                        : this.getTagetPrice().equals(other.getTagetPrice()))
+                && (this.getTagetFundCode() == null ? other.getTagetFundCode() == null
+                        : this.getTagetFundCode().equals(other.getTagetFundCode()))
+                && (this.getTagetShareType() == null ? other.getTagetShareType() == null
+                        : this.getTagetShareType().equals(other.getTagetShareType()))
+                && (this.getTagetTradeAccount() == null ? other.getTagetTradeAccount() == null
+                        : this.getTagetTradeAccount().equals(other.getTagetTradeAccount()))
+                && (this.getTagetFundAccount() == null ? other.getTagetFundAccount() == null
+                        : this.getTagetFundAccount().equals(other.getTagetFundAccount()))
+                && (this.getTagetAgencyNo() == null ? other.getTagetAgencyNo() == null
+                        : this.getTagetAgencyNo().equals(other.getTagetAgencyNo()))
+                && (this.getTagetNetNo() == null ? other.getTagetNetNo() == null
+                        : this.getTagetNetNo().equals(other.getTagetNetNo()))
+                && (this.getTagetNetValue() == null ? other.getTagetNetValue() == null
+                        : this.getTagetNetValue().equals(other.getTagetNetValue()))
+                && (this.getTagetConfirmShares() == null ? other.getTagetConfirmShares() == null
+                        : this.getTagetConfirmShares().equals(other.getTagetConfirmShares()))
+                && (this.getTagetCityNo() == null ? other.getTagetCityNo() == null
+                        : this.getTagetCityNo().equals(other.getTagetCityNo()))
+                && (this.getTagetDiscount() == null ? other.getTagetDiscount() == null
+                        : this.getTagetDiscount().equals(other.getTagetDiscount()))
+                && (this.getOriginFare() == null ? other.getOriginFare() == null
+                        : this.getOriginFare().equals(other.getOriginFare()))
+                && (this.getBroker() == null ? other.getBroker() == null : this.getBroker().equals(other.getBroker()))
+                && (this.getCityNo() == null ? other.getCityNo() == null : this.getCityNo().equals(other.getCityNo()))
+                && (this.getCustManager() == null ? other.getCustManager() == null
+                        : this.getCustManager().equals(other.getCustManager()))
+                && (this.getInvestShare() == null ? other.getInvestShare() == null
+                        : this.getInvestShare().equals(other.getInvestShare()))
+                && (this.getOriginConfirmNo() == null ? other.getOriginConfirmNo() == null
+                        : this.getOriginConfirmNo().equals(other.getOriginConfirmNo()))
+                && (this.getOriginRequestNo() == null ? other.getOriginRequestNo() == null
+                        : this.getOriginRequestNo().equals(other.getOriginRequestNo()))
+                && (this.getOriginTradeDate() == null ? other.getOriginTradeDate() == null
+                        : this.getOriginTradeDate().equals(other.getOriginTradeDate()))
+                && (this.getOriginDiscount() == null ? other.getOriginDiscount() == null
+                        : this.getOriginDiscount().equals(other.getOriginDiscount()))
+                && (this.getOriginConfirmDate() == null ? other.getOriginConfirmDate() == null
+                        : this.getOriginConfirmDate().equals(other.getOriginConfirmDate()))
+                && (this.getSubRedemDate() == null ? other.getSubRedemDate() == null
+                        : this.getSubRedemDate().equals(other.getSubRedemDate()))
+                && (this.getValidPeriod() == null ? other.getValidPeriod() == null
+                        : this.getValidPeriod().equals(other.getValidPeriod()))
+                && (this.getRedemReson() == null ? other.getRedemReson() == null
+                        : this.getRedemReson().equals(other.getRedemReson()))
+                && (this.getTaCustNo() == null ? other.getTaCustNo() == null
+                        : this.getTaCustNo().equals(other.getTaCustNo()))
+                && (this.getRegDate() == null ? other.getRegDate() == null
+                        : this.getRegDate().equals(other.getRegDate()))
+                && (this.getBusinClass() == null ? other.getBusinClass() == null
+                        : this.getBusinClass().equals(other.getBusinClass()))
+                && (this.getDetail() == null ? other.getDetail() == null : this.getDetail().equals(other.getDetail()))
+                && (this.getLargeRedeem() == null ? other.getLargeRedeem() == null
+                        : this.getLargeRedeem().equals(other.getLargeRedeem()))
+                && (this.getTradeTime() == null ? other.getTradeTime() == null
+                        : this.getTradeTime().equals(other.getTradeTime()))
+                && (this.getIssuedDate() == null ? other.getIssuedDate() == null
+                        : this.getIssuedDate().equals(other.getIssuedDate()))
+                && (this.getRedeemDate() == null ? other.getRedeemDate() == null
+                        : this.getRedeemDate().equals(other.getRedeemDate()))
+                && (this.getTotalBackFare() == null ? other.getTotalBackFare() == null
+                        : this.getTotalBackFare().equals(other.getTotalBackFare()))
+                && (this.getTransferFlag() == null ? other.getTransferFlag() == null
+                        : this.getTransferFlag().equals(other.getTransferFlag()))
+                && (this.getCurrency() == null ? other.getCurrency() == null
+                        : this.getCurrency().equals(other.getCurrency()))
+                && (this.getDevidendRatio() == null ? other.getDevidendRatio() == null
+                        : this.getDevidendRatio().equals(other.getDevidendRatio()))
+                && (this.getPromotion() == null ? other.getPromotion() == null
+                        : this.getPromotion().equals(other.getPromotion()))
+                && (this.getAcceptMode() == null ? other.getAcceptMode() == null
+                        : this.getAcceptMode().equals(other.getAcceptMode()))
+                && (this.getFrozenCause() == null ? other.getFrozenCause() == null
+                        : this.getFrozenCause().equals(other.getFrozenCause()))
+                && (this.getSpecification() == null ? other.getSpecification() == null
+                        : this.getSpecification().equals(other.getSpecification()))
+                && (this.getfUnfrozenbala() == null ? other.getfUnfrozenbala() == null
+                        : this.getfUnfrozenbala().equals(other.getfUnfrozenbala()))
+                && (this.getFrozenMethod() == null ? other.getFrozenMethod() == null
+                        : this.getFrozenMethod().equals(other.getFrozenMethod()))
+                && (this.getFrozenEndLine() == null ? other.getFrozenEndLine() == null
+                        : this.getFrozenEndLine().equals(other.getFrozenEndLine()))
+                && (this.getTradeStatus() == null ? other.getTradeStatus() == null
+                        : this.getTradeStatus().equals(other.getTradeStatus()))
+                && (this.getSaleRequestNo() == null ? other.getSaleRequestNo() == null
+                        : this.getSaleRequestNo().equals(other.getSaleRequestNo()));
     }
 
     @Override

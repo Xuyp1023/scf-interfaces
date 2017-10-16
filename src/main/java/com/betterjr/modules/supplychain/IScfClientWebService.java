@@ -28,6 +28,7 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "findWorkAccount", fundType = RuleFuncType.OBJECT)
     public List<ScfClientDataDetail> findWorkAccount(Map anMap);
+
     /**
      * 处理从资金管理系统推送过来的数据
      * 
@@ -36,7 +37,7 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "processPushData", fundType = RuleFuncType.OBJECT)
     public boolean saveProcessPushData(Map anMap);
-    
+
     /**
      * 处理从资金管理系统推送过来的数据
      * 
@@ -45,6 +46,7 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "processCoreCorp", fundType = RuleFuncType.OBJECT)
     public boolean saveProcessCoreCorp(Map anMap);
+
     /**
      * 处理业务数据，处理单个账户，用于注册信息的处理
      * 
@@ -53,7 +55,7 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "processData", fundType = RuleFuncType.OBJECT)
     public boolean saveProcessData(Map anMap);
-    
+
     /**
      * 处理业务数据，用于调度的批量信息的处理
      * 
@@ -62,7 +64,7 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "batchProcessData", fundType = RuleFuncType.OBJECT)
     public boolean saveBatchProcessData(Map anMap);
-    
+
     /**
      * 处理业务数据，用于调度的批量信息的处理
      * 
@@ -71,8 +73,8 @@ public interface IScfClientWebService {
      */
     @AnnotRuleFunc(name = "noticeProcess", fundType = RuleFuncType.OBJECT)
     public boolean noticeProcess(Map anMap);
-    
+
     @AnnotRuleFunc(name = "findDataProcess", fundType = RuleFuncType.OBJECT)
     public List<ScfClientDataProcess> findDataProcess(Map anMap);
-    
+
 }

@@ -1,266 +1,271 @@
 package com.betterjr.modules.fund.entity;
 
-import com.betterjr.common.annotation.*;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.data.BaseRemoteEntity;
 import com.betterjr.common.entity.BetterjrEntity;
-
-import javax.persistence.*;
 
 @Access(AccessType.FIELD)
 @Entity
 @Table(name = "T_SALE_ACCOCONFIRM")
-public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
+public class SaleAccoConfirmInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 编号
      */
     @Id
-    @Column(name = "ID",  columnDefinition="INTEGER" )
-    @MetaData( value="编号", comments = "编号")
+    @Column(name = "ID", columnDefinition = "INTEGER")
+    @MetaData(value = "编号", comments = "编号")
     private Long id;
 
     /**
      * 客户编号
      */
-    @Column(name = "L_CUSTNO",  columnDefinition="INTEGER" )
-    @MetaData( value="客户编号", comments = "客户编号")
+    @Column(name = "L_CUSTNO", columnDefinition = "INTEGER")
+    @MetaData(value = "客户编号", comments = "客户编号")
     private Long custNo;
 
     /**
      * TA代码
      */
-    @Column(name = "C_TANO",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA代码", comments = "TA代码")
+    @Column(name = "C_TANO", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA代码", comments = "TA代码")
     private String tano;
 
     /**
      * 业务代码
      */
-    @Column(name = "C_BUSINFLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="业务代码", comments = "业务代码")
+    @Column(name = "C_BUSINFLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "业务代码", comments = "业务代码")
     private String businFlag;
 
     /**
      * 确认业务代码
      */
-    @Column(name = "C_CBUSINFLAG",  columnDefinition="VARCHAR" )
-    @MetaData( value="确认业务代码", comments = "确认业务代码")
+    @Column(name = "C_CBUSINFLAG", columnDefinition = "VARCHAR")
+    @MetaData(value = "确认业务代码", comments = "确认业务代码")
     private String businConfirmFlag;
 
     /**
      * 交易账户
      */
-    @Column(name = "C_TRADEACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易账户", comments = "交易账户")
+    @Column(name = "C_TRADEACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易账户", comments = "交易账户")
     private String tradeAccount;
 
     /**
      * 基金账户
      */
-    @Column(name = "C_FUNDACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金账户", comments = "基金账户")
+    @Column(name = "C_FUNDACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金账户", comments = "基金账户")
     private String fundAccount;
 
     /**
      * 申请单号
      */
-    @Column(name = "C_REQUESTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="申请单号", comments = "申请单号")
+    @Column(name = "C_REQUESTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "申请单号", comments = "申请单号")
     private String requestNo;
 
     /**
      * 销售人代码
      */
-    @Column(name = "C_AGENCYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="销售人代码", comments = "销售人代码")
+    @Column(name = "C_AGENCYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "销售人代码", comments = "销售人代码")
     private String agencyNo;
 
     /**
      * 网点编码
      */
-    @Column(name = "C_NETNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="网点编码", comments = "网点编码")
+    @Column(name = "C_NETNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "网点编码", comments = "网点编码")
     private String netNo;
 
     /**
      * 客户类型；0个人，1机构
      */
-    @Column(name = "C_CUSTTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户类型", comments = "客户类型；0个人，1机构")
+    @Column(name = "C_CUSTTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户类型", comments = "客户类型；0个人，1机构")
     private String custType;
 
     /**
      * 客户姓名
      */
-    @Column(name = "C_CUSTNAME",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户姓名", comments = "客户姓名")
+    @Column(name = "C_CUSTNAME", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户姓名", comments = "客户姓名")
     private String custName;
 
     /**
      * 客户简称
      */
-    @Column(name = "C_SHORTNAME",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户简称", comments = "客户简称")
+    @Column(name = "C_SHORTNAME", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户简称", comments = "客户简称")
     private String shortName;
 
     /**
      * 证件类型
      */
-    @Column(name = "C_IDENTTYPE",  columnDefinition="VARCHAR" )
-    @MetaData( value="证件类型", comments = "证件类型")
+    @Column(name = "C_IDENTTYPE", columnDefinition = "VARCHAR")
+    @MetaData(value = "证件类型", comments = "证件类型")
     private String identType;
 
     /**
      * 账户确认日期
      */
-    @Column(name = "D_CDATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="账户确认日期", comments = "账户确认日期")
+    @Column(name = "D_CDATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "账户确认日期", comments = "账户确认日期")
     private String confirmDate;
 
     /**
      * 账户申请日期
      */
-    @Column(name = "D_DATE",  columnDefinition="VARCHAR" )
-    @MetaData( value="账户申请日期", comments = "账户申请日期")
+    @Column(name = "D_DATE", columnDefinition = "VARCHAR")
+    @MetaData(value = "账户申请日期", comments = "账户申请日期")
     private String tradeDate;
 
     /**
      * 账户申请时间
      */
-    @Column(name = "T_TIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="账户申请时间", comments = "账户申请时间")
+    @Column(name = "T_TIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "账户申请时间", comments = "账户申请时间")
     private String tradeTime;
 
     /**
      * 申请状态
      */
-    @Column(name = "C_STATUS",  columnDefinition="VARCHAR" )
-    @MetaData( value="申请状态", comments = "申请状态")
+    @Column(name = "C_STATUS", columnDefinition = "VARCHAR")
+    @MetaData(value = "申请状态", comments = "申请状态")
     private String tradeStatus;
 
     /**
      * 证件号码
      */
-    @Column(name = "C_IDENTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="证件号码", comments = "证件号码")
+    @Column(name = "C_IDENTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "证件号码", comments = "证件号码")
     private String identNo;
 
     /**
      * 多渠道开户标志
      */
-    @Column(name = "C_MULTIACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="多渠道开户标志", comments = "多渠道开户标志")
+    @Column(name = "C_MULTIACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "多渠道开户标志", comments = "多渠道开户标志")
     private Boolean muiltAcco;
 
     /**
      * TA发起业务标志 0-由代销商发起，1-由TA发起
      */
-    @Column(name = "C_FROMTA",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA发起业务标志 0-由代销商发起", comments = "TA发起业务标志 0-由代销商发起，1-由TA发起")
+    @Column(name = "C_FROMTA", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA发起业务标志 0-由代销商发起", comments = "TA发起业务标志 0-由代销商发起，1-由TA发起")
     private Boolean fromTA;
 
     /**
      * TA客户编号
      */
-    @Column(name = "C_TACUSTNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="TA客户编号", comments = "TA客户编号")
+    @Column(name = "C_TACUSTNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "TA客户编号", comments = "TA客户编号")
     private String taCustNo;
 
     /**
      * 确认单号
      */
-    @Column(name = "C_CSERIALNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="确认单号", comments = "确认单号")
+    @Column(name = "C_CSERIALNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "确认单号", comments = "确认单号")
     private String confirmSerialno;
 
     /**
      * 对方交易帐号 对代理人申报008或058，此处赋值为新交易帐号
      */
-    @Column(name = "C_TAGET_TRADEACCO",  columnDefinition="VARCHAR" )
-    @MetaData( value="对方交易帐号 对代理人申报008或058", comments = "对方交易帐号 对代理人申报008或058，此处赋值为新交易帐号")
+    @Column(name = "C_TAGET_TRADEACCO", columnDefinition = "VARCHAR")
+    @MetaData(value = "对方交易帐号 对代理人申报008或058", comments = "对方交易帐号 对代理人申报008或058，此处赋值为新交易帐号")
     private String tagetTradeAccount;
 
     /**
      * 交易处理返回代码系统处理后返回错误信息
      */
-    @Column(name = "C_CAUSE",  columnDefinition="VARCHAR" )
-    @MetaData( value="交易处理返回代码系统处理后返回错误信息", comments = "交易处理返回代码系统处理后返回错误信息")
+    @Column(name = "C_CAUSE", columnDefinition = "VARCHAR")
+    @MetaData(value = "交易处理返回代码系统处理后返回错误信息", comments = "交易处理返回代码系统处理后返回错误信息")
     private String confirmCause;
 
     /**
      * 错误代码
      */
-    @Column(name = "C_ERRCODE",  columnDefinition="VARCHAR" )
-    @MetaData( value="错误代码", comments = "错误代码")
+    @Column(name = "C_ERRCODE", columnDefinition = "VARCHAR")
+    @MetaData(value = "错误代码", comments = "错误代码")
     private String errCode;
 
     /**
      * 摘要说明
      */
-    @Column(name = "C_SPECIFICATION",  columnDefinition="VARCHAR" )
-    @MetaData( value="摘要说明", comments = "摘要说明")
+    @Column(name = "C_SPECIFICATION", columnDefinition = "VARCHAR")
+    @MetaData(value = "摘要说明", comments = "摘要说明")
     private String specification;
 
     /**
      * 冻结截止日期  格式为：YYYYMMDD
      */
-    @Column(name = "D_FROZENENDLINE",  columnDefinition="VARCHAR" )
-    @MetaData( value="冻结截止日期  格式为：YYYYMMDD", comments = "冻结截止日期  格式为：YYYYMMDD")
+    @Column(name = "D_FROZENENDLINE", columnDefinition = "VARCHAR")
+    @MetaData(value = "冻结截止日期  格式为：YYYYMMDD", comments = "冻结截止日期  格式为：YYYYMMDD")
     private String frozenEndLine;
 
     /**
      * 冻结原因  0-司法冻结，1-柜台冻结 2-质押冻结， 3-质押(司法冻结) 4-柜台(司法冻结)
      */
-    @Column(name = "C_FROZENCAUSE",  columnDefinition="VARCHAR" )
-    @MetaData( value="冻结原因  0-司法冻结", comments = "冻结原因  0-司法冻结，1-柜台冻结 2-质押冻结， 3-质押(司法冻结) 4-柜台(司法冻结)")
+    @Column(name = "C_FROZENCAUSE", columnDefinition = "VARCHAR")
+    @MetaData(value = "冻结原因  0-司法冻结", comments = "冻结原因  0-司法冻结，1-柜台冻结 2-质押冻结， 3-质押(司法冻结) 4-柜台(司法冻结)")
     private String frozenCause;
 
     /**
      * 基金账户卡的凭证号
      */
-    @Column(name = "C_ACCOUNTCARDNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="基金账户卡的凭证号", comments = "基金账户卡的凭证号")
+    @Column(name = "C_ACCOUNTCARDNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "基金账户卡的凭证号", comments = "基金账户卡的凭证号")
     private String accountCardNo;
 
     /**
      * 客户经理代码
      */
-    @Column(name = "C_CUSTMANAGER",  columnDefinition="VARCHAR" )
-    @MetaData( value="客户经理代码", comments = "客户经理代码")
+    @Column(name = "C_CUSTMANAGER", columnDefinition = "VARCHAR")
+    @MetaData(value = "客户经理代码", comments = "客户经理代码")
     private String custManager;
 
     /**
      * 城市地区代码
      */
-    @Column(name = "C_CITYNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="城市地区代码", comments = "城市地区代码")
+    @Column(name = "C_CITYNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "城市地区代码", comments = "城市地区代码")
     private String cityNo;
 
     /**
      * 操作员编码
      */
-    @Column(name = "C_OPERNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="操作员编码", comments = "操作员编码")
+    @Column(name = "C_OPERNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "操作员编码", comments = "操作员编码")
     private String operNo;
 
     /**
      * 复核人编码
      */
-    @Column(name = "C_CHECKNO",  columnDefinition="VARCHAR" )
-    @MetaData( value="复核人编码", comments = "复核人编码")
+    @Column(name = "C_CHECKNO", columnDefinition = "VARCHAR")
+    @MetaData(value = "复核人编码", comments = "复核人编码")
     private String checkerNo;
 
     /**
      * 推荐人姓名
      */
-    @Column(name = "C_REFERRAL",  columnDefinition="VARCHAR" )
-    @MetaData( value="推荐人姓名", comments = "推荐人姓名")
+    @Column(name = "C_REFERRAL", columnDefinition = "VARCHAR")
+    @MetaData(value = "推荐人姓名", comments = "推荐人姓名")
     private String referral;
 
     /**
      * 推荐人手机号码
      */
-    @Column(name = "C_REFERRALMOBILE",  columnDefinition="VARCHAR" )
-    @MetaData( value="推荐人手机号码", comments = "推荐人手机号码")
+    @Column(name = "C_REFERRALMOBILE", columnDefinition = "VARCHAR")
+    @MetaData(value = "推荐人手机号码", comments = "推荐人手机号码")
     private String referralMobile;
 
     /**
@@ -311,7 +316,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
@@ -319,7 +324,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custNo;
     }
 
-    public void setCustNo(Long custNo) {
+    public void setCustNo(final Long custNo) {
         this.custNo = custNo;
     }
 
@@ -327,7 +332,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tano;
     }
 
-    public void setTano(String tano) {
+    public void setTano(final String tano) {
         this.tano = tano == null ? null : tano.trim();
     }
 
@@ -335,7 +340,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return businFlag;
     }
 
-    public void setBusinFlag(String businFlag) {
+    public void setBusinFlag(final String businFlag) {
         this.businFlag = businFlag == null ? null : businFlag.trim();
     }
 
@@ -343,7 +348,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return businConfirmFlag;
     }
 
-    public void setBusinConfirmFlag(String businConfirmFlag) {
+    public void setBusinConfirmFlag(final String businConfirmFlag) {
         this.businConfirmFlag = businConfirmFlag == null ? null : businConfirmFlag.trim();
     }
 
@@ -351,7 +356,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeAccount;
     }
 
-    public void setTradeAccount(String tradeAccount) {
+    public void setTradeAccount(final String tradeAccount) {
         this.tradeAccount = tradeAccount == null ? null : tradeAccount.trim();
     }
 
@@ -359,7 +364,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fundAccount;
     }
 
-    public void setFundAccount(String fundAccount) {
+    public void setFundAccount(final String fundAccount) {
         this.fundAccount = fundAccount == null ? null : fundAccount.trim();
     }
 
@@ -367,7 +372,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return requestNo;
     }
 
-    public void setRequestNo(String requestNo) {
+    public void setRequestNo(final String requestNo) {
         this.requestNo = requestNo == null ? null : requestNo.trim();
     }
 
@@ -375,7 +380,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return agencyNo;
     }
 
-    public void setAgencyNo(String agencyNo) {
+    public void setAgencyNo(final String agencyNo) {
         this.agencyNo = agencyNo == null ? null : agencyNo.trim();
     }
 
@@ -383,7 +388,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return netNo;
     }
 
-    public void setNetNo(String netNo) {
+    public void setNetNo(final String netNo) {
         this.netNo = netNo == null ? null : netNo.trim();
     }
 
@@ -391,7 +396,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custType;
     }
 
-    public void setCustType(String custType) {
+    public void setCustType(final String custType) {
         this.custType = custType == null ? null : custType.trim();
     }
 
@@ -399,7 +404,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custName;
     }
 
-    public void setCustName(String custName) {
+    public void setCustName(final String custName) {
         this.custName = custName == null ? null : custName.trim();
     }
 
@@ -407,7 +412,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return shortName;
     }
 
-    public void setShortName(String shortName) {
+    public void setShortName(final String shortName) {
         this.shortName = shortName == null ? null : shortName.trim();
     }
 
@@ -415,7 +420,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return identType;
     }
 
-    public void setIdentType(String identType) {
+    public void setIdentType(final String identType) {
         this.identType = identType == null ? null : identType.trim();
     }
 
@@ -423,7 +428,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmDate;
     }
 
-    public void setConfirmDate(String confirmDate) {
+    public void setConfirmDate(final String confirmDate) {
         this.confirmDate = confirmDate == null ? null : confirmDate.trim();
     }
 
@@ -431,7 +436,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeDate;
     }
 
-    public void setTradeDate(String tradeDate) {
+    public void setTradeDate(final String tradeDate) {
         this.tradeDate = tradeDate == null ? null : tradeDate.trim();
     }
 
@@ -439,7 +444,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeTime;
     }
 
-    public void setTradeTime(String tradeTime) {
+    public void setTradeTime(final String tradeTime) {
         this.tradeTime = tradeTime == null ? null : tradeTime.trim();
     }
 
@@ -447,7 +452,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tradeStatus;
     }
 
-    public void setTradeStatus(String tradeStatus) {
+    public void setTradeStatus(final String tradeStatus) {
         this.tradeStatus = tradeStatus == null ? null : tradeStatus.trim();
     }
 
@@ -455,7 +460,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return identNo;
     }
 
-    public void setIdentNo(String identNo) {
+    public void setIdentNo(final String identNo) {
         this.identNo = identNo == null ? null : identNo.trim();
     }
 
@@ -463,7 +468,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return muiltAcco;
     }
 
-    public void setMuiltAcco(Boolean muiltAcco) {
+    public void setMuiltAcco(final Boolean muiltAcco) {
         this.muiltAcco = muiltAcco;
     }
 
@@ -471,7 +476,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return fromTA;
     }
 
-    public void setFromTA(Boolean fromTA) {
+    public void setFromTA(final Boolean fromTA) {
         this.fromTA = fromTA;
     }
 
@@ -479,7 +484,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return taCustNo;
     }
 
-    public void setTaCustNo(String taCustNo) {
+    public void setTaCustNo(final String taCustNo) {
         this.taCustNo = taCustNo == null ? null : taCustNo.trim();
     }
 
@@ -487,7 +492,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmSerialno;
     }
 
-    public void setConfirmSerialno(String confirmSerialno) {
+    public void setConfirmSerialno(final String confirmSerialno) {
         this.confirmSerialno = confirmSerialno == null ? null : confirmSerialno.trim();
     }
 
@@ -495,7 +500,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return tagetTradeAccount;
     }
 
-    public void setTagetTradeAccount(String tagetTradeAccount) {
+    public void setTagetTradeAccount(final String tagetTradeAccount) {
         this.tagetTradeAccount = tagetTradeAccount == null ? null : tagetTradeAccount.trim();
     }
 
@@ -503,7 +508,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return confirmCause;
     }
 
-    public void setConfirmCause(String confirmCause) {
+    public void setConfirmCause(final String confirmCause) {
         this.confirmCause = confirmCause == null ? null : confirmCause.trim();
     }
 
@@ -511,7 +516,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return errCode;
     }
 
-    public void setErrCode(String errCode) {
+    public void setErrCode(final String errCode) {
         this.errCode = errCode == null ? null : errCode.trim();
     }
 
@@ -519,7 +524,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return specification;
     }
 
-    public void setSpecification(String specification) {
+    public void setSpecification(final String specification) {
         this.specification = specification == null ? null : specification.trim();
     }
 
@@ -527,7 +532,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return frozenEndLine;
     }
 
-    public void setFrozenEndLine(String frozenEndLine) {
+    public void setFrozenEndLine(final String frozenEndLine) {
         this.frozenEndLine = frozenEndLine == null ? null : frozenEndLine.trim();
     }
 
@@ -535,7 +540,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return frozenCause;
     }
 
-    public void setFrozenCause(String frozenCause) {
+    public void setFrozenCause(final String frozenCause) {
         this.frozenCause = frozenCause == null ? null : frozenCause.trim();
     }
 
@@ -543,7 +548,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return accountCardNo;
     }
 
-    public void setAccountCardNo(String accountCardNo) {
+    public void setAccountCardNo(final String accountCardNo) {
         this.accountCardNo = accountCardNo == null ? null : accountCardNo.trim();
     }
 
@@ -551,7 +556,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return custManager;
     }
 
-    public void setCustManager(String custManager) {
+    public void setCustManager(final String custManager) {
         this.custManager = custManager == null ? null : custManager.trim();
     }
 
@@ -559,7 +564,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return cityNo;
     }
 
-    public void setCityNo(String cityNo) {
+    public void setCityNo(final String cityNo) {
         this.cityNo = cityNo == null ? null : cityNo.trim();
     }
 
@@ -567,7 +572,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return operNo;
     }
 
-    public void setOperNo(String operNo) {
+    public void setOperNo(final String operNo) {
         this.operNo = operNo == null ? null : operNo.trim();
     }
 
@@ -575,7 +580,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return checkerNo;
     }
 
-    public void setCheckerNo(String checkerNo) {
+    public void setCheckerNo(final String checkerNo) {
         this.checkerNo = checkerNo == null ? null : checkerNo.trim();
     }
 
@@ -583,7 +588,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return referral;
     }
 
-    public void setReferral(String referral) {
+    public void setReferral(final String referral) {
         this.referral = referral == null ? null : referral.trim();
     }
 
@@ -591,7 +596,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return referralMobile;
     }
 
-    public void setReferralMobile(String referralMobile) {
+    public void setReferralMobile(final String referralMobile) {
         this.referralMobile = referralMobile == null ? null : referralMobile.trim();
     }
 
@@ -599,7 +604,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleNetNo;
     }
 
-    public void setSaleNetNo(String anSaleNetNo) {
+    public void setSaleNetNo(final String anSaleNetNo) {
         this.saleNetNo = anSaleNetNo;
     }
 
@@ -607,7 +612,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.salePayCenterNo;
     }
 
-    public void setSalePayCenterNo(String anSalePayCenterNo) {
+    public void setSalePayCenterNo(final String anSalePayCenterNo) {
         this.salePayCenterNo = anSalePayCenterNo;
     }
 
@@ -615,7 +620,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleTradeAccount;
     }
 
-    public void setSaleTradeAccount(String anSaleTradeAccount) {
+    public void setSaleTradeAccount(final String anSaleTradeAccount) {
         this.saleTradeAccount = anSaleTradeAccount;
     }
 
@@ -623,7 +628,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleMoneyAccount;
     }
 
-    public void setSaleMoneyAccount(String anSaleMoneyAccount) {
+    public void setSaleMoneyAccount(final String anSaleMoneyAccount) {
         this.saleMoneyAccount = anSaleMoneyAccount;
     }
 
@@ -631,7 +636,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleCustNo;
     }
 
-    public void setSaleCustNo(String anSaleCustNo) {
+    public void setSaleCustNo(final String anSaleCustNo) {
         this.saleCustNo = anSaleCustNo;
     }
 
@@ -639,13 +644,13 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         return this.saleRequestNo;
     }
 
-    public void setSaleRequestNo(String anSaleRequestNo) {
+    public void setSaleRequestNo(final String anSaleRequestNo) {
         this.saleRequestNo = anSaleRequestNo;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
@@ -691,7 +696,7 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
     }
 
     @Override
-    public boolean equals(Object that) {
+    public boolean equals(final Object that) {
         if (this == that) {
             return true;
         }
@@ -701,43 +706,72 @@ public class SaleAccoConfirmInfo implements BetterjrEntity,BaseRemoteEntity {
         if (getClass() != that.getClass()) {
             return false;
         }
-        SaleAccoConfirmInfo other = (SaleAccoConfirmInfo) that;
+        final SaleAccoConfirmInfo other = (SaleAccoConfirmInfo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
-            && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
-            && (this.getBusinFlag() == null ? other.getBusinFlag() == null : this.getBusinFlag().equals(other.getBusinFlag()))
-            && (this.getBusinConfirmFlag() == null ? other.getBusinConfirmFlag() == null : this.getBusinConfirmFlag().equals(other.getBusinConfirmFlag()))
-            && (this.getTradeAccount() == null ? other.getTradeAccount() == null : this.getTradeAccount().equals(other.getTradeAccount()))
-            && (this.getFundAccount() == null ? other.getFundAccount() == null : this.getFundAccount().equals(other.getFundAccount()))
-            && (this.getRequestNo() == null ? other.getRequestNo() == null : this.getRequestNo().equals(other.getRequestNo()))
-            && (this.getAgencyNo() == null ? other.getAgencyNo() == null : this.getAgencyNo().equals(other.getAgencyNo()))
-            && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
-            && (this.getCustType() == null ? other.getCustType() == null : this.getCustType().equals(other.getCustType()))
-            && (this.getCustName() == null ? other.getCustName() == null : this.getCustName().equals(other.getCustName()))
-            && (this.getShortName() == null ? other.getShortName() == null : this.getShortName().equals(other.getShortName()))
-            && (this.getIdentType() == null ? other.getIdentType() == null : this.getIdentType().equals(other.getIdentType()))
-            && (this.getConfirmDate() == null ? other.getConfirmDate() == null : this.getConfirmDate().equals(other.getConfirmDate()))
-            && (this.getTradeDate() == null ? other.getTradeDate() == null : this.getTradeDate().equals(other.getTradeDate()))
-            && (this.getTradeTime() == null ? other.getTradeTime() == null : this.getTradeTime().equals(other.getTradeTime()))
-            && (this.getTradeStatus() == null ? other.getTradeStatus() == null : this.getTradeStatus().equals(other.getTradeStatus()))
-            && (this.getIdentNo() == null ? other.getIdentNo() == null : this.getIdentNo().equals(other.getIdentNo()))
-            && (this.getMuiltAcco() == null ? other.getMuiltAcco() == null : this.getMuiltAcco().equals(other.getMuiltAcco()))
-            && (this.getFromTA() == null ? other.getFromTA() == null : this.getFromTA().equals(other.getFromTA()))
-            && (this.getTaCustNo() == null ? other.getTaCustNo() == null : this.getTaCustNo().equals(other.getTaCustNo()))
-            && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
-            && (this.getTagetTradeAccount() == null ? other.getTagetTradeAccount() == null : this.getTagetTradeAccount().equals(other.getTagetTradeAccount()))
-            && (this.getConfirmCause() == null ? other.getConfirmCause() == null : this.getConfirmCause().equals(other.getConfirmCause()))
-            && (this.getErrCode() == null ? other.getErrCode() == null : this.getErrCode().equals(other.getErrCode()))
-            && (this.getSpecification() == null ? other.getSpecification() == null : this.getSpecification().equals(other.getSpecification()))
-            && (this.getFrozenEndLine() == null ? other.getFrozenEndLine() == null : this.getFrozenEndLine().equals(other.getFrozenEndLine()))
-            && (this.getFrozenCause() == null ? other.getFrozenCause() == null : this.getFrozenCause().equals(other.getFrozenCause()))
-            && (this.getAccountCardNo() == null ? other.getAccountCardNo() == null : this.getAccountCardNo().equals(other.getAccountCardNo()))
-            && (this.getCustManager() == null ? other.getCustManager() == null : this.getCustManager().equals(other.getCustManager()))
-            && (this.getCityNo() == null ? other.getCityNo() == null : this.getCityNo().equals(other.getCityNo()))
-            && (this.getOperNo() == null ? other.getOperNo() == null : this.getOperNo().equals(other.getOperNo()))
-            && (this.getCheckerNo() == null ? other.getCheckerNo() == null : this.getCheckerNo().equals(other.getCheckerNo()))
-            && (this.getReferral() == null ? other.getReferral() == null : this.getReferral().equals(other.getReferral()))
-            && (this.getReferralMobile() == null ? other.getReferralMobile() == null : this.getReferralMobile().equals(other.getReferralMobile()));
+                && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
+                && (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
+                && (this.getBusinFlag() == null ? other.getBusinFlag() == null
+                        : this.getBusinFlag().equals(other.getBusinFlag()))
+                && (this.getBusinConfirmFlag() == null ? other.getBusinConfirmFlag() == null
+                        : this.getBusinConfirmFlag().equals(other.getBusinConfirmFlag()))
+                && (this.getTradeAccount() == null ? other.getTradeAccount() == null
+                        : this.getTradeAccount().equals(other.getTradeAccount()))
+                && (this.getFundAccount() == null ? other.getFundAccount() == null
+                        : this.getFundAccount().equals(other.getFundAccount()))
+                && (this.getRequestNo() == null ? other.getRequestNo() == null
+                        : this.getRequestNo().equals(other.getRequestNo()))
+                && (this.getAgencyNo() == null ? other.getAgencyNo() == null
+                        : this.getAgencyNo().equals(other.getAgencyNo()))
+                && (this.getNetNo() == null ? other.getNetNo() == null : this.getNetNo().equals(other.getNetNo()))
+                && (this.getCustType() == null ? other.getCustType() == null
+                        : this.getCustType().equals(other.getCustType()))
+                && (this.getCustName() == null ? other.getCustName() == null
+                        : this.getCustName().equals(other.getCustName()))
+                && (this.getShortName() == null ? other.getShortName() == null
+                        : this.getShortName().equals(other.getShortName()))
+                && (this.getIdentType() == null ? other.getIdentType() == null
+                        : this.getIdentType().equals(other.getIdentType()))
+                && (this.getConfirmDate() == null ? other.getConfirmDate() == null
+                        : this.getConfirmDate().equals(other.getConfirmDate()))
+                && (this.getTradeDate() == null ? other.getTradeDate() == null
+                        : this.getTradeDate().equals(other.getTradeDate()))
+                && (this.getTradeTime() == null ? other.getTradeTime() == null
+                        : this.getTradeTime().equals(other.getTradeTime()))
+                && (this.getTradeStatus() == null ? other.getTradeStatus() == null
+                        : this.getTradeStatus().equals(other.getTradeStatus()))
+                && (this.getIdentNo() == null ? other.getIdentNo() == null
+                        : this.getIdentNo().equals(other.getIdentNo()))
+                && (this.getMuiltAcco() == null ? other.getMuiltAcco() == null
+                        : this.getMuiltAcco().equals(other.getMuiltAcco()))
+                && (this.getFromTA() == null ? other.getFromTA() == null : this.getFromTA().equals(other.getFromTA()))
+                && (this.getTaCustNo() == null ? other.getTaCustNo() == null
+                        : this.getTaCustNo().equals(other.getTaCustNo()))
+                && (this.getConfirmSerialno() == null ? other.getConfirmSerialno() == null
+                        : this.getConfirmSerialno().equals(other.getConfirmSerialno()))
+                && (this.getTagetTradeAccount() == null ? other.getTagetTradeAccount() == null
+                        : this.getTagetTradeAccount().equals(other.getTagetTradeAccount()))
+                && (this.getConfirmCause() == null ? other.getConfirmCause() == null
+                        : this.getConfirmCause().equals(other.getConfirmCause()))
+                && (this.getErrCode() == null ? other.getErrCode() == null
+                        : this.getErrCode().equals(other.getErrCode()))
+                && (this.getSpecification() == null ? other.getSpecification() == null
+                        : this.getSpecification().equals(other.getSpecification()))
+                && (this.getFrozenEndLine() == null ? other.getFrozenEndLine() == null
+                        : this.getFrozenEndLine().equals(other.getFrozenEndLine()))
+                && (this.getFrozenCause() == null ? other.getFrozenCause() == null
+                        : this.getFrozenCause().equals(other.getFrozenCause()))
+                && (this.getAccountCardNo() == null ? other.getAccountCardNo() == null
+                        : this.getAccountCardNo().equals(other.getAccountCardNo()))
+                && (this.getCustManager() == null ? other.getCustManager() == null
+                        : this.getCustManager().equals(other.getCustManager()))
+                && (this.getCityNo() == null ? other.getCityNo() == null : this.getCityNo().equals(other.getCityNo()))
+                && (this.getOperNo() == null ? other.getOperNo() == null : this.getOperNo().equals(other.getOperNo()))
+                && (this.getCheckerNo() == null ? other.getCheckerNo() == null
+                        : this.getCheckerNo().equals(other.getCheckerNo()))
+                && (this.getReferral() == null ? other.getReferral() == null
+                        : this.getReferral().equals(other.getReferral()))
+                && (this.getReferralMobile() == null ? other.getReferralMobile() == null
+                        : this.getReferralMobile().equals(other.getReferralMobile()));
     }
 
     @Override

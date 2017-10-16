@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
-
 public interface IScfRequestService {
 
     /**
@@ -81,8 +80,9 @@ public interface IScfRequestService {
      * @param anDescription    备注
      * @return
      */
-    String webOfferScheme(Map<String, Object> anMap, String anApprovalResult, String anReturnNode, String anDescription);
-    
+    String webOfferScheme(Map<String, Object> anMap, String anApprovalResult, String anReturnNode,
+            String anDescription);
+
     /**
      * 融资企业-确认融资方案（供应商融资 ：签署应收账款转让通知书。销商融资：签署《保兑仓业务三方合作协议》）
      * @param anRequestNo
@@ -96,7 +96,8 @@ public interface IScfRequestService {
      * @param anRequestNo
      * @return
      */
-    String webRequestTradingBackgrand(String anRequestNo, String anAduitStatus, String anReturnNode, String anDescription, String anSmsCode);
+    String webRequestTradingBackgrand(String anRequestNo, String anAduitStatus, String anReturnNode,
+            String anDescription, String anSmsCode);
 
     /**
      * 核心企业确认贸易背景，（供应商融资：签署《 应收账款转让确认意见书》，经销商融资：签署《保兑仓业务三方合作协议》）
@@ -106,7 +107,6 @@ public interface IScfRequestService {
      */
     String webConfirmTradingBackgrand(String anRequestNo, String anBusinStatus, String anSmsCode);
 
-
     /**
      * 保理公司-放款确认（生成还款计划）
      * @param anMap
@@ -115,7 +115,8 @@ public interface IScfRequestService {
      * @param anDescription    备注
      * @return
      */
-    String webConfirmLoan(Map<String, Object> anMap, String anApprovalResult, String anReturnNode, String anDescription);
+    String webConfirmLoan(Map<String, Object> anMap, String anApprovalResult, String anReturnNode,
+            String anDescription);
 
     /**
      * 计算手续费
@@ -145,21 +146,22 @@ public interface IScfRequestService {
      * 查询待批融资
      */
     String webQueryPendingRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
-    
+
     /**
      * 查询还款融资
      */
     String webQueryRepaymentRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
-    
+
     /**
      * 查询历史融资
      */
     String webQueryCompletedRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
-    
+
     /**
      * 核心企业进行融资查询
      */
-    String webQueryCoreEnterpriseRequest(Map<String, Object> anMap, String anRequestType, String anFlag, int anPageNum, int anPageSize);
+    String webQueryCoreEnterpriseRequest(Map<String, Object> anMap, String anRequestType, String anFlag, int anPageNum,
+            int anPageSize);
 
     /**
      * 查询当前用户任务
@@ -178,9 +180,9 @@ public interface IScfRequestService {
     String webQueryTradeStatus();
 
     String webFindPayPlan(Long anId);
-    
-    
+
     public List<Long> findVoucherBatchNo(String anRequest);
+
     /**
      * 发送申请单状态给保理公司
      * 
@@ -189,32 +191,31 @@ public interface IScfRequestService {
      * @param anStatus
      *            申请单状态
      */
-    public void updateAndSendRequestStatus(String anRequestNo, String anStatus) ;
+    public void updateAndSendRequestStatus(String anRequestNo, String anStatus);
 
     /**
      * 查询供应商融资
      */
-    public String webQuerySupplierRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag, int anPageNum, int anPageSize);
+    public String webQuerySupplierRequestByCore(Map<String, Object> anMap, String anBusinStatus, String anFlag,
+            int anPageNum, int anPageSize);
 
     /**
      * 查询融资列表
      */
-	String webCustQueryRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
+    String webCustQueryRequest(Map<String, Object> anMap, String anFlag, int anPageNum, int anPageSize);
 
-	/**
-	 * 放款
-	 * @param anMap
-	 * @return
-	 */
-	String webLoan(Map<String, Object> anMap);
+    /**
+     * 放款
+     * @param anMap
+     * @return
+     */
+    String webLoan(Map<String, Object> anMap);
 
-	/**
-	 * 2.3.1-保存融资批复
-	 * @param anMap
-	 * @return
-	 */
-	String webAddScheme(Map<String, Object> anMap);
+    /**
+     * 2.3.1-保存融资批复
+     * @param anMap
+     * @return
+     */
+    String webAddScheme(Map<String, Object> anMap);
 
-    
-  
 }

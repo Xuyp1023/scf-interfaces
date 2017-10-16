@@ -1,14 +1,20 @@
 package com.betterjr.modules.fund.entity;
 
-import com.betterjr.common.annotation.*;
+import java.math.BigDecimal;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.betterjr.common.annotation.MetaData;
 import com.betterjr.common.data.BaseRemoteEntity;
 import com.betterjr.common.entity.BetterjrEntity;
 import com.betterjr.common.utils.BetterDateUtils;
 import com.betterjr.modules.fund.data.SaleFundState;
-
-import javax.persistence.*;
-
-import java.math.BigDecimal;
 
 @Access(AccessType.FIELD)
 @Entity
@@ -60,15 +66,15 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 面值
      */
-    @Column(name = "F_FACEVALUE",  columnDefinition="DOUBLE" )
-    @MetaData( value="面值", comments = "面值")
+    @Column(name = "F_FACEVALUE", columnDefinition = "DOUBLE")
+    @MetaData(value = "面值", comments = "面值")
     private BigDecimal faceValue;
 
     /**
      * 发行价格
      */
-    @Column(name = "F_ISSUEPRICE",  columnDefinition="DOUBLE" )
-    @MetaData( value="发行价格", comments = "发行价格")
+    @Column(name = "F_ISSUEPRICE", columnDefinition = "DOUBLE")
+    @MetaData(value = "发行价格", comments = "发行价格")
     private BigDecimal issuePrice;
 
     /**
@@ -109,22 +115,22 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 管理费率
      */
-    @Column(name = "F_MANAGERATIO",  columnDefinition="DOUBLE" )
-    @MetaData( value="管理费率", comments = "管理费率")
+    @Column(name = "F_MANAGERATIO", columnDefinition = "DOUBLE")
+    @MetaData(value = "管理费率", comments = "管理费率")
     private BigDecimal managerRatio;
 
     /**
      * 销售服务费率
      */
-    @Column(name = "F_SERVICERATIO",  columnDefinition="DOUBLE" )
-    @MetaData( value="销售服务费率", comments = "销售服务费率")
+    @Column(name = "F_SERVICERATIO", columnDefinition = "DOUBLE")
+    @MetaData(value = "销售服务费率", comments = "销售服务费率")
     private BigDecimal serviceRatio;
 
     /**
      * 状态； 0停用，1启用
      */
-    @Column(name = "C_STATUS",  columnDefinition="VARCHAR" )
-    @MetaData( value="状态", comments = "状态； 0停用，1启用")
+    @Column(name = "C_STATUS", columnDefinition = "VARCHAR")
+    @MetaData(value = "状态", comments = "状态； 0停用，1启用")
     private String fundStatus;
 
     /**
@@ -153,8 +159,8 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 最小持有份额
      */
-    @Column(name = "F_MINSHARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="最小持有份额", comments = "最小持有份额")
+    @Column(name = "F_MINSHARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "最小持有份额", comments = "最小持有份额")
     private BigDecimal minShare;
 
     /**
@@ -244,29 +250,29 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     /**
      * 最高持有份额
      */
-    @Column(name = "F_MAXSHARE",  columnDefinition="DOUBLE" )
-    @MetaData( value="最高持有份额", comments = "最高持有份额")
+    @Column(name = "F_MAXSHARE", columnDefinition = "DOUBLE")
+    @MetaData(value = "最高持有份额", comments = "最高持有份额")
     private BigDecimal maxShare;
 
     /**
      * (销售专用)  申购期收市时间    空或者全0 表示无设置
      */
-    @Column(name = "T_TIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="(销售专用)  申购期收市时间    空或者全0 表示无设置", comments = "(销售专用)  申购期收市时间    空或者全0 表示无设置")
+    @Column(name = "T_TIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "(销售专用)  申购期收市时间    空或者全0 表示无设置", comments = "(销售专用)  申购期收市时间    空或者全0 表示无设置")
     private String tradeTime;
 
     /**
      * (销售专用)  认购最后一天收市时间  空或者全0 表示无设置
      */
-    @Column(name = "T_SUBSLASTTIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="(销售专用)  认购最后一天收市时间  空或者全0 表示无设置", comments = "(销售专用)  认购最后一天收市时间  空或者全0 表示无设置")
+    @Column(name = "T_SUBSLASTTIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "(销售专用)  认购最后一天收市时间  空或者全0 表示无设置", comments = "(销售专用)  认购最后一天收市时间  空或者全0 表示无设置")
     private String subLastTime;
 
     /**
      * (销售专用)  认购收市时间       空或者全0 表示无设置
      */
-    @Column(name = "T_SUBSTIME",  columnDefinition="VARCHAR" )
-    @MetaData( value="(销售专用)  认购收市时间       空或者全0 表示无设置", comments = "(销售专用)  认购收市时间       空或者全0 表示无设置")
+    @Column(name = "T_SUBSTIME", columnDefinition = "VARCHAR")
+    @MetaData(value = "(销售专用)  认购收市时间       空或者全0 表示无设置", comments = "(销售专用)  认购收市时间       空或者全0 表示无设置")
     private String subTime;
 
     /**
@@ -454,7 +460,6 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     public void setServiceRatio(BigDecimal serviceRatio) {
         this.serviceRatio = serviceRatio;
     }
- 
 
     public String getFundStatus() {
         return this.fundStatus;
@@ -563,8 +568,7 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
     public String findIpoTime() {
         if (BetterDateUtils.getNumDate().equals(this.ipoEndDate)) {
             return this.subLastTime;
-        }
-        else {
+        } else {
             return this.subTime;
         }
     }
@@ -766,47 +770,85 @@ public class SaleFundInfo implements BetterjrEntity, BaseRemoteEntity {
         }
         SaleFundInfo other = (SaleFundInfo) that;
         return (this.getTano() == null ? other.getTano() == null : this.getTano().equals(other.getTano()))
-                && (this.getFundCode() == null ? other.getFundCode() == null : this.getFundCode().equals(other.getFundCode()))
-                && (this.getFundName() == null ? other.getFundName() == null : this.getFundName().equals(other.getFundName()))
-                && (this.getFullName() == null ? other.getFullName() == null : this.getFullName().equals(other.getFullName()))
-                && (this.getShortName() == null ? other.getShortName() == null : this.getShortName().equals(other.getShortName()))
-                && (this.getCurrency() == null ? other.getCurrency() == null : this.getCurrency().equals(other.getCurrency()))
-                && (this.getFaceValue() == null ? other.getFaceValue() == null : this.getFaceValue().equals(other.getFaceValue()))
-                && (this.getIssuePrice() == null ? other.getIssuePrice() == null : this.getIssuePrice().equals(other.getIssuePrice()))
-                && (this.getManager() == null ? other.getManager() == null : this.getManager().equals(other.getManager()))
-                && (this.getTrustee() == null ? other.getTrustee() == null : this.getTrustee().equals(other.getTrustee()))
+                && (this.getFundCode() == null ? other.getFundCode() == null
+                        : this.getFundCode().equals(other.getFundCode()))
+                && (this.getFundName() == null ? other.getFundName() == null
+                        : this.getFundName().equals(other.getFundName()))
+                && (this.getFullName() == null ? other.getFullName() == null
+                        : this.getFullName().equals(other.getFullName()))
+                && (this.getShortName() == null ? other.getShortName() == null
+                        : this.getShortName().equals(other.getShortName()))
+                && (this.getCurrency() == null ? other.getCurrency() == null
+                        : this.getCurrency().equals(other.getCurrency()))
+                && (this.getFaceValue() == null ? other.getFaceValue() == null
+                        : this.getFaceValue().equals(other.getFaceValue()))
+                && (this.getIssuePrice() == null ? other.getIssuePrice() == null
+                        : this.getIssuePrice().equals(other.getIssuePrice()))
+                && (this.getManager() == null ? other.getManager() == null
+                        : this.getManager().equals(other.getManager()))
+                && (this.getTrustee() == null ? other.getTrustee() == null
+                        : this.getTrustee().equals(other.getTrustee()))
                 && (this.getTaName() == null ? other.getTaName() == null : this.getTaName().equals(other.getTaName()))
-                && (this.getIssueDate() == null ? other.getIssueDate() == null : this.getIssueDate().equals(other.getIssueDate()))
-                && (this.getSetupDate() == null ? other.getSetupDate() == null : this.getSetupDate().equals(other.getSetupDate()))
-                && (this.getManagerRatio() == null ? other.getManagerRatio() == null : this.getManagerRatio().equals(other.getManagerRatio()))
-                && (this.getServiceRatio() == null ? other.getServiceRatio() == null : this.getServiceRatio().equals(other.getServiceRatio()))
-                && (this.getFundStatus() == null ? other.getFundStatus() == null : this.getFundStatus().equals(other.getFundStatus()))
-                && (this.getFeeType() == null ? other.getFeeType() == null : this.getFeeType().equals(other.getFeeType()))
-                && (this.getShareType() == null ? other.getShareType() == null : this.getShareType().equals(other.getShareType()))
+                && (this.getIssueDate() == null ? other.getIssueDate() == null
+                        : this.getIssueDate().equals(other.getIssueDate()))
+                && (this.getSetupDate() == null ? other.getSetupDate() == null
+                        : this.getSetupDate().equals(other.getSetupDate()))
+                && (this.getManagerRatio() == null ? other.getManagerRatio() == null
+                        : this.getManagerRatio().equals(other.getManagerRatio()))
+                && (this.getServiceRatio() == null ? other.getServiceRatio() == null
+                        : this.getServiceRatio().equals(other.getServiceRatio()))
+                && (this.getFundStatus() == null ? other.getFundStatus() == null
+                        : this.getFundStatus().equals(other.getFundStatus()))
+                && (this.getFeeType() == null ? other.getFeeType() == null
+                        : this.getFeeType().equals(other.getFeeType()))
+                && (this.getShareType() == null ? other.getShareType() == null
+                        : this.getShareType().equals(other.getShareType()))
                 && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-                && (this.getMinShare() == null ? other.getMinShare() == null : this.getMinShare().equals(other.getMinShare()))
-                && (this.getRiskLevel() == null ? other.getRiskLevel() == null : this.getRiskLevel().equals(other.getRiskLevel()))
-                && (this.getLiquiDate() == null ? other.getLiquiDate() == null : this.getLiquiDate().equals(other.getLiquiDate()))
-                && (this.getRegDate() == null ? other.getRegDate() == null : this.getRegDate().equals(other.getRegDate()))
-                && (this.getModiDate() == null ? other.getModiDate() == null : this.getModiDate().equals(other.getModiDate()))
-                && (this.getDescription() == null ? other.getDescription() == null : this.getDescription().equals(other.getDescription()))
-                && (this.getFundGroup() == null ? other.getFundGroup() == null : this.getFundGroup().equals(other.getFundGroup()))
+                && (this.getMinShare() == null ? other.getMinShare() == null
+                        : this.getMinShare().equals(other.getMinShare()))
+                && (this.getRiskLevel() == null ? other.getRiskLevel() == null
+                        : this.getRiskLevel().equals(other.getRiskLevel()))
+                && (this.getLiquiDate() == null ? other.getLiquiDate() == null
+                        : this.getLiquiDate().equals(other.getLiquiDate()))
+                && (this.getRegDate() == null ? other.getRegDate() == null
+                        : this.getRegDate().equals(other.getRegDate()))
+                && (this.getModiDate() == null ? other.getModiDate() == null
+                        : this.getModiDate().equals(other.getModiDate()))
+                && (this.getDescription() == null ? other.getDescription() == null
+                        : this.getDescription().equals(other.getDescription()))
+                && (this.getFundGroup() == null ? other.getFundGroup() == null
+                        : this.getFundGroup().equals(other.getFundGroup()))
                 && (this.getBrand() == null ? other.getBrand() == null : this.getBrand().equals(other.getBrand()))
-                && (this.getShareClass() == null ? other.getShareClass() == null : this.getShareClass().equals(other.getShareClass()))
-                && (this.getCrsCode() == null ? other.getCrsCode() == null : this.getCrsCode().equals(other.getCrsCode()))
-                && (this.getSubType() == null ? other.getSubType() == null : this.getSubType().equals(other.getSubType()))
-                && (this.getBonusType() == null ? other.getBonusType() == null : this.getBonusType().equals(other.getBonusType()))
-                && (this.getMaxShare() == null ? other.getMaxShare() == null : this.getMaxShare().equals(other.getMaxShare()))
-                && (this.getTradeTime() == null ? other.getTradeTime() == null : this.getTradeTime().equals(other.getTradeTime()))
-                && (this.getSubLastTime() == null ? other.getSubLastTime() == null : this.getSubLastTime().equals(other.getSubLastTime()))
-                && (this.getSubTime() == null ? other.getSubTime() == null : this.getSubTime().equals(other.getSubTime()))
-                && (this.getAcceptMode() == null ? other.getAcceptMode() == null : this.getAcceptMode().equals(other.getAcceptMode()))
-                && (this.getFinanceCycle() == null ? other.getFinanceCycle() == null : this.getFinanceCycle().equals(other.getFinanceCycle()))
-                && (this.getIpoEndDate() == null ? other.getIpoEndDate() == null : this.getIpoEndDate().equals(other.getIpoEndDate()))
-                && (this.getBusinFlag() == null ? other.getBusinFlag() == null : this.getBusinFlag().equals(other.getBusinFlag()))
-                && (this.getManagerNo() == null ? other.getManagerNo() == null : this.getManagerNo().equals(other.getManagerNo()))
-                && (this.getFundClass() == null ? other.getFundClass() == null : this.getFundClass().equals(other.getFundClass()))
-                && (this.getTrusteeNo() == null ? other.getTrusteeNo() == null : this.getTrusteeNo().equals(other.getTrusteeNo()));
+                && (this.getShareClass() == null ? other.getShareClass() == null
+                        : this.getShareClass().equals(other.getShareClass()))
+                && (this.getCrsCode() == null ? other.getCrsCode() == null
+                        : this.getCrsCode().equals(other.getCrsCode()))
+                && (this.getSubType() == null ? other.getSubType() == null
+                        : this.getSubType().equals(other.getSubType()))
+                && (this.getBonusType() == null ? other.getBonusType() == null
+                        : this.getBonusType().equals(other.getBonusType()))
+                && (this.getMaxShare() == null ? other.getMaxShare() == null
+                        : this.getMaxShare().equals(other.getMaxShare()))
+                && (this.getTradeTime() == null ? other.getTradeTime() == null
+                        : this.getTradeTime().equals(other.getTradeTime()))
+                && (this.getSubLastTime() == null ? other.getSubLastTime() == null
+                        : this.getSubLastTime().equals(other.getSubLastTime()))
+                && (this.getSubTime() == null ? other.getSubTime() == null
+                        : this.getSubTime().equals(other.getSubTime()))
+                && (this.getAcceptMode() == null ? other.getAcceptMode() == null
+                        : this.getAcceptMode().equals(other.getAcceptMode()))
+                && (this.getFinanceCycle() == null ? other.getFinanceCycle() == null
+                        : this.getFinanceCycle().equals(other.getFinanceCycle()))
+                && (this.getIpoEndDate() == null ? other.getIpoEndDate() == null
+                        : this.getIpoEndDate().equals(other.getIpoEndDate()))
+                && (this.getBusinFlag() == null ? other.getBusinFlag() == null
+                        : this.getBusinFlag().equals(other.getBusinFlag()))
+                && (this.getManagerNo() == null ? other.getManagerNo() == null
+                        : this.getManagerNo().equals(other.getManagerNo()))
+                && (this.getFundClass() == null ? other.getFundClass() == null
+                        : this.getFundClass().equals(other.getFundClass()))
+                && (this.getTrusteeNo() == null ? other.getTrusteeNo() == null
+                        : this.getTrusteeNo().equals(other.getTrusteeNo()));
     }
 
     @Override
